@@ -11,32 +11,34 @@ body{
 
 .navbar{
     background-color: #319CFF;
-    height: 45px;
+    height: 3.5%;
     text-align: center;
     padding-bottom: 5px;
     overflow: hidden;
 }
 
-ul{
+.ul{
     margin-top: 0px;
     padding: 0px;
     border: solid 1px #0052a5;
+    border-radius: 12px;
     background-color: #0066cc;
     display: inline-block;
 }
 
-li{
+.li{
     display: inline-block;
 }
 
-a{
+.a{
     color: white;
-    font-size: 30px;
+    font-size: 200%;
     text-decoration: none;
-    padding: 0px 4px;
+    padding: 0px 8px;
+    font-family: calibri;
 }
 
-a:hover, a:active{
+.a:hover, .a:active{
     background-color: #00468d;
 }
 
@@ -44,25 +46,29 @@ a:hover, a:active{
     height: 75%;
     width: 100%;
     overflow: hidden;
-    background-color: #f7d44c;
 }
 
 .banner_left{
     width: 20%;
     float: left;
-    overflow: hidden;
+    background-color: #f7d44c;
+    height: 100%;
 }
 
 .content{
     width: 60%;
     float: left;
     overflow: hidden;
+    padding: 0px 4px;
+    height: 100%
 }
 
 .banner_right{
     width: 20%;
     float: left;
     overflow: hidden;
+    background-color: #f7d44c;
+    height: 100%;
 }
 
 .footer{
