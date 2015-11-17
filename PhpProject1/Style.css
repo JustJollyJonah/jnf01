@@ -19,8 +19,10 @@ body{
 
 ul{
     margin-top: 0px;
+    padding: 0px;
     border: solid 1px #0052a5;
     background-color: #0066cc;
+    display: inline-block;
 }
 
 li{
