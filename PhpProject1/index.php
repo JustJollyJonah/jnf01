@@ -18,7 +18,9 @@
         </div>
 
         <div class="wrapper">
-            <div class="banner_left"></div>
+            <div class="banner_left">
+                .
+            </div>
             <div class="content">
                 <pre><?php
                     $home = file_get_contents("home.txt");
@@ -26,16 +28,17 @@
                     ?>
                 </pre>
             </div>
-            <div class="banner_right"></div>
+            <div class="banner_right">
+                .
+            </div>
         </div>
-        
         <div class="footer">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="about.php">Over Dynamiek ateliers</a></li>
-                <li><a href="product.php">Accesoires en producten</a></li>
-                <li><a href="workshop.php">Workshops</a></li>
-                <li>Webshop</li>
+                <li><a href=""><strong>Home</strong></a></li>
+                <li><a href="about.php"><strong>Over Dynamiek ateliers</strong></a></li>
+                <li><a href="product.php"><strong>Accesoires en producten</strong></a></li>
+                <li><a href="workshop.php"><strong>Workshops</strong></a></li>
+                <li><a href=""><strong>Webshop</strong></a></li>
             </ul>
         </div>
     </body>
