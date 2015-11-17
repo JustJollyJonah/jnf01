@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Webpagina Framework</title>
         <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="stylejonah.css">
     </head>
     <body>
 
