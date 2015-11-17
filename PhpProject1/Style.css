@@ -50,7 +50,6 @@ body{
 .banner_left{
     width: 20%;
     float: left;
-    overflow: hidden;
     background-color: #f7d44c;
     height: 100%;
 }
@@ -66,12 +65,17 @@ body{
 .banner_right{
     width: 20%;
     float: left;
+    overflow: hidden;
     background-color: #f7d44c;
     height: 100%;
 }
 
 .footer{
-    background-color: black;
+    background-color: #5C5CFF;
     height: 10%;
     display:inline;
+}
+
+.footer ul{
+    padding-top: 5px;
 }
