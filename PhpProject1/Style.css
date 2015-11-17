@@ -65,7 +65,7 @@ body{
 
 .banner_right{
     width: 20%;
-    float: right;
+    float: left;
     background-color: #f7d44c;
     height: 100%;
 }
