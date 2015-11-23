@@ -60,7 +60,7 @@ body{
 .content{
     width: 60%;
     float: left;
-    overflow: hidden;
+    overflow: auto;
     padding: 0px 4px;
     height: 100%;
 }
@@ -95,4 +95,10 @@ body{
 
 .testdata{
     background-color: red;
+}
+
+.testdata2{
+	background-color: black;
+	color: white;
+	display: inline;
 }

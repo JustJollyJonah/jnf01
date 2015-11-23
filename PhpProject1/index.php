@@ -30,7 +30,7 @@
         </div>
 
         <div class="wrapper">
-            <div class="banner_left">
+			<div class="banner_left">
                 .
             </div>
             <div class="content">
@@ -43,10 +43,11 @@
 
                     $pdo = connectToServer("mysql:host=localhost;port=3307", "root", "usbw");
                     selectDatabase($pdo, "cursus");
-//                    fetchFromDatabase($pdo, "cursus", "omschrijving", "testdata");
-//                    fetchWithException($pdo, "cursus", "omschrijving", "omschrijving LIKE '%SQL%'", "testdata");
+                    
+//                     fetchFromDatabase($pdo, "cursus", "omschrijving", "testdata");
+//                     fetchWithException($pdo, "cursus", "omschrijving", "omschrijving LIKE '%SQL%'", "testdata");
                     $toFetch = array("code","omschrijving");
-                    fetchMultiple($pdo, "cursus", $toFetch, "testdata");
+                    fetchMultiple($pdo, "cursus", $toFetch, "testdata", "testdata2");
                     ?>
                 </pre>
             </div>
