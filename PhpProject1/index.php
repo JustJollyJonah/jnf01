@@ -13,6 +13,7 @@
         </div>
         <div class="navbar">
             <?php
+            header('Content-Type: text/html; charset=ISO-8859-1');
             include("DatabaseFunctions.php");
 
             $contents = array("home.txt", "about.txt", "product.txt", "workshops.txt");
