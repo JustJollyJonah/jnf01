@@ -1,7 +1,7 @@
-<ul>
-	<li><a href=""><strong>Home</strong></a></li>
-	<li><a href="about.php"><strong>Over Dynamiek ateliers</strong></a></li>
-	<li><a href="product.php"><strong>Accesoires en producten</strong></a></li>
-	<li><a href="workshop.php"><strong>Workshops</strong></a></li>
-	<li><a href=""><strong>Webshop</strong></a></li>
+<ul class="ul">
+	<li class="li"><a href="index.php?page=0" class="a"><strong>Home</strong></a></li>
+	<li class="li"><a href="index.php?page=1" class="a"><strong>Over Dynamiek ateliers</strong></a></li>
+	<li class="li"><a href="index.php?page=2" class="a"><strong>Accesoires en producten</strong></a></li>
+	<li class="li"><a href="index.php?page=3" class="a"><strong>Workshops</strong></a></li>
+	<li class="li"><a href="" class="a"><strong>Webshop</strong></a></li>
 </ul>
