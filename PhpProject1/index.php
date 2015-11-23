@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Webpagina Framework</title>
-        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="Style_chris_1.css">
         <!--<link rel="stylesheet" href="stylejonah.css">-->
     </head>
     <body>
@@ -16,7 +16,7 @@
             header('Content-Type: text/html; charset=ISO-8859-1');
             include("DatabaseFunctions.php");
 
-            $contents = array("home.txt", "about.txt", "product.txt", "workshops.txt");
+            $contents = array("home"=>"home.txt", "about"=>"about.txt", "product"=>"product.txt", "workshops"=>"workshops.txt");
 
             $navbar = file_get_contents("navbar.txt");
             echo $navbar;
@@ -24,7 +24,7 @@
             if (isset($_GET['page'])) {
                 $page = $_GET['page'];
             } else {
-                $page = 0;
+                $page = "home";
             }
             ?>
         </div>
@@ -34,20 +34,17 @@
                 .
             </div>
             <div class="content">
-                <pre><?php
-//                    $home = file_get_contents("home.txt");
-//                    echo $home;
-
+                <pre class="contents" width=167><?php
                     $content = file_get_contents($contents[$page]);
                     echo $content;
 
-                    $pdo = connectToServer("mysql:host=localhost;port=3307", "root", "usbw");
-                    selectDatabase($pdo, "cursus");
+//                     $pdo = connectToServer("mysql:host=localhost;port=3307", "root", "usbw");
+//                     selectDatabase($pdo, "cursus");
                     
 //                     fetchFromDatabase($pdo, "cursus", "omschrijving", "testdata");
 //                     fetchWithException($pdo, "cursus", "omschrijving", "omschrijving LIKE '%SQL%'", "testdata");
-                    $toFetch = array("code","omschrijving");
-                    fetchMultiple($pdo, "cursus", $toFetch, "testdata", "testdata2");
+//                     $toFetch = array("code","omschrijving");
+//                     fetchMultiple($pdo, "cursus", $toFetch, "testdata", "testdata2");
                     ?>
                 </pre>
             </div>
