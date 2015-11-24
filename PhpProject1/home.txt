@@ -9,6 +9,8 @@ Al deze producten worden gemaakt door de werknemers die bij Dynamiek werken.
 Zowel Dynamiek als De Bloemboetiek zijn locaties van Omega Zorg. Beide locaties bieden arbeidsgerelateerde dagbesteding aan mensen met een beperking. Het gaat om echt werk. Werk wat er toe doet.
 
 
+<img src="img/bloemboetiek home.png">
+
 
 <table>
 <tr><th colspan=2 id=1>Openingstijden Dynamiek</th>			<th colspan=2 id=2>Openingstijden de Bloemboetiek</th></tr>
