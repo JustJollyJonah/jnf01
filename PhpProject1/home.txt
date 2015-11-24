@@ -10,12 +10,12 @@ Zowel Dynamiek als De Bloemboetiek zijn locaties van Omega Zorg. Beide locaties 
 
 
 
-
-Openingstijden Dynamiek			Openingstijden de Bloemboetiek
-Maandag			gesloten			Maandag		gesloten
-Dinsdag			9.00-15.30 uur		Dinsdag		9.00-17.30 uur
-Woensdag		9.00-15.30 uur		Woensdag	9.00-17.30 uur
-Donderdag		9.00-15.30 uur		Donderdag	9.00-17.30 uur
-Vrijdag			9.00-15.30 uur		Vrijdag		9.00-17.30 uur
-Zaterdag en zondag	gesloten			Zaterdag		9.00-17.00 uur
-								Zondag		gesloten
+<table>
+<tr><th colspan=2 id=1>Openingstijden Dynamiek</th>			<th colspan=2 id=2>Openingstijden de Bloemboetiek</th></tr>
+<tr><td>Maandag</td>			<td>gesloten</td>			<td>Maandag</td>		<td>gesloten</td></tr>
+<tr><td>Dinsdag</td>			<td>9.00-15.30</td>			<td>Dinsdag</td>		<td>9.00-17.30</td></tr>
+<tr><td>Woensdag</td>			<td>9.00-15.30</td>			<td>Woensdag</td>		<td>9.00-17.30</td></tr>
+<tr><td>Donderdag</td>			<td>9.00-15.30</td>			<td>Donderdag</td>		<td>9.00-17.30</td></tr>
+<tr><td>Vrijdag</td>			<td>9.00-15.30</td>			<td>Vrijdag</td>		<td>9.00-17.30</td></tr>
+<tr><td>Zaterdag en zondag</td>	<td>gesloten</td>			<td>Zaterdag</td>		<td>9.00-17.00 uur</td><tr>
+<tr><td colspan=2></td>								<td>Zondag</td>		<td>gesloten</td></tr></table>

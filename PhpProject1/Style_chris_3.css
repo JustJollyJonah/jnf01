@@ -89,6 +89,8 @@ body{
 	float: left;
 	text-align: center;
 	border-style: hidden solid hidden solid;
+	font-size: 20px;
+	text-decoration: none;
 }
 
 .content{
@@ -120,4 +122,12 @@ body{
 
 .footer ul li a{
 	color: black;
+}
+
+table{
+	border: solid 1px orange;	
+}
+
+td, th{
+	border: solid 1px blue;
 }
