@@ -9,13 +9,12 @@
     	<div class="banner">
     		<img src="" alt="Hier komt het logo">
     		<p>Dynamiek Ateliers Login Portaal</p>
+    		<div class="LoggedInUser"><?php session_start();
+    		$user = $_SESSION['user'];
+    		echo $user;?></div>
     	</div>
     	<div class="content">
     		<?php 
-    		session_start();
-    		
-    		$user = $_SESSION['user'];
-    		echo $user;
     		
     		?>
     	</div>

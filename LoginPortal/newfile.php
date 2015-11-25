@@ -12,19 +12,19 @@
     	</div>
     	<div class="content">
     	
-    	<?php 
-    	session_start();
-    	
-    	if($_SESSION['falseLogin']){
-    		echo 'False Login';
-    	}
-    	
-    	?>
     		<div class="loginform">
+	    	<?php 
+    		session_start();
+    		
+	    	if($_SESSION['falseLogin']){
+    			echo '<div id="error"><strong>False Login</strong><br><br></div>';
+    		}
+    	
+    		?>
     			<form method="POST" action="login.php">
-    				Gebruikersnaam: <input type="text" name="username"><br>
+    				Gebruikersnaam: <input type="text" name="username"><br><br>
     				Wachtwoord: <input type="password" name="password"><br>
-    				<input type="submit" value="submit">
+    				<input type="submit" value="submit" id="submit">
     			</form>
     		</div>
     	</div>

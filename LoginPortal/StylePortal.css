@@ -20,18 +20,42 @@ body {
 	height:100%;
 }
 
+.loggedInUser{
+	float: right;
+	display: inline;
+	color: beige;
+}
+
+#error{
+	color: red;
+}
+
 .loginform {
-	margin-top: 20%;
-	text-align:center;
+	margin-top: 10%;
 	border: solid 1px black;
 	display: inline-block;
+	padding: 20px 8px;
+	background-color: #5FC3C3;
+}
+
+.loginform form{
+	text-align: center;
+	float: right;
+}
+
+.loginform form input{
+	width: 75%;
+}
+
+#submit{
+	margin-top: 10px;
+	width: 50%;
+	height: 3.5%;
+	font-size: 20px;
 }
 
 .content{
 	text-align:center;
 	height: 100%;
-}
-
-input{
-	margin-bottom: 2px;
+	background-color: #669999;
 }
