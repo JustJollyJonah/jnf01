@@ -59,7 +59,9 @@
 			selectDatabase ( $pdo, "cursus" );
 
 			$array = array ("code","omschrijving" );
-			print_array(fetchRows ( $pdo, "cursus", $array, "testdata"));
+// 			print_array(fetchRows ( $pdo, "cursus", $array, "testdata"));
+			
+// 			echo fetchWithException($pdo, 'cursus', "omschrijving", "omschrijving LIKE '%SQL%'");
 
 			?>
 			</div>

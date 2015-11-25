@@ -22,4 +22,6 @@ function sort_text($array, $type){
 	}
 }
 
+
+
 ?>
