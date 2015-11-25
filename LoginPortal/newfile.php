@@ -10,6 +10,12 @@
     	<img src="" alt="Hier komt het logo">
     	<p>Dynamiek Ateliers Login Portaal</p>
     </div>
+    <div class="loginform">
+    <form>
+    <p>Gebruikersnaam: <input type="text" name="username"></p>
+    <p>Wachtwoord: <input type="password" name="password"></p>
+    </form>
+    </div>
     <?php
 
 	?>

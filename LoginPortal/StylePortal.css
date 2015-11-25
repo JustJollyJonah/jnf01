@@ -5,10 +5,19 @@
 }
 
 .banner p {
-	display:inline;
 	font-size:24px;
-	padding-top:50%;
+	padding-top:15px;
 }
 body {
 	margin: 0px;
 }
+.banner img {
+	float:left;
+	width:20%;
+	height:100%;
+}
+.loginform  {
+	text-align:center;
+	border: solid 1px black;
+}
+
