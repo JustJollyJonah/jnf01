@@ -1,11 +1,12 @@
 .banner {
-	height:40px;
+	height:60px;
 	background-color:lightblue;
 	margin:0px 0px 0px 0px;
 }
 
 .banner p {
 	display:inline;
+	font-size:24px;
 }
 body {
 	margin: 0px;
