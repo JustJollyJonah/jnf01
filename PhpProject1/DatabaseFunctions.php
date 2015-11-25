@@ -27,18 +27,18 @@ function fetchWithException($pdo, $table, $data, $exception, $style) {
 	}
 	echo "</div>";
 }
-function fetchMultiple($pdo, $table, $data, $style1, $style2) {
+function fetchRows($pdo, $table, $data, $style) {
 //     for($i = 0; $i < count($data); $i++){
 //         $value = $data[$i];
 //         $query = $pdo->prepare("SELECT $value FROM $table");
 //         $query->execute();
+//         $returnvalues = array();
         
-//         echo "<div class=$style>";
 //         while($row = $query->fetch()){
-//             $value_ = $row[$value];
-//             echo $value_ . "<br>";
+//             array_push($returnvalues, $row[$value]);
+            
 //         }
-//         echo "</div>";
+//         return $returnvalues;
 //     }
     
    	$select = "";
@@ -49,17 +49,15 @@ function fetchMultiple($pdo, $table, $data, $style1, $style2) {
    	
    	$query = $pdo->prepare("SELECT $select FROM $table");
    	$query->execute();
+   	$returnvalues = array();
    	
-   	echo "<div class=$style1>";
    	while($row = $query->fetch()){
-   		echo"<div class=$style2>";
    		for($i = 0; $i < count($data); $i++){
    			$value = $row[$data[$i]];
-   			echo $value . "<br>";
+   			array_push($returnvalues,$value);
    		}
-   		echo "<br></div>";
    	}
-   	echo "</div>";
+   	return $returnvalues;
 }
 
 

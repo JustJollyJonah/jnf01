@@ -4,26 +4,37 @@
 <meta charset="UTF-8">
 <title>Webpagina Framework</title>
 <link rel="stylesheet" href="Style_chris_3.css">
-<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssgrids/cssgrids-min.css">
+<link rel="stylesheet" type="text/css"
+	href="http://yui.yahooapis.com/3.18.1/build/cssgrids/cssgrids-min.css">
 <!--<link rel="stylesheet" href="stylejonah.css">-->
 </head>
 <body>
 
 
-	<div class="header">Hier komt logo te staan</div>
+	<div class="header">
+		<img src="img/Logo_01.jpg" class="img_logo"> <img
+			src="img/Logo_02.png"
+			style="margin-left: 0px; float: bottom; margin-bottom: 0px;">
+	</div>
 
 	<div class="navbar">
 		<?php
 		$file = file_get_contents ( "navbarLayout3.txt" );
 		echo $file;
 		
-		header('Content-Type: text/html; charset=ISO-8859-1');
-		include("DatabaseFunctions.php");
+		header ( 'Content-Type: text/html; charset=ISO-8859-1' );
+		include ("DatabaseFunctions.php");
+		include ("phpfuncties.php");
 		
-		$contents = array("home"=>"home.txt", "about"=>"about.txt", "product"=>"product.txt", "workshops"=>"workshops.txt");
+		$contents = array (
+				"home" => "home.txt",
+				"about" => "about.txt",
+				"product" => "product.txt",
+				"workshops" => "workshops.txt" 
+		);
 		
-		if (isset($_GET['page'])) {
-			$page = $_GET['page'];
+		if (isset ( $_GET ['page'] )) {
+			$page = $_GET ['page'];
 		} else {
 			$page = "home";
 		}
@@ -33,14 +44,25 @@
 
 	<div class="content">
 		<pre><?php
-		$content = file_get_contents($contents[$page]);
+		$content = file_get_contents ( $contents [$page] );
 		echo $content;
 		
-// 		$home = file_get_contents ( "home.txt" );
-// 		echo $home;
+		// $home = file_get_contents ( "home.txt" );
+		// echo $home;
 		
 		?>
-			</pre>
+		</pre>
+			<div class="test">
+			
+			<?php
+			$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
+			selectDatabase ( $pdo, "cursus" );
+
+			$array = array ("code","omschrijving" );
+			print_array(fetchRows ( $pdo, "cursus", $array, "testdata"));
+
+			?>
+			</div>
 	</div>
 
 	<div class="footer">
