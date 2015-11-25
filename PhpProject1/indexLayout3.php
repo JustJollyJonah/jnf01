@@ -24,6 +24,7 @@
 		
 		header ( 'Content-Type: text/html; charset=ISO-8859-1' );
 		include ("DatabaseFunctions.php");
+		include ("phpfuncties.php");
 		
 		$contents = array (
 				"home" => "home.txt",
@@ -50,16 +51,18 @@
 		// echo $home;
 		
 		?>
-			</pre>
+		</pre>
+			<div class="test">
 			
 			<?php
 			$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
 			selectDatabase ( $pdo, "cursus" );
 
 			$array = array ("code","omschrijving" );
-			fetchRows ( $pdo, "cursus", $array, "testdata");
+			print_array(fetchRows ( $pdo, "cursus", $array, "testdata"));
 
 			?>
+			</div>
 	</div>
 
 	<div class="footer">

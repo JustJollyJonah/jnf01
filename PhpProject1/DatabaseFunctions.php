@@ -28,39 +28,36 @@ function fetchWithException($pdo, $table, $data, $exception, $style) {
 	echo "</div>";
 }
 function fetchRows($pdo, $table, $data, $style) {
-    for($i = 0; $i < count($data); $i++){
-        $value = $data[$i];
-        $query = $pdo->prepare("SELECT $value FROM $table");
-        $query->execute();
-        $returnvalues = array();
+//     for($i = 0; $i < count($data); $i++){
+//         $value = $data[$i];
+//         $query = $pdo->prepare("SELECT $value FROM $table");
+//         $query->execute();
+//         $returnvalues = array();
         
-        echo "<div class=$style>";
-        while($row = $query->fetch()){
-            array_push($returnvalues, $row[$value]);
-            return $returnvalues;
-        }
-        echo "</div>";
-    }
+//         while($row = $query->fetch()){
+//             array_push($returnvalues, $row[$value]);
+            
+//         }
+//         return $returnvalues;
+//     }
     
-//    	$select = "";
-//    	foreach($data as $fetch){
-//    		$select .= $fetch . ",";
-//    	}
-//    	$select = rtrim($select, ",");
+   	$select = "";
+   	foreach($data as $fetch){
+   		$select .= $fetch . ",";
+   	}
+   	$select = rtrim($select, ",");
    	
-//    	$query = $pdo->prepare("SELECT $select FROM $table");
-//    	$query->execute();
+   	$query = $pdo->prepare("SELECT $select FROM $table");
+   	$query->execute();
+   	$returnvalues = array();
    	
-//    	echo "<div class=$style1>";
-//    	while($row = $query->fetch()){
-//    		echo"<div class=$style2>";
-//    		for($i = 0; $i < count($data); $i++){
-//    			$value = $row[$data[$i]];
-//    			echo $value . "<br>";
-//    		}
-//    		echo "<br></div>";
-//    	}
-//    	echo "</div>";
+   	while($row = $query->fetch()){
+   		for($i = 0; $i < count($data); $i++){
+   			$value = $row[$data[$i]];
+   			array_push($returnvalues,$value);
+   		}
+   	}
+   	return $returnvalues;
 }
 
 
