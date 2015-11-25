@@ -11,22 +11,13 @@
     		<p>Dynamiek Ateliers Login Portaal</p>
     	</div>
     	<div class="content">
-    	
-    	<?php 
-    	session_start();
-    	
-    	if($_SESSION['falseLogin']){
-    		echo 'False Login';
-    	}
-    	
-    	?>
-    		<div class="loginform">
-    			<form method="POST" action="login.php">
-    				Gebruikersnaam: <input type="text" name="username"><br>
-    				Wachtwoord: <input type="password" name="password"><br>
-    				<input type="submit" value="submit">
-    			</form>
-    		</div>
+    		<?php 
+    		session_start();
+    		
+    		$user = $_SESSION['user'];
+    		echo $user;
+    		
+    		?>
     	</div>
     </body>
 </html>
