@@ -6,18 +6,18 @@
 <title>Insert title here</title>
 </head>
     <body>
-    <div class="banner">
-    	<img src="" alt="Hier komt het logo">
-    	<p>Dynamiek Ateliers Login Portaal</p>
-    </div>
-    <div class="loginform">
-    <form>
-    <p>Gebruikersnaam: <input type="text" name="username"></p>
-    <p>Wachtwoord: <input type="password" name="password"></p>
-    </form>
-    </div>
-    <?php
-
-	?>
+    	<div class="banner">
+    		<img src="" alt="Hier komt het logo">
+    		<p>Dynamiek Ateliers Login Portaal</p>
+    	</div>
+    	<div class="content">
+    		<div class="loginform">
+    			<form method="POST" action="login.php">
+    				Gebruikersnaam: <input type="text" name="username"><br>
+    				Wachtwoord: <input type="password" name="password"><br>
+    				<input type="submit" value="submit">
+    			</form>
+    		</div>
+    	</div>
     </body>
 </html>

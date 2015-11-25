@@ -75,6 +75,7 @@
 			<li><a href="">Workshops</a></li>
 			<li><a href="">Webshop</a></li>
 		</ul>
+		<a href="../LoginPortal/newfile.php" class="loginLink">Login</a>
 	</div>
 </body>
 </html>

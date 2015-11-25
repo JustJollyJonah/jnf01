@@ -133,7 +133,7 @@ body{
 	float: left;
 	display: inline-block;
 	margin-bottom: height;
-	background-color: darkblue;
+	background-color: blue;
 }
 
 .footer ul{
@@ -162,4 +162,12 @@ table{
 
 td, th{
 	border: solid 1px blue;
+}
+
+.loginLink{
+	float: right;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	text-decoration: none;
+	color: black;
 }
