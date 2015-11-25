@@ -1,6 +1,7 @@
 .banner {
 	height:40px;
 	background-color:lightblue;
+	padding:auto;
 }
 
 .banner p {
