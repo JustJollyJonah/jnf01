@@ -1,0 +1,55 @@
+body{
+	background-color: #669999;
+}
+
+.contentLeft{
+	width: 50%;
+	float: left;
+}
+
+.cmsSelect input{
+	margin-top: 5px;
+}
+
+.cmsSelect{
+	float: left;
+	display: inline-block;
+	border: solid 1px black;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 100%;
+	padding: 5px 5px;
+}
+
+.cmsTextarea{
+	margin-top: 5px;
+	width: 100%;
+	height: 480px;
+	float: left;
+	display: inline;
+	margin-left: 5px;
+	margin-right: 100%;
+}
+
+.cmsBewerk{
+	float: left;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 100%;
+}
+
+.bewerkSuccess{
+	float: left;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.contentRight{
+	width: 50%;
+	float: left;
+}
+
+.contentRight iframe{
+	width: 100%;
+	height: 100%;
+}

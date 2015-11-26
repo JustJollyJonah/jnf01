@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="StylePortal.css">
+<link rel="stylesheet" href="cmsStyle.css">
 <title>Insert title here</title>
 </head>
     <body>
@@ -13,10 +14,41 @@
     		$user = $_SESSION['user'];
     		echo $user;?></div>
     	</div>
-    	<div class="content">
+    	<div class="contentLeft">
+    		<form class="cmsSelect" method='GET' action="Ingelogd.php">
+    		<legend>Change content files</legend>
+    			<?php 
+    			$txtfiles = array('home.txt','about.txt','product.txt','workshops.txt');
+    		
+    			foreach($txtfiles as $file){
+    				echo "<input type='submit' name='toChange' value='$file'><br>";
+    			}
+    			
+    			
+    			?>
+    		</form>
     		<?php 
+    		header ( 'Content-Type: text/html; charset=ISO-8859-1' );
+    		if(isset($_GET['toChange'])){
+				$toChange = "";
+    			$toChange = "../PhpProject1/" . $_GET['toChange'];
+    			echo "<form action='Bewerk.php' method='GET'>";
+    			echo "<textarea class='cmsTextarea' name='Bewerk'>" . file_get_contents($toChange) . "</textarea><br>";
+    			echo "<input type='submit' value='Bewerk' class='cmsBewerk'>";
+    			echo "<input type='hidden' name=toChange value=" . $toChange . ">";
+    			echo "</form>";
+    		}
+    		
+    		if(isset($_GET['Bewerkt'])){
+    			if($_GET['Bewerkt']){
+    				echo '<div class="bewerkSuccess">Bestand succesvol bijgewerkt</div>';
+    			}
+    		}
     		
     		?>
+    	</div>
+    	<div class="contentRight">
+    		<iframe src="http://localhost:8080/PhpProject1/indexLayout3.php"></iframe>
     	</div>
     </body>
 </html>

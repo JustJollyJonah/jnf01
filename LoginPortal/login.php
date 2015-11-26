@@ -10,7 +10,7 @@
 session_start ();
 
 $user = $_POST ['username'];
-$pw = $_POST ['password'];
+$pw = md5($_POST ['password']);
 
 $_SESSION['user'] = $user;
 
@@ -18,13 +18,13 @@ include ("DatabaseFunctions.php");
 
 $pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
 
-selectDatabase ( $pdo, "avondschool" );
+selectDatabase ( $pdo, "omega" );
 
 LogIn ( $pdo, $user, $pw );
 
 function LogIn($pdo, $user, $pw) {
-	$query = $pdo->prepare( "SELECT COUNT(*) test FROM cursist WHERE voornaam='$user' AND cursistnr='$pw' LIMIT 1" );
-	$query->execute();
+	$query = $pdo->prepare( "SELECT COUNT(*) test FROM login WHERE Gebruikersnaam=? AND Wachtwoord=? LIMIT 1" );
+	$query->execute(array($user,$pw));
 	
 	while($row = $query->fetch()){
 		$waarde = $row['test'];
@@ -33,6 +33,7 @@ function LogIn($pdo, $user, $pw) {
 		}else{
 			$_SESSION['falseLogin'] = TRUE;
 			header('Location: newfile.php');
+			$_SESSION['falseInfo'] = array($user,$pw);
 		}
 	}
 }
