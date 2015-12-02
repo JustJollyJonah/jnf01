@@ -11,9 +11,7 @@
 
 
 	<div class="header">
-		<img src="img/Logo_01.jpg" class="img_logo"> <img
-			src="img/Logo_02.png"
-			style="margin-left: 0px; float: bottom; margin-bottom: 0px;">
+		<img src="img/Logo_01.jpg" class="img_logo">
 	</div>
 
 	<div class="navbar">

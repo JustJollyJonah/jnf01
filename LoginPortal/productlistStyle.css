@@ -1,0 +1,16 @@
+body{
+	background-color: #669999;
+}
+
+.addProduct{
+	display: inline-block;
+	border: solid 1px black;
+}
+
+.addProduct a{
+	text-decoration: none;
+}
+
+.addProduct a:visited{
+	color: blue;
+}
