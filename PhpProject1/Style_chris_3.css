@@ -1,175 +1,221 @@
-html{
-	height: 100%;
+@media ( min-width : 800px) {
+	html {
+		height: 100%;
+	}
+	body {
+		margin: 0px;
+		width: 100%;
+		height: 100%;
+		background-color: beige;
+	}
+	.header {
+		width: 100%;
+		height: 15%;
+		background-color: #0099FF;
+	}
+	.img_logo {
+		height: 100%;
+		margin-right: 0px;
+		float: left;
+	}
+	.navbar {
+		width: 100%;
+		height: 25%;
+		overflow: hidden;
+	}
+	.navbar_list {
+		height: 100%;
+		width: 100%;
+		list-style: none;
+		padding-left: 0px;
+		margin-top: 0px;
+		background-color: #FF9900;
+	}
+	.navbar_item_home {
+		height: 30px;
+		width: 20%;
+		display: inline;
+		float: left;
+	}
+	.navbar_item_about {
+		height: 30px;
+		width: 20%;
+		display: inline;
+		float: left;
+	}
+	.navbar_item_product {
+		height: 30px;
+		width: 20%;
+		display: inline;
+		float: left;
+	}
+	.navbar_item_workshops {
+		height: 30px;
+		width: 20%;
+		display: inline;
+		float: left;
+	}
+	.navbar_item_webshop {
+		height: 30px;
+		width: 20%;
+		display: inline;
+		float: left;
+	}
+	.navbar_item_home:hover ~ .navbar_img {
+		background-image: url('img/banner_image2.0.png');
+		height: 100%;
+		background-size: 100%;
+	}
+	.navbar_item_about:hover ~ .navbar_img {
+		background-image: url('img/banner_about.png');
+		height: 100%;
+		background-size: 100%;
+	}
+	.navbar_item_product:hover ~ .navbar_img {
+		background-image: url('img/banner_accessoires.png');
+		height: 100%;
+		background-size: 100%;
+	}
+	.navbar_item_workshops:hover ~ .navbar_img {
+		background-image: url('img/banner_workshops.png');
+		height: 100%;
+		background-size: 100%;
+	}
+	.navbar_item_webshop:hover ~ .navbar_img {
+		background-image: url('img/banner_webshop.png');
+		height: 100%;
+		background-size: 100%;
+	}
+	.navbar_img {
+		float: left;
+		background-image: url('img/banner_standard.png');
+		width: 100%;
+		height: 100%;
+		background-size: 100%;
+	}
+	.a {
+		height: 100%;
+		width: 100%;
+		float: left;
+		text-align: center;
+		border-style: hidden solid hidden solid;
+		font-size: 20px;
+		text-decoration: none;
+	}
+	.content {
+		margin: 0 auto;
+		width: 50%;
+		overflow: hidden;
+		border-style: hidden solid hidden solid;
+	}
+	.content pre {
+		white-space: pre-wrap;
+		font-family: inherit;
+		padding: 0px 5px;
+	}
+	.test {
+		width: 100%;
+		float: left;
+	}
+	.footer {
+		width: 100%;
+		float: left;
+		display: inline-block;
+		margin-bottom: height;
+		background-color: blue;
+	}
+	.footer ul {
+		list-style: none;
+		padding-left: 5px;
+	}
+	.footer ul li a {
+		color: black;
+	}
+	table {
+		border: solid 1px orange;
+		float: left;
+		display: inline;
+		margin-bottom: 25px;
+	}
+	.home_img {
+		float: left;
+		display: inline;
+		margin-left: 10%;
+		margin-bottom: 25px;
+		width: calc(100%/ 3);
+	}
+	td, th {
+		border: solid 1px blue;
+	}
+	.loginLink {
+		float: right;
+		padding-bottom: 5px;
+		padding-right: 5px;
+		text-decoration: none;
+		color: black;
+	}
 }
 
-body{
-	margin: 0px;
-	width: 100%;
-	height: 100%;
-	background-color: beige;
-}
-
-.header{
-	width: 100%;
-	height: 15%;
-	background-color: #0099FF;
-}
-
-.img_logo{
-	height: 100%;
-	margin-right: 0px;
-	float: left;
-}
-
-.navbar{
-	width: 100%;
-	height: 25%;
-	overflow: hidden;
-}
-
-.navbar_list{
-	height: 100%;
-	width: 100%;
-	list-style: none;
-	padding-left: 0px;
-	margin-top: 0px;
-	background-color: #FF9900;
-}
-
-.navbar_item_home{
-	height: 30px;
-	width: 20%;
-	display: inline;
-	float: left;
-}
-.navbar_item_about{
-	height: 30px;
-	width: 20%;
-	display: inline;
-	float: left;
-}
-.navbar_item_product{
-	height: 30px;
-	width: 20%;
-	display: inline;
-	float: left;
-}
-.navbar_item_workshops{
-	height: 30px;
-	width: 20%;
-	display: inline;
-	float: left;
-}
-.navbar_item_webshop{
-	height: 30px;
-	width: 20%;
-	display: inline;
-	float: left;
-}
-
-.navbar_item_home:hover ~ .navbar_img{
-	background-image: url('img/banner_image2.0.png');
-	height: 100%;
-	background-size: 100%;
-}
-.navbar_item_about:hover ~ .navbar_img{
-	background-image: url('img/panorama2.jpg');
-	height: 100%;
-	background-size: 100%;
-}
-.navbar_item_product:hover ~ .navbar_img{
-	background-image: url('img/panorama2.jpg');
-	height: 100%;
-	background-size: 100%;
-}
-.navbar_item_workshops:hover ~ .navbar_img{
-	background-image: url('img/panorama2.jpg');
-	height: 100%;
-	background-size: 100%;
-}
-.navbar_item_webshop:hover ~ .navbar_img{
-	background-image: url('img/panorama2.jpg');
-	height: 100%;
-	background-size: 100%;
-}
-
-.navbar_img{
-	float: left;
-	background-image: url('img/banner_image.png');
-	width: 100%;
-	height: 100%;
-	background-size: 100%;
-}
-
-.a{
-	height: 20%;
-	width: 100%;
-	display: inline;
-	float: left;
-	text-align: center;
-	border-style: hidden solid hidden solid;
-	font-size: 20px;
-	text-decoration: none;
-}
-
-.content{
-	margin: 0 auto;
-	width: 50%;
-	overflow: hidden;
-	border-style: hidden solid hidden solid;
-}
-
-.content pre{
-	white-space: pre-wrap;
-	font-family: inherit;
-	padding: 0px 5px;
-}
-
-.test{
-	width: 100%;
-	float: left;
-}
-
-.footer{
-	width: 100%;
-	float: left;
-	display: inline-block;
-	margin-bottom: height;
-	background-color: blue;
-}
-
-.footer ul{
-	list-style: none;
-	padding-left: 5px;
-}
-
-.footer ul li a{
-	color: black;
-}
-
-table{
-	border: solid 1px orange;
-	float: left;
-	display: inline;	
-	margin-bottom: 25px;
-}
-
-.home_img{
-	float: left;
-	display: inline;
-	margin-left: 10%;
-	margin-bottom: 25px;
-	width: calc(100% / 3);
-}
-
-td, th{
-	border: solid 1px blue;
-}
-
-.loginLink{
-	float: right;
-	padding-bottom: 5px;
-	padding-right: 5px;
-	text-decoration: none;
-	color: black;
+@media (max-width: 800px){
+	html {
+		height: 100%;
+	}
+	body {
+		margin: 0px;
+		width: 100%;
+		height: 100%;
+		background-color: beige;
+	}
+	.header {
+		width: 100%;
+		height: 15%;
+		background-color: #0099FF;
+	}
+	.img_logo {
+		height: 100%;
+		margin-right: 0px;
+		float: left;
+	}
+	.navbar {
+		width: 100%;
+		height: 5%;
+		overflow: hidden;
+	}
+	.navbar_list {
+		height: 100%;
+		width: 100%;
+		list-style: none;
+		padding-left: 0px;
+		margin-top: 0px;
+		background-color: #FF9900;
+	}
+	.navbar_item_home {
+		width: 20%;
+		float: left;
+		text-align: center;
+	}
+	.navbar_item_about {
+		width: 20%;
+		float: left;
+		text-align: center;
+	}
+	.navbar_item_product {
+		width: 20%;
+		float: left;
+		text-align: center;
+	}
+	.navbar_item_workshops {
+		width: 20%;
+		float: left;
+		text-align: center;
+	}
+	.navbar_item_webshop {
+		width: 20%;
+		float: left;
+		text-align: center;
+	}
+	.navbar_img {
+		width: 0px;
+		height: 0px;
+	}
 }

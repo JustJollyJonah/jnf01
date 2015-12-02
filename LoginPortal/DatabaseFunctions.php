@@ -11,13 +11,13 @@ function selectDatabase($pdo, $db) {
 function fetchFromDatabase($pdo, $table, $data, $style) {
 	$query = $pdo->prepare ( "SELECT $data FROM $table" );						//create new query
 	$query->execute ();															//execute query
+	$array = array();
 	
-	echo "<div class=$style>";
 	while ( $row = $query->fetch () ) {											//fetch result
 		$value = $row [$data];
-		echo $value . "<br>";													//returns individual value
+		array_push($array, $value);
+		return $array;															//returns array with all values
 	}
-	echo "</div>";
 }
 
 function fetchWithException($pdo, $table, $data, $exception) {

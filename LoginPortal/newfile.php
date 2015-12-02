@@ -18,12 +18,12 @@
     		
     		include ("DatabaseFunctions.php");
     		include ("CustomEncryption.php");
+    		
     		$test = Encrypt("test");
     		$test2 = Encrypt("test");
-    		echo $test;
-    		
+    		print_r($test);
     		echo "</br>";
-    		echo $test2;
+//     		print_r($test2);
     		
     		?>
     			<form method="POST" action="login.php">

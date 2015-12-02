@@ -14,9 +14,10 @@
 	$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
 	selectDatabase ( $pdo, "omega" );
 	
-	$query = $pdo->prepare("UPDATE pagina SET tekst = '$bewerkt' WHERE titel = '$toChange'");
+	$query = $pdo->prepare("UPDATE pagina SET tekst='$bewerkt' WHERE titel='$toChange'");
+	$query->execute();
 	
-	file_put_contents ( $toChange, $bewerkt );
+// 	$rows = $query->rowCount();
 	
 	header ( "Location: Ingelogd.php?toChange=$toChange&Bewerkt=TRUE" );
 	

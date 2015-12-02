@@ -4,8 +4,7 @@
 <meta charset="UTF-8">
 <title>Webpagina Framework</title>
 <link rel="stylesheet" href="Style_chris_3.css">
-<link rel="stylesheet" type="text/css"
-	href="http://yui.yahooapis.com/3.18.1/build/cssgrids/cssgrids-min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--<link rel="stylesheet" href="stylejonah.css">-->
 </head>
 <body>
@@ -71,10 +70,10 @@
 
 	<div class="footer">
 		<ul>
-			<li><a href="">Home</a></li>
-			<li><a href="">Over Dynamiek ateliers</a></li>
-			<li><a href="">Accesoires en producten</a></li>
-			<li><a href="">Workshops</a></li>
+			<li><a href="?page=home">Home</a></li>
+			<li><a href="?page=about">Over Dynamiek ateliers</a></li>
+			<li><a href="?page=product">Accesoires en producten</a></li>
+			<li><a href="?page=workshops">Workshops</a></li>
 			<li><a href="">Webshop</a></li>
 		</ul>
 		<a href="../LoginPortal/newfile.php" class="loginLink">Login</a>
