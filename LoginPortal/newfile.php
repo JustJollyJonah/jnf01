@@ -17,13 +17,14 @@
     		session_start();
     		
     		include ("DatabaseFunctions.php");
+    		include ("CustomEncryption.php");
+    		$test = Encrypt("test");
+    		$test2 = Encrypt("test");
+    		echo $test;
     		
-    		if(isset($_SESSION['falseLogin'])){
-	    		if($_SESSION['falseLogin']){
-    				echo '<div id="error"><strong>False Login</strong><br><br></div>';
-    			}
-    		}
-    	
+    		echo "</br>";
+    		echo $test2;
+    		
     		?>
     			<form method="POST" action="login.php">
     				Gebruikersnaam: <input type="text" name="username"><br><br>
