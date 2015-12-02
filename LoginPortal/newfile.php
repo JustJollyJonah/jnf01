@@ -18,8 +18,10 @@
     		
     		include ("DatabaseFunctions.php");
     		
-	    	if($_SESSION['falseLogin']){
-    			echo '<div id="error"><strong>False Login</strong><br><br></div>';
+    		if(isset($_SESSION['falseLogin'])){
+	    		if($_SESSION['falseLogin']){
+    				echo '<div id="error"><strong>False Login</strong><br><br></div>';
+    			}
     		}
     	
     		?>

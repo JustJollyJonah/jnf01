@@ -44,8 +44,12 @@
 
 	<div class="content">
 		<pre><?php
-		$content = file_get_contents ( $contents [$page] );
-		echo $content;
+		$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
+		selectDatabase ( $pdo, "omega" );
+// 		$content = file_get_contents ( $contents [$page] );
+// 		echo $content;
+
+		echo fetchWithException($pdo, "pagina", "tekst", "titel='$page'");
 		
 		// $home = file_get_contents ( "home.txt" );
 		// echo $home;
@@ -55,10 +59,8 @@
 			<div class="test">
 			
 			<?php
-			$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
-			selectDatabase ( $pdo, "cursus" );
 
-			$array = array ("code","omschrijving" );
+// 			$array = array ("code","omschrijving" );
 // 			print_array(fetchRows ( $pdo, "cursus", $array, "testdata"));
 			
 // 			echo fetchWithException($pdo, 'cursus', "omschrijving", "omschrijving LIKE '%SQL%'");

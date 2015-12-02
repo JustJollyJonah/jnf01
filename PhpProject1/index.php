@@ -26,6 +26,7 @@
             } else {
                 $page = "home";
             }
+            header('Location: indexLayout3.php');
             ?>
         </div>
 
