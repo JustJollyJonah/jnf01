@@ -18,7 +18,7 @@
     		<form class="cmsSelect" method='GET' action="Ingelogd.php">
     		<legend>Change content files</legend>
     			<?php 
-    			$txtfiles = array('home.txt','about.txt','product.txt','workshops.txt');
+    			$txtfiles = array('home','about','product','workshops');
     		
     			foreach($txtfiles as $file){
     				echo "<input type='submit' name='toChange' value='$file'><br>";
@@ -48,7 +48,7 @@
     		?>
     	</div>
     	<div class="contentRight">
-    		<iframe src="http://localhost:8080/PhpProject1/indexLayout3.php"></iframe>
+    		<iframe src="http://localhost:8080/jnf01/PhpProject1/indexLayout3.php"></iframe>
     	</div>
     </body>
 </html>

@@ -68,7 +68,7 @@ body{
 }
 
 .navbar_item_home:hover ~ .navbar_img{
-	background-image: url('img/banner_image.png');
+	background-image: url('img/banner_image2.0.png');
 	height: 100%;
 	background-size: 100%;
 }
