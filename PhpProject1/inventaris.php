@@ -1,4 +1,6 @@
     <?php
+    //debug stuff
+    $_SESSION = "Medewerker";
     //Importeer bestanden
     include 'DatabaseFunctions.php';
 	//connect met database
@@ -24,6 +26,10 @@
     	print ("<img src='".$imageurl."' /> <br>");
     	print ("Product nummer: " . $productnummer . "<br>");
     	print ("Naam: ". $product . "<br>");
+    	if ($_SESSION == 'Medewerker') {
+    		print ("Aantal beschikbaar: " . $beschikbaar . "<br>");
+    		
+    	}
     	
     }
     
