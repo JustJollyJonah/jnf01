@@ -5,13 +5,22 @@
 <title>Webpagina Framework</title>
 <link rel="stylesheet" href="Style_chris_3.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro|Raleway' rel='stylesheet' type='text/css'>
 <!--<link rel="stylesheet" href="stylejonah.css">-->
 </head>
 <body>
 
 
 	<div class="header">
-		<img src="img/Logo_01.jpg" class="img_logo">
+		<img src="img/dynamiek_logo.png" class="img_logo">
+	</div>
+	
+	<div class="navbar_mobile">
+		<details>
+			<ul>
+				<a>test</a>
+			</ul>
+		</details>
 	</div>
 
 	<div class="navbar">
@@ -67,6 +76,7 @@
 	</div>
 
 	<div class="footer">
+		<img src="img/dynamiek_logo.png" class="img_logo">
 		<ul>
 			<li><a href="?page=home">Home</a></li>
 			<li><a href="?page=about">Over Dynamiek ateliers</a></li>

@@ -1,27 +1,33 @@
 @media ( min-width : 800px) {
 	html {
 		height: 100%;
+		font-family: 'Open Sans', sans-serif;
+		font-family: 'Source Sans Pro', sans-serif;
 	}
 	body {
 		margin: 0px;
 		width: 100%;
 		height: 100%;
-		background-color: beige;
+		background-image: url('img/geometry_@2X.png');
 	}
 	.header {
 		width: 100%;
 		height: 15%;
-		background-color: #0099FF;
+		background: radial-gradient(50% 200%, #6699ff, #6666CC);
 	}
 	.img_logo {
 		height: 100%;
 		margin-right: 0px;
 		float: left;
 	}
+	.navbar_mobile{
+		display: none;
+	}
 	.navbar {
 		width: 100%;
 		height: 25%;
 		overflow: hidden;
+		background-color: #0099FF;
 	}
 	.navbar_list {
 		height: 100%;
@@ -29,42 +35,48 @@
 		list-style: none;
 		padding-left: 0px;
 		margin-top: 0px;
-		background-color: #FF9900;
 	}
 	.navbar_item_home {
 		height: 30px;
 		width: 20%;
 		display: inline;
 		float: left;
-		font-size: 75%;
+		font-size: 95%;
+		background: linear-gradient(to bottom, #d55d15, #efba3d);
+		border-radius: 6px 0 0 6px; 
 	}
 	.navbar_item_about {
 		height: 30px;
 		width: 20%;
 		display: inline;
 		float: left;
-		font-size: 75%;
+		font-size: 95%;
+		background: linear-gradient(to bottom, #d55d15, #efba3d);
 	}
 	.navbar_item_product {
 		height: 30px;
 		width: 20%;
 		display: inline;
 		float: left;
-		font-size: 75%;
+		font-size: 95%;
+		background: linear-gradient(to bottom, #d55d15, #efba3d);
 	}
 	.navbar_item_workshops {
 		height: 30px;
 		width: 20%;
 		display: inline;
 		float: left;
-		font-size: 75%;
+		font-size: 95%;
+		background: linear-gradient(to bottom, #d55d15, #efba3d);
 	}
 	.navbar_item_webshop {
 		height: 30px;
 		width: 20%;
 		display: inline;
 		float: left;
-		font-size: 75%;
+		font-size: 95%;
+		background: linear-gradient(to bottom, #d55d15, #efba3d);
+		border-radius: 0 6px 6px 0;
 	}
 	.navbar_item_home:hover ~ .navbar_img {
 		background-image: url('img/banner_image2.0.png');
@@ -103,9 +115,12 @@
 		width: 100%;
 		float: left;
 		text-align: center;
-		border-style: hidden solid hidden solid;
+		
 		font-size: 100%;
 		text-decoration: none;
+	}
+	.a:hover{
+		box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);
 	}
 	.content {
 		margin: 0 auto;
@@ -123,15 +138,22 @@
 		float: left;
 	}
 	.footer {
+		height: 150px;
 		width: 100%;
 		float: left;
 		display: inline-block;
 		margin-bottom: height;
+		background: radial-gradient(50% 100%, #6699cc, #003399);
 		background-color: blue;
+	}
+	.footer .img_logo{
+		margin-top: 18.75px;
+		height: 75%;
 	}
 	.footer ul {
 		list-style: none;
 		padding-left: 5px;
+		display: inline;
 	}
 	.footer ul li a {
 		color: black;
@@ -161,7 +183,7 @@
 	}
 }
 
-@media (min-width: 321px) and (max-width: 800px){
+@media (min-width: 361px) and (max-width: 800px){
 	html {
 		height: 100%;
 	}
@@ -181,10 +203,26 @@
 		margin-right: 0px;
 		float: left;
 	}
+	.navbar_mobile{
+		height: 40px;
+		width: 100%;
+	}
+	.navbar_mobile details ul a{
+		background-color: darkblue;
+		overflow: hidden;
+		width: 100%;
+		display: block;
+	}
+	.navbar_mobile details ul{
+		list-style: none;
+		padding-left: 0px;
+		z-index: 999;
+	}
 	.navbar {
 		width: 100%;
 		height: 2%;
 		overflow: hidden;
+		display: none;
 	}
 	.navbar_list {
 		height: 65%;
@@ -196,30 +234,35 @@
 		overflow: hidden;
 	}
 	.navbar_item_home {
+		height: 20px;
 		width: 20%;
 		float: left;
 		text-align: center;
 		font-size: 70%;
 	}
 	.navbar_item_about {
+		height: 20px;
 		width: 20%;
 		float: left;
 		text-align: center;
 		font-size: 70%;
 	}
 	.navbar_item_product {
+		height: 20px;
 		width: 20%;
 		float: left;
 		text-align: center;
 		font-size: 70%;
 	}
 	.navbar_item_workshops {
+		height: 20px;
 		width: 20%;
 		float: left;
 		text-align: center;
 		font-size: 70%;
 	}
 	.navbar_item_webshop {
+		height: 20px;
 		width: 20%;
 		float: left;
 		text-align: center;
@@ -241,6 +284,7 @@
 		margin: 0 auto;
 		overflow: hidden;
 		border-style: hidden solid hidden solid;
+		z-index: 1;
 	}
 	.content pre{
 		white-space: pre-wrap;
@@ -259,9 +303,13 @@
 	.footer{
 		width: 100%;
 		float: left;
-		display: inline-block;
+		display: none;
 		margin-bottom: height;
 		background-color: blue;
+	}
+	.footer .img_logo{
+		margin-top: 18.75px;
+		height: 75%;
 	}
 	.footer ul {
 		list-style: none;
@@ -279,7 +327,7 @@
 	}
 }
 
-@media(max-width: 320px){
+@media(max-width: 360px){
 	html {
 		height: 100%;
 	}
@@ -314,34 +362,34 @@
 		overflow: hidden;
 	}
 	.navbar_item_home {
+		height: 20px;
 		width: 20%;
 		float: left;
 		text-align: center;
-		font-size: 70%;
 	}
 	.navbar_item_about {
+		height: 20px;
 		width: 20%;
 		float: left;
 		text-align: center;
-		font-size: 70%;
 	}
 	.navbar_item_product {
+		height: 20px;
 		width: 20%;
 		float: left;
 		text-align: center;
-		font-size: 70%;
 	}
 	.navbar_item_workshops {
+		height: 20px;
 		width: 20%;
 		float: left;
 		text-align: center;
-		font-size: 70%;
 	}
 	.navbar_item_webshop {
+		height: 20px;
 		width: 20%;
 		float: left;
 		text-align: center;
-		font-size: 70%;
 	}
 	.a{
 		height: 100%;
@@ -349,6 +397,7 @@
 		float: left;
 		border-style: hidden solid hidden solid;
 		text-decoration: none;
+		font-size: 70%;
 	}
 	.navbar_img {
 		width: 0px;
@@ -376,7 +425,7 @@
 	.footer{
 		width: 100%;
 		float: left;
-		display: inline-block;
+		display: none;
 		margin-bottom: height;
 		background-color: blue;
 	}

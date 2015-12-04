@@ -19,7 +19,7 @@
 	
 // 	$rows = $query->rowCount();
 	
-	header ( "Location: Ingelogd.php?toChange=$toChange&Bewerkt=TRUE" );
+	header ( "Location: CMS.php?toChange=$toChange&Bewerkt=TRUE" );
 	
 	?>
 	</body>

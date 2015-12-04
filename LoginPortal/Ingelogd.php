@@ -20,6 +20,7 @@
     		<a href='bewerkProduct.php'>Product verwijderen</a><br>
     		<a href='bewerkProduct.php'>Product aanpassen</a>
     	</div><br>
+    	<a href="CMS.php">CMS</a>
     	<?php 
     	include("DatabaseFunctions.php");
     	$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
