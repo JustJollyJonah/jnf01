@@ -10,7 +10,7 @@
 session_start ();
 
 $user = $_POST ['username'];
-$pw = md5($_POST ['password']);
+$pw = Encrypt($_POST ['password']);
 
 $_SESSION['user'] = $user;
 
