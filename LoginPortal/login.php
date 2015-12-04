@@ -8,6 +8,7 @@
 <body>
 <?php
 session_start ();
+include ("CustomEncryption.php");
 
 $user = $_POST ['username'];
 $pw = Encrypt($_POST ['password']);
@@ -15,7 +16,7 @@ $pw = Encrypt($_POST ['password']);
 $_SESSION['user'] = $user;
 
 include ("DatabaseFunctions.php");
-include ("CustomEncryption.php");
+
 
 $pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
 
