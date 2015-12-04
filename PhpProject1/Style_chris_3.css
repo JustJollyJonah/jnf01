@@ -115,12 +115,15 @@
 		width: 100%;
 		float: left;
 		text-align: center;
-		
+		color: #29406b;
 		font-size: 100%;
 		text-decoration: none;
 	}
 	.a:hover{
 		box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);
+	}
+	.a:visited{
+		color: #29406b;
 	}
 	.content {
 		margin: 0 auto;
@@ -347,10 +350,26 @@
 		margin-right: 0px;
 		float: left;
 	}
+	.navbar_mobile{
+		height: 40px;
+		width: 100%;
+	}
+	.navbar_mobile details ul a{
+		background-color: darkblue;
+		overflow: hidden;
+		width: 100%;
+		display: block;
+	}
+	.navbar_mobile details ul{
+		list-style: none;
+		padding-left: 0px;
+		z-index: 999;
+	}
 	.navbar {
 		width: 100%;
 		height: 3%;
 		overflow: hidden;
+		display: none;
 	}
 	.navbar_list {
 		height: 65%;
