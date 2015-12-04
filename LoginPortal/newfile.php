@@ -18,13 +18,6 @@
     		
     		include ("DatabaseFunctions.php");
     		include ("CustomEncryption.php");
-    		
-    		$test = Encrypt("test");
-    		$test2 = Encrypt("test");
-    		print_r($test);
-    		echo "</br>";
-//     		print_r($test2);
-    		
     		?>
     			<form method="POST" action="login.php">
     				Gebruikersnaam: <input type="text" name="username"><br><br>
