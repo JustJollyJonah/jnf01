@@ -14,10 +14,9 @@
     	
     		<div class="loginform">
 	    	<?php 
-    		session_start();
+	    	include ("DatabaseFunctions.php");
+	    	include ("CustomEncryption.php");
     		
-    		include ("DatabaseFunctions.php");
-    		include ("CustomEncryption.php");
     		?>
     			<form method="POST" action="login.php">
     				Gebruikersnaam: <input type="text" name="username"><br><br>
