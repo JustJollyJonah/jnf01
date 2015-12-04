@@ -350,10 +350,26 @@
 		margin-right: 0px;
 		float: left;
 	}
+	.navbar_mobile{
+		height: 40px;
+		width: 100%;
+	}
+	.navbar_mobile details ul a{
+		background-color: darkblue;
+		overflow: hidden;
+		width: 100%;
+		display: block;
+	}
+	.navbar_mobile details ul{
+		list-style: none;
+		padding-left: 0px;
+		z-index: 999;
+	}
 	.navbar {
 		width: 100%;
 		height: 3%;
 		overflow: hidden;
+		display: none;
 	}
 	.navbar_list {
 		height: 65%;
