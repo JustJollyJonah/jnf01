@@ -343,6 +343,10 @@
 		text-decoration: none;
 		color: black;
 	}
+	.fb {
+	display:none;
+	}
+	
 }
 
 @media(max-width: 360px){
@@ -489,5 +493,8 @@
 		padding-right: 5px;
 		text-decoration: none;
 		color: black;
+	}
+	.fb {
+	display:none;
 	}
 }
