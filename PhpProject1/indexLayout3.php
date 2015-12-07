@@ -16,7 +16,8 @@
 	</div>
 	
 	<div class="navbar_mobile">
-		<details>
+		<details value='test'>
+		<summary><strong>Menu</strong></summary>
 			<ul>
 				<li><a href="indexLayout3.php?page=home" class="a"><strong>Home</strong></a></li>
 				<li><a href="indexLayout3.php?page=about" class="a"><strong>Over Dynamiek ateliers</strong></a></li>
