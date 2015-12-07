@@ -111,6 +111,7 @@
 		background-size: 100% 100%;
 	}
 	.a {
+		margin-top: 5px;
 		height: 100%;
 		width: 100%;
 		float: left;
@@ -119,7 +120,7 @@
 		font-size: 100%;
 		text-decoration: none;
 	}
-	.a:hover{
+	.navbar ul li:hover{
 		box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);
 	}
 	.a:visited{
@@ -162,7 +163,6 @@
 		color: black;
 	}
 	table {
-		border: solid 1px orange;
 		float: left;
 		display: inline;
 		margin-bottom: 25px;
@@ -175,7 +175,7 @@
 		width: calc(100%/ 3);
 	}
 	td, th {
-		border: solid 1px blue;
+		border: solid 1px purple;
 	}
 	.loginLink {
 		float: right;
@@ -189,17 +189,20 @@
 @media (min-width: 361px) and (max-width: 800px){
 	html {
 		height: 100%;
+		font-family: 'Open Sans', sans-serif;
+		font-family: 'Source Sans Pro', sans-serif;
 	}
 	body {
 		margin: 0px;
 		width: 100%;
 		height: 100%;
 		background-color: beige;
+		background-image: url('img/geometry_@2X.png');
 	}
 	.header {
 		width: 100%;
 		height: 15%;
-		background-color: #0099FF;
+		background: radial-gradient(50% 200%, #6699ff, #6666CC);
 	}
 	.img_logo {
 		height: 100%;
@@ -207,19 +210,31 @@
 		float: left;
 	}
 	.navbar_mobile{
-		height: 40px;
+		display: inline-table;
 		width: 100%;
+		background: radial-gradient(50% 200%, #6699ff, #2E45FF);
 	}
-	.navbar_mobile details ul a{
-		background-color: darkblue;
+	.navbar_mobile details{
+	}
+	.navbar_mobile details ul li{
+		background: linear-gradient(to right, darkblue, blue, darkblue);
 		overflow: hidden;
-		width: 100%;
+		width: 80%;
 		display: block;
+		font-size: 24px;
+		border-radius: 6px 6px 6px 6px; 
+		margin: 0 auto;
+		margin-bottom: 5px;
 	}
 	.navbar_mobile details ul{
 		list-style: none;
+		list-style: none;
 		padding-left: 0px;
 		z-index: 999;
+		margin-bottom: 0px;
+		text-align: center;
+	}
+	.navbar_mobile ul li{
 	}
 	.navbar {
 		width: 100%;
@@ -275,8 +290,8 @@
 		height: 100%;
 		width: 100%;
 		float: left;
-		border-style: hidden solid hidden solid;
 		text-decoration: none;
+		color: white;
 	}
 	.navbar_img {
 		width: 0px;
@@ -333,17 +348,19 @@
 @media(max-width: 360px){
 	html {
 		height: 100%;
+		font-family: 'Open Sans', sans-serif;
+		font-family: 'Source Sans Pro', sans-serif;
 	}
 	body {
 		margin: 0px;
 		width: 100%;
 		height: 100%;
-		background-color: beige;
+		background-image: url('img/geometry_@2X.png');
 	}
 	.header {
 		width: 100%;
 		height: 15%;
-		background-color: #0099FF;
+		background: radial-gradient(50% 200%, #6699ff, #6666CC);
 	}
 	.img_logo {
 		height: 100%;
@@ -351,19 +368,31 @@
 		float: left;
 	}
 	.navbar_mobile{
-		height: 40px;
+		display: inline-table;
 		width: 100%;
+		background: radial-gradient(50% 200%, #6699ff, #2E45FF);
 	}
-	.navbar_mobile details ul a{
-		background-color: darkblue;
+	.navbar_mobile details{
+	}
+	.navbar_mobile details ul li{
+		background: linear-gradient(to right, darkblue, blue, darkblue);
 		overflow: hidden;
-		width: 100%;
+		width: 80%;
 		display: block;
+		font-size: 24px;
+		border-radius: 6px 6px 6px 6px; 
+		margin: 0 auto;
+		margin-bottom: 5px;
 	}
 	.navbar_mobile details ul{
 		list-style: none;
+		list-style: none;
 		padding-left: 0px;
 		z-index: 999;
+		margin-bottom: 0px;
+		text-align: center;
+	}
+	.navbar_mobile ul li{
 	}
 	.navbar {
 		width: 100%;
@@ -414,9 +443,8 @@
 		height: 100%;
 		width: 100%;
 		float: left;
-		border-style: hidden solid hidden solid;
 		text-decoration: none;
-		font-size: 70%;
+		color: white;
 	}
 	.navbar_img {
 		width: 0px;

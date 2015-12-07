@@ -16,7 +16,10 @@ $pw = Encrypt($_POST ['password']);
 $_SESSION['user'] = $user;
 
 include ("DatabaseFunctions.php");
+<<<<<<< HEAD
+=======
 
+>>>>>>> branch 'master' of https://github.com/JustJollyJonah/jnf01
 
 $pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
 

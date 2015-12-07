@@ -26,25 +26,21 @@
     	$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
     	selectDatabase ( $pdo, "omega" );
     	
-    	$kwerie = $pdo->prepare("SELECT Product FROM inventaris");
+    	$kwerie = $pdo->prepare("SELECT * FROM inventaris");
     	$kwerie->execute();
-    	$array = array();
     	
     	while($row = $kwerie->fetch()){
-    		array_push($array, $row['Product']);
+    		$productnummer = $row['Productnummer'];
+    		$product = $row['Product'];
+    		$beschrijving = $row['Product'];
+    		$beschikbaar = $row['Beschikbaarheid'];
+    		$webshopurl = $row['WebshopURL'];
+    		$imageurl = $row['ImageURL'];
+    		
+    		echo $productnummer . " " .  $product . " " . $beschrijving . " " . $beschikbaar . " " . $webshopurl . " " . $imageurl;
     	}
     	
-    	print_r($array);
-    	
-    	$kwerie = $pdo->prepare("SELECT Beschrijving FROM inventaris");
-    	$kwerie->execute();
-    	$array = array();
-    	 
-    	while($row = $kwerie->fetch()){
-    		array_push($array, $row['Beschrijving']);
-    	}
-    	 
-    	print_r($array);
+//     	echo checkUserLevel($pdo, $user);
     	?>
     </body>
 </html>

@@ -18,7 +18,12 @@
 	<div class="navbar_mobile">
 		<details>
 			<ul>
-				<a>test</a>
+				<li><a href="indexLayout3.php?page=home" class="a"><strong>Home</strong></a></li>
+				<li><a href="indexLayout3.php?page=about" class="a"><strong>Over Dynamiek ateliers</strong></a></li>
+				<li><a href="indexLayout3.php?page=product" class="a"><strong>Accesoires en producten</strong></a></li>
+				<li><a href="indexLayout3.php?page=workshops" class="a"><strong>Workshops</strong></a></li>
+				<li><a href="" class="a"><strong>Webshop</strong></a></li>
+				<li><a href=""></a></li>
 			</ul>
 		</details>
 	</div>
@@ -50,8 +55,8 @@
 
 	<div class="content">
 		<pre><?php
-		$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
-		selectDatabase ( $pdo, "omega" );
+		$pdo = connectToServer ( "mysql:host=localhost;port=3307;", "root", "usbw" );
+		selectDatabase($pdo, 'omega');
 // 		$content = file_get_contents ( $contents [$page] );
 // 		echo $content;
 

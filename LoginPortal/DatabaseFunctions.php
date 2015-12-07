@@ -63,7 +63,15 @@ function fetchRows($pdo, $table, $data, $style) {
    	return $returnvalues;														//returns array
 }
 
-
+function checkUserLevel($pdo, $username){
+	$query = $pdo->prepare("SELECT gebruikersrechten FROM functie WHERE Functie = (SELECT Functie FROM login WHERE '$username' = gebruikersnaam)");
+	$query->execute();
+	
+	while($row = $query->fetch()){
+		$userLevel = $row['gebruikersrechten'];
+		return $userLevel;
+	}
+}
 
 
 
