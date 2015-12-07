@@ -1,4 +1,4 @@
-@media ( min-width : 800px) {
+@media ( min-width : 760px) {
 	html {
 		height: 100%;
 		font-family: 'Open Sans', sans-serif;
@@ -186,7 +186,7 @@
 	}
 }
 
-@media (min-width: 361px) and (max-width: 800px){
+@media (min-width: 401px) and (max-width: 760px){
 	html {
 		height: 100%;
 		font-family: 'Open Sans', sans-serif;
@@ -214,7 +214,8 @@
 		width: 100%;
 		background: radial-gradient(50% 200%, #6699ff, #2E45FF);
 	}
-	.navbar_mobile details{
+	.navbar_mobile details summary{
+		font-size: 18px;
 	}
 	.navbar_mobile details ul li{
 		background: linear-gradient(to right, darkblue, blue, darkblue);
@@ -345,7 +346,7 @@
 	}
 }
 
-@media(max-width: 360px){
+@media(max-width: 400px){
 	html {
 		height: 100%;
 		font-family: 'Open Sans', sans-serif;
