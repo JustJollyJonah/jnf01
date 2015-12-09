@@ -11,8 +11,6 @@
 <!--<link rel="stylesheet" href="stylejonah.css">-->
 </head>
 <body>
-
-
 	<div class="header">
 		<img src="img/dynamiek_logo.png" class="img_logo">
 		<div class="search">
@@ -25,7 +23,6 @@
 			</details>
 		</div>
 	</div>
-
 	<div class="navbar_mobile">
 		<details value='test'>
 			<summary>
@@ -88,18 +85,33 @@
 		
 		// 		?>
 		</div>
-
 	<div class="content">
-		<div class="pagina">
-			<pre><?php
-			$pdo = connectToServer ( "mysql:host=localhost;port=3307;", "root", "usbw" );
-			selectDatabase ( $pdo, 'omega' );
-			// $content = file_get_contents ( $contents [$page] );
-			// echo $content;
+		<div class="pagina"><?php
+		
+		// include ("DatabaseFunctions.php");
+		// include ("phpfuncties.php");
+		$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
+		selectDatabase ( $pdo, "omega" );
+		$searchquery = $_GET ['searchquery'];
+		echo "<h3>Zoekresultaten voor: </h3>  <i>$searchquery</i><br><br>";
+		
+		$query = $pdo->prepare ( "SELECT * FROM pagina WHERE Tekst LIKE '%$searchquery%'" );
+		$query->execute ();
+		
+		while ( $row = $query->fetch () ) {
+			$page = $row ['Titel']; // get page title
+			$tekst = explode ( ".", $row ['Tekst'] ); // get text from page(individual sentences
 			
-			echo fetchWithException ( $pdo, "pagina", "tekst", "titel='$page'" );
-			
-			?></pre>
+			echo "<a href=indexLayout3.php?page=$page class=searchresult>$page</a><br>"; // create link to page
+			foreach ( $tekst as $zin ) { // loop through text
+				if (stripos ( $zin, trim ( $searchquery ) ) !== false) { // separate search query from sentence
+					echo ucfirst ( ltrim ( $zin ) );
+				}
+			}
+			echo "<br><br>";
+		}
+		
+		?>
 		</div>
 		<div class="facebook-feed">
 			<div class="fb">
@@ -107,7 +119,7 @@
 				<script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "//connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.3";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
 				<center>
 					<div class="fb-page"
-						data-href="https://www.facebook.com/Dynamiek-Ateliers-694744090613339/?fref=ts"
+					data-href="https://www.facebook.com/Dynamiek-Ateliers-694744090613339/?fref=ts"
 						data-tabs="timeline" data-width="500" data-height="700"
 						data-small-header="false" data-adapt-container-width="true"
 						data-hide-cover="false" data-show-facepile="true"></div>
