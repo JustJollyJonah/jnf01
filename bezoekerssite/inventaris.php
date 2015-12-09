@@ -10,7 +10,7 @@
     //debug stuff
     session_start();
     //functions
-    include('DatabaseFunctions.php');
+    include('../DatabaseFunctions.php');
     
 //     function Inv_Plus($InvID) {
 //     	try {

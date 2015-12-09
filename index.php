@@ -1,5 +1,5 @@
 <?php
 
-header('Location: PhpProject1/index.php');
+header('Location: bezoekerssite/index.php');
 
 ?>

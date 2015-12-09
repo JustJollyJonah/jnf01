@@ -6,7 +6,7 @@
 <body>
 	<?php
 	
-	include("DatabaseFunctions.php");
+	include("../DatabaseFunctions.php");
 	$toChange = "";
 	$toChange = $_GET ['toChange'];
 	$bewerkt = $_GET ['Bewerk'];

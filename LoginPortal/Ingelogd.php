@@ -27,7 +27,7 @@
     	}else{
     		header('Location: newfile.php');
     	}
-    	include("DatabaseFunctions.php");
+    	include("../DatabaseFunctions.php");
     	$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
     	selectDatabase ( $pdo, "omega" );
     	
