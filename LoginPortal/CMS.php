@@ -27,7 +27,8 @@
 									'home',
 									'about',
 									'product',
-									'workshops' 
+									'workshops',
+									'Search'
 							);
 							
 							foreach ( $txtfiles as $file ) {

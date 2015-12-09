@@ -20,6 +20,28 @@
 		margin-right: 0px;
 		float: left;
 	}
+	.search{
+		display: inline;
+		float: right;
+	}
+	.search summary{
+		display: inline;
+		float: right;
+		background-image: url('img/search2.png');
+		width: 40px;
+		height: 40px;
+		background-size: 100%;
+	}
+	.search summary:hover{
+		background-image: url('img/search.png');
+	}
+	.search summary::-webkit-details-marker{
+		display: none;
+	}
+	.search details form input{
+		display: inline;
+		float: right;
+	}
 	.navbar_mobile{
 		display: none;
 	}
@@ -126,16 +148,41 @@
 	.a:visited{
 		color: #29406b;
 	}
-	.content {
+	.content{
+		width: 90%;
+		margin-left: 10%;
+	}
+	.searchresult{
+		font-size: 18px;
+		text-decoration: none;
+		color: blue;
+	}
+	.searchresult:hover{
+		font-size: 24px;
+	}
+	.pagina {
 		margin: 0 auto;
 		width: 60%;
+		display: inline;
+		float: left;
 		overflow: hidden;
 		border-style: hidden solid hidden solid;
+		min-height: 710px;
 	}
-	.content pre {
+	.pagina pre {
 		white-space: pre-wrap;
 		font-family: inherit;
 		padding: 0px 5px;
+		height: 100%;
+	}
+	.pagina h3{
+		display: inline;
+	}
+	.fb{
+		margin-top: 10px;
+		margin-left: 10px;
+		display: inline;
+		float: left;
 	}
 	.test {
 		width: 100%;
