@@ -8,8 +8,9 @@
     <body>
     <?php
     //debug stuff
-    $_SESSION = "Medewerker";
+    session_start();
     //functions
+    include('DatabaseFunctions.php');
     
     function Inv_Plus($InvID) {
     	try {
@@ -30,20 +31,18 @@
     	
     }
     //Importeer bestanden
-    include 'DatabaseFunctions.php';
+    
 	//connect met database
 
-    	try {
-    		$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
-    		selectDatabase ( $pdo, "omega" );
-    	} catch (Exception $e) {
-    		echo 'Caught exception: ',  $e->getMessage(), "\n";
-    	}
-    $stmt = $pdo->prepare("SELECT * FROM inventaris");
-    $stmt->execute();
+    
+    $pdo = connectToServer ( "mysql:host=localhost;port=3307;", "root", "usbw" );
+    selectDatabase ( $pdo, "omega" );
+    
+    $query = $pdo->prepare("SELECT * FROM inventaris");
+    $query->execute();
     $array = array();
     
-    while($row = $stmt->fetch()){
+    while($row = $query->fetch()){
     	$productnummer = $row['Productnummer'];
     	$product = $row['Product'];
     	$beschrijving = $row['Product'];
@@ -52,20 +51,18 @@
     	$imageurl = $row['ImageURL'];
     	
     	print ("<img src='".$imageurl."' /> <br>");
-    	print ("Product nummer: " . $productnummer . "<br>");
+    	print ("Productnummer: " . $productnummer . "<br>");
     	print ("Naam: ". $product . "<br>");
-    	if ($_SESSION == 'Medewerker') {
-    		print ("Aantal beschikbaar: " . $beschikbaar . "<br>");
-    		print ('<a href="" onclick='. Inv_Plus($productnummer) .' class="plusbtn">plusbtn</a>  ');
-    		print ('<a href="" onclick='. Inv_Min($productnummer) .' class="plusbtn">minbtn</a><br />');
-    		print ('<a href="" onclick='. Inv_Del($productnummer) .' class="plusbtn">Verwijderen</a><br />');
-    	}
+    	
+    	print ("Aantal beschikbaar: " . $beschikbaar . "<br>");
+    	print ('<a href="" onclick='. Inv_Plus($productnummer) .' class="plusbtn">plusbtn</a>  ');
+    	print ('<a href="" onclick='. Inv_Min($productnummer) .' class="plusbtn">minbtn</a><br />');
+    	print ('<a href="" onclick='. Inv_Del($productnummer) .' class="plusbtn">Verwijderen</a><br />');
+    	
     	print ("<br>");
     }
     
 	
 	?>
     </body>
-    </noframes>
-</frameset>
 </html>
