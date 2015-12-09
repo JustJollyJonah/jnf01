@@ -12,16 +12,14 @@
     //functions
     include('DatabaseFunctions.php');
     
-    function Inv_Plus($InvID) {
-    	try {
-    		$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
-    		selectDatabase ( $pdo, "omega" );
-    	} catch (Exception $e) {
-    		echo 'Caught exception: ',  $e->getMessage(), "\n";
-    	}
-    	$stmt = $pdo->prepare("UPDATE inventaris SET beschikbaarheid + 1 WHERE Productnummer=$InvID");
-    	$stmt->execute();
-    }
+//     function Inv_Plus($InvID) {
+//     	try {
+//     		$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
+//     		selectDatabase ( $pdo, "omega" );
+//     	} catch (Exception $e) {
+//     		echo 'Caught exception: ',  $e->getMessage(), "\n";
+//     	}
+//     }
     
     function Inv_Min($InvID) {
     	 
@@ -38,6 +36,15 @@
     $pdo = connectToServer ( "mysql:host=localhost;port=3307;", "root", "usbw" );
     selectDatabase ( $pdo, "omega" );
     
+    if (isset($_POST['plus'])){
+    	$stmt = $pdo->prepare("UPDATE inventaris SET aantal = aantal + 1 WHERE Productnummer=?");
+    	$stmt->execute(array($_POST["productnummer"]));
+    } else if (isset($_POST['min'])){
+    	$stmt = $pdo->prepare("UPDATE inventaris SET aantal = aantal - 1 WHERE Productnummer=?");
+    	$stmt->execute(array($_POST["productnummer"]));
+    } 
+
+    
     $query = $pdo->prepare("SELECT * FROM inventaris");
     $query->execute();
     $array = array();
@@ -46,7 +53,7 @@
     	$productnummer = $row['Productnummer'];
     	$product = $row['Product'];
     	$beschrijving = $row['Product'];
-    	$beschikbaar = $row['Beschikbaarheid'];
+    	$aantal = $row['Aantal'];
     	$webshopurl = $row['WebshopURL'];
     	$imageurl = $row['ImageURL'];
     	
@@ -54,9 +61,17 @@
     	print ("Productnummer: " . $productnummer . "<br>");
     	print ("Naam: ". $product . "<br>");
     	
-    	print ("Aantal beschikbaar: " . $beschikbaar . "<br>");
-    	print ('<a href="" onclick='. Inv_Plus($productnummer) .' class="plusbtn">plusbtn</a>  ');
-    	print ('<a href="" onclick='. Inv_Min($productnummer) .' class="plusbtn">minbtn</a><br />');
+    	print ("Aantal beschikbaar: " . $aantal . "<br>"); ?>
+    	<form action="inventaris.php" method="post">
+    	<input type="hidden" value="<?php print ($productnummer);?>" name="productnummer">
+    	<input type="submit" value="plus" name="plus">
+    	</form>
+    	<form action="inventaris.php" method="post">
+    	<input type="hidden" value="<?php print ($productnummer);?>" name="productnummer">
+    	<input type="submit" value="min" name="min">
+    	</form>
+    	<?php 
+     	print ('<a href="" onclick='. Inv_Min($productnummer) .' class="plusbtn">minbtn</a><br />');
     	print ('<a href="" onclick='. Inv_Del($productnummer) .' class="plusbtn">Verwijderen</a><br />');
     	
     	print ("<br>");
