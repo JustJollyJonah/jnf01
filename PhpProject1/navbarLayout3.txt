@@ -1,8 +1,0 @@
-<ul class="navbar_list">
-	<li class="navbar_item_home"><a href="indexLayout3.php?page=home" class="a"><strong>Home</strong></a></li>
-	<li class="navbar_item_about"><a href="indexLayout3.php?page=about" class="a"><strong>Over Dynamiek ateliers</strong></a></li>
-	<li class="navbar_item_product"><a href="indexLayout3.php?page=product" class="a"><strong>Accesoires en producten</strong></a></li>
-	<li class="navbar_item_workshops"><a href="indexLayout3.php?page=workshops" class="a"><strong>Workshops</strong></a></li>
-	<li class="navbar_item_webshop"><a href="" class="a"><strong>Webshop</strong></a></li>
-	<li class="navbar_img"><a href=""></a></li>
-</ul>

@@ -17,14 +17,9 @@
 	    	include ("DatabaseFunctions.php");
 	    	include ("CustomEncryption.php");
     		
-<<<<<<< HEAD
-    		include ("DatabaseFunctions.php");
-    		include ("CustomEncryption.php");
     		$pdo = connectToServer ( "mysql:host=localhost;port=3307;", "root", "usbw" );
     		selectDatabase($pdo, 'omega');
     		
-=======
->>>>>>> branch 'master' of https://github.com/JustJollyJonah/jnf01
     		?>
     			<form method="POST" action="login.php">
     			<?php 

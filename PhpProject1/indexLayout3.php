@@ -17,7 +17,7 @@
 	
 	<div class="navbar_mobile">
 		<details value='test'>
-		<summary><strong>Menu</strong></summary>
+		<summary><img src="img/View_Details.png" width="40" height="40" alt="menu"></summary>
 			<ul>
 				<li><a href="indexLayout3.php?page=home" class="a"><strong>Home</strong></a></li>
 				<li><a href="indexLayout3.php?page=about" class="a"><strong>Over Dynamiek ateliers</strong></a></li>
@@ -28,11 +28,23 @@
 			</ul>
 		</details>
 	</div>
-
+	<?php if (isset ( $_GET ['page'] )) {
+			$page = $_GET ['page'];
+		} else {
+			$page = "home";
+		}?>
 	<div class="navbar">
+		<ul class="navbar_list">
+			<li class="navbar_item_home" <?php if($page=='home'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a href="indexLayout3.php?page=home" class="a"><strong>Home</strong></a></li>
+			<li class="navbar_item_about" <?php if($page=='about'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a href="indexLayout3.php?page=about" class="a"><strong>Over Dynamiek ateliers</strong></a></li>
+			<li class="navbar_item_product" <?php if($page=='product'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a href="indexLayout3.php?page=product" class="a"><strong>Accesoires en producten</strong></a></li>
+			<li class="navbar_item_workshops" <?php if($page=='workshops'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a href="indexLayout3.php?page=workshops" class="a"><strong>Workshops</strong></a></li>
+			<li class="navbar_item_webshop" <?php if($page=='webshop'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a href="" class="a"><strong>Webshop</strong></a></li>
+			<li class="navbar_img"><a href=""></a></li>
+		</ul>
 		<?php
-		$file = file_get_contents ( "navbarLayout3.txt" );
-		echo $file;
+// 		$file = file_get_contents ( "navbarLayout3.txt" );
+// 		echo $file;
 		
 		header ( 'Content-Type: text/html; charset=ISO-8859-1' );
 		include ("DatabaseFunctions.php");
@@ -45,13 +57,9 @@
 				"workshops" => "workshops.txt" 
 		);
 		
-		if (isset ( $_GET ['page'] )) {
-			$page = $_GET ['page'];
-		} else {
-			$page = "home";
-		}
 		
-		?>
+		
+// 		?>
 		</div>
 
 	<div class="content">
@@ -67,6 +75,7 @@
 		// echo $home;
 		
 		?>
+		
 		</pre>
 			<div class="test">
 			
@@ -92,5 +101,6 @@
 		</ul>
 		<a href="../LoginPortal/newfile.php" class="loginLink">Login</a>
 	</div>
+	
 </body>
 </html>
