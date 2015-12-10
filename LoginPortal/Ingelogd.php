@@ -47,5 +47,8 @@
     	
 //     	echo checkUserLevel($pdo, $user);
     	?>
+    	
+    	<div class="plus_button"></div>
+    	
     </body>
 </html>
