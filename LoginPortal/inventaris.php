@@ -3,49 +3,60 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=${encoding}">
 <title>Inventaris</title>
-<link type="text/css" rel="stylesheet" href="bootstrap.css">
-<link type="text/css" rel="stylesheet" href="StylePortal.css">
+<link type="text/css" rel="stylesheet" src="bootstrap.css">
 </head>
     <body>
-    <div class="banner">
-    	<img src="" alt="Hier komt het logo">
-    	<p>Dynamiek Ateliers Login Portaal</p>
-    	<div class="LoggedInUser"><?php session_start();
-    	$user = $_SESSION['user'];
-    	echo $user;?><br>
-    	<a href="newfile.php">Log uit</a></div>
-    </div>
     <?php
-    //debug stuff
-    //functions
+    //sessie start
+    session_start();
+    //Includes
     include('../DatabaseFunctions.php');
-    
-    
+	//Database connectie
     $pdo = connectToServer ( "mysql:host=localhost;port=3307;", "root", "usbw" );
     selectDatabase ( $pdo, "omega" );
     
-    if (isset($_POST['plus'])){
+    //Hier komt alles vanuit een post te staan
+    if (isset($_POST['plus'])){	//Plus knop
     	$stmt = $pdo->prepare("UPDATE inventaris SET aantal = aantal + 1 WHERE Productnummer=?");
     	$stmt->execute(array($_POST["productnummer"]));
-    } else if (isset($_POST['min'])){
+    } else if (isset($_POST['min'])){ //Min knop
     	$stmt = $pdo->prepare("UPDATE inventaris SET aantal = aantal - 1 WHERE Productnummer=?");
     	$stmt->execute(array($_POST["productnummer"]));
-    } 
-
+    } else if (isset($_POST['verwijder'])) { //Verwijder knop, echter verwijderen we hem niet, we zetten hem op niet actief
+    	$stmt = $pdo->prepare("UPDATE inventaris SET actief = 0 WHERE Productnummer=?");
+    	$stmt->execute(array($_POST["productnummer"])); 
+    } else if (isset($_POST['toevoegen'])) { //Voeg toe knop, hier komt een heel formulier te voorschijn
+    	print ('
+    	<form action="inventaris.php" method="post">
+    	Productnaam: <input type="text" value="Naam van product" name="name"><br>
+    	Actief: <input type="radio" name="actief" value="Ja"> Ja
+    	<input type="radio" name="actief" value="nee"> Nee <br>
+    	Product beschrijving <br><textarea rows="3" cols="50" name="beschrijving"></textarea> <br>
+    	Aantal<input type="text" name="aantal" value="voer aantal in"><br>
+    	Image link<input type="text" name="imgurl" value="voer image URL in"><br>
+    	Webshop url<input type="text" name="webshopurl" value="voer webshop url in"><br>
+    	<input type="submit" name="voegtoe" value="product toevoegen">
+    	</form>
+    			');
+    } else if (isset($_POST['voegtoe'])) {
+    	$stmt = $pdo->prepare("INSERT INTO inventaris ");
+    	$stmt->execute(array($_POST["productnummer"]));
+    }
     
     $query = $pdo->prepare("SELECT * FROM inventaris");
     $query->execute();
     $array = array();
     
-    echo '<div class="contents">';
     while($row = $query->fetch()){
     	$productnummer = $row['Productnummer'];
+    	$actief = $row['actief'];
     	$product = $row['Product'];
-    	$beschrijving = $row['beschrijving'];
+    	$beschrijving = $row['Product'];
     	$aantal = $row['Aantal'];
     	$webshopurl = $row['WebshopURL'];
-    	$imageurl = $row['ImgURL'];
+    	$imageurl = $row['ImageURL'];
     	
+    	if ($actief == 1) {
     	print ("<img src='".$imageurl."' /> <br>");
     	print ("Productnummer: " . $productnummer . "<br>");
     	print ("Naam: ". $product . "<br>");
@@ -59,13 +70,21 @@
     	<input type="hidden" value="<?php print ($productnummer);?>" name="productnummer">
     	<input type="submit" value="min" name="min">
     	</form>
+    	<form action="inventaris.php" method="post">
+    	<input type="hidden" value="<?php print ($productnummer);?>" name="productnummer">
+    	<input type="submit" value="Verwijder" name="verwijder">
+    	</form>
     	<?php 
     	
     	print ("<br>");
+    } 
     }
-    echo "</div>";
     
 	
 	?>
+	
+    <form action="inventaris.php" method="post">
+    <input type="submit" value="Voeg een product toe" name="toevoegen">
+    </form> 
     </body>
 </html>
