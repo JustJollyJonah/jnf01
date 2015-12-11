@@ -31,12 +31,28 @@
 		width: 40px;
 		height: 40px;
 		background-size: 100%;
+		overflow: hidden;
 	}
 	.search summary:hover{
 		background-image: url('img/search.png');
 	}
 	.search summary::-webkit-details-marker{
 		display: none;
+	}
+	@keyframes fadeInRight{
+		0%{
+			opacity: 0;
+		}
+		100%{
+			opacity: 1;
+		}
+	}
+	.search details[open] > form{
+		animation-name: fadeInRight;
+		animation-duration: 1s;
+	}
+	.search details{
+		overflow: hidden;
 	}
 	.search details form input{
 		display: inline;
@@ -265,12 +281,28 @@
 	.navbar_mobile{
 		display: inline-table;
 		width: 100%;
-		background: radial-gradient(50% 200%, #6699ff, #2E45FF);
+		overflow: hidden;
 	}
-	.navbar_mobile details{
+	.navbar_mobile details div{
+		background: radial-gradient(50% 200%, #6699ff, #2E45FF);
+		height: 100%;
+		overflow: hidden;
+	}
+	@keyframes slideInDown{
+		0%{
+			transform: translateY(-100%);
+		}
+		100%{
+			transform: translateY(0);
+		}
+	}
+	.navbar_mobile details[open] > div ul{
+		animation-name: slideInDown;
+		animation-duration: 1s;
 	}
 	.navbar_mobile details summary{
 		font-size: 18px;
+		background: radial-gradient(50% 200%, #6699ff, #2E45FF);
 	}
 	.navbar_mobile details ul li{
 		background: linear-gradient(to right, darkblue, blue, darkblue);
@@ -288,9 +320,13 @@
 		padding-left: 0px;
 		z-index: 999;
 		margin-bottom: 0px;
+		margin-top: 0px;
+		height: 100%;
 		text-align: center;
+		background: radial-gradient(50% 200%, #6699ff, #2E45FF);
 	}
-	.navbar_mobile ul li{
+	.navbar_mobile details{
+		height: 100%;
 	}
 	.navbar {
 		width: 100%;
@@ -433,8 +469,24 @@
 		display: inline-table;
 		width: 100%;
 		background: radial-gradient(50% 200%, #6699ff, #2E45FF);
+		overflow: hidden;
 	}
-	.navbar_mobile details{
+	@keyframes slideInDown{
+		0%{
+			transform: translateY(-100%);
+		}
+		100%{
+			transform: translateY(0);
+		}
+	}
+	.navbar_mobile details[open] > div ul{
+		animation-name: slideInDown;
+		animation-duration: 1s;
+	}
+	.navbar_mobile details div{
+		font-size: 18px;
+		background: radial-gradient(50% 200%, #6699ff, #2E45FF);
+		overflow: hidden;
 	}
 	.navbar_mobile details ul li{
 		background: linear-gradient(to right, darkblue, blue, darkblue);
@@ -452,7 +504,9 @@
 		padding-left: 0px;
 		z-index: 999;
 		margin-bottom: 0px;
+		margin-top: 0px;
 		text-align: center;
+		background: radial-gradient(50% 200%, #6699ff, #2E45FF);
 	}
 	.navbar_mobile ul li{
 	}
