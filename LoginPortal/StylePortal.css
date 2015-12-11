@@ -60,3 +60,18 @@ body {
 	height: 100%;
 	background-color: #669999;
 }
+.plus_button{
+	background-image: url('../bezoekerssite/img/plus2.png');
+	width: 30px;
+	height: 30px;
+	background-size: 100% 100%;
+}
+.plus_button:hover{
+	background-image: url('../bezoekerssite/img/plus.png');
+}
+.minus_button{
+	background-image: url('img/minus.png');
+}
+.minus_button:hover{
+	background-image: url('img/minus2.png');
+}
