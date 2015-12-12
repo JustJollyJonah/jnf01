@@ -17,10 +17,10 @@
     
     //Hier komt alles vanuit een post te staan
     if (isset($_POST['plus'])){	//Plus knop
-    	$stmt = $pdo->prepare("UPDATE inventaris SET aantal = aantal + 1 WHERE Productnummer=?");
+    	$stmt = $pdo->prepare("UPDATE inventaris SET Beschikbaarheid = aantal + 1 WHERE Productnummer=?");
     	$stmt->execute(array($_POST["productnummer"]));
     } else if (isset($_POST['min'])){ //Min knop
-    	$stmt = $pdo->prepare("UPDATE inventaris SET aantal = aantal - 1 WHERE Productnummer=?");
+    	$stmt = $pdo->prepare("UPDATE inventaris SET Beschikbaarheid = aantal - 1 WHERE Productnummer=?");
     	$stmt->execute(array($_POST["productnummer"]));
     } else if (isset($_POST['verwijder'])) { //Verwijder knop, echter verwijderen we hem niet, we zetten hem op niet actief
     	$stmt = $pdo->prepare("UPDATE inventaris SET actief = 0 WHERE Productnummer=?");
@@ -49,10 +49,10 @@
     
     while($row = $query->fetch()){
     	$productnummer = $row['Productnummer'];
-    	$actief = $row['actief'];
+    	$actief = $row['Actief'];
     	$product = $row['Product'];
     	$beschrijving = $row['Product'];
-    	$aantal = $row['Aantal'];
+    	$aantal = $row['Beschikbaarheid'];
     	$webshopurl = $row['WebshopURL'];
     	$imageurl = $row['ImageURL'];
     	
@@ -82,9 +82,13 @@
     
 	
 	?>
+	<?php if (!isset($_POST['toevoegen'])) {
+		print ('
 	
     <form action="inventaris.php" method="post">
     <input type="submit" value="Voeg een product toe" name="toevoegen">
-    </form> 
+    </form>  
+				'); }
+    ?>
     </body>
 </html>
