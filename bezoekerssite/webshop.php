@@ -89,9 +89,35 @@
 
 	<div class=content>
 		<div class=pagina>
+			<h2>Producten</h2>
+			<table class=webshop>
 				<?php
+				$pdo = connectToServer ( "mysql:host=localhost;port=3307;", "root", "usbw" );
+				selectDatabase ( $pdo, 'omega' );
+				
+				$query = $pdo->prepare("SELECT * FROM inventaris");
+				$query->execute();
+				
+				while($row = $query->fetch()){
+					$product = $row['Product'];
+					$beschrijving = $row['Beschrijving'];
+					$active = $row['Actief'];
+					$image = $row['ImageURL'];
+					$shop_url = $row['WebshopURL'];
+					$categorie = $row['Categorienummer'];
+					$eigenschap = $row['Eigenschap'];
+					
+					if($active){
+						echo "<tr>";
+						echo "<td><img src=$image width=80 height=80 alt='Plaats plaatje hier!'></td>";
+						echo "<td><strong>$beschrijving</strong></td>";
+						echo "<td><a href=$shop_url>Bestellen</a></td>";
+						echo "</tr>";
+					}
+				}
 				
 				?>
+				</table>
 			</div>
 		<div class="facebook-feed">
 			<div class="fb">

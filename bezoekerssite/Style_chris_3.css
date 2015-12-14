@@ -3,7 +3,7 @@
 		display: none;
 	}
 	.content .pagina{
-		width: 80%;
+		width: 90%;
 	}
 }
 
@@ -208,7 +208,7 @@
 	}
 	.content{
 		width: 90%;
-		margin-left: 10%;
+		margin: 0 auto;
 	}
 	.searchresult{
 		font-size: 18px;
@@ -226,6 +226,31 @@
 		overflow: hidden;
 		border-style: hidden solid hidden solid;
 		min-height: 710px;
+	}
+	.pagina div{
+		display: inline;
+	}
+	.pagina table{
+		margin: 2% auto;
+		display: inline;
+	}
+	.webshop tbody tr td{
+		white-space: pre-wrap;
+		padding: 0px 50px;
+	}
+	.pagina h2{
+		margin-left: 10%;
+	}
+	.pagina a{
+		color: white;
+		text-decoration: none;
+		background-color: black;
+		border-radius: 6px;
+		padding: 4px 5px;
+		border: solid 1px grey;
+	}
+	.pagina a:hover{
+		background-color: darkgrey;
 	}
 	.pagina pre {
 		white-space: pre-wrap;
@@ -267,7 +292,7 @@
 	.footer ul li a {
 		color: black;
 	}
-	table {
+	.table {
 		float: left;
 		display: inline;
 		margin-bottom: 25px;
@@ -279,7 +304,7 @@
 		margin-bottom: 25px;
 		width: calc(100%/ 3);
 	}
-	td, th {
+	.td, .th {
 		border: solid 1px purple;
 	}
 	.loginLink {
