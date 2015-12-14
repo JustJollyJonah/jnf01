@@ -1,3 +1,24 @@
+@media ( max-width : 960px) and ( min-width : 760px ) {
+	.content .fb{
+		display: none;
+	}
+	.content .pagina{
+		width: 80%;
+	}
+}
+
+@media ( max-width : 1150px) and ( min-width : 960px ) {
+	.content .pagina{
+		width: 40%;
+	}
+}
+
+@media ( max-width : 1435px) and ( min-width : 1150px ) {
+	.content .pagina{
+		width: 50%;
+	}
+}
+
 @media ( min-width : 760px) {
 	html {
 		height: 100%;
@@ -74,6 +95,22 @@
 		padding-left: 0px;
 		margin-top: 0px;
 	}
+	@keyframes imgFadeOut{
+		0%{
+			opacity: 0;
+		}
+		100%{
+			opacity: 1;
+		}
+	}
+	@keyframes imgFadeIn{
+		0%{
+			opacity: 1;
+		}	
+		100%{
+			opacity: 0;
+		}
+	}
 	.navbar_item_home {
 		height: 30px;
 		width: 20%;
@@ -116,10 +153,15 @@
 		background: linear-gradient(to bottom, #d55d15, #efba3d);
 		border-radius: 0 6px 6px 0;
 	}
+	.navbar_item_home:hover{
+		
+	}
 	.navbar_item_home:hover ~ .navbar_img {
 		background-image: url('img/banner_image2.0.png');
 		height: 100%;
 		background-size: 100% 100%;
+		animation-name: imgFadeOut;
+		animation-duration: 0.5s;
 	}
 	.navbar_item_about:hover ~ .navbar_img {
 		background-image: url('img/banner_about.png');
