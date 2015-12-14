@@ -126,7 +126,7 @@
 			<li><a href="?page=workshops">Workshops</a></li>
 			<li><a href="">Webshop</a></li>
 		</ul>
-		<a href="../LoginPortal/newfile.php" class="loginLink">Login</a>
+		<a href="../LoginPortal/login.php" class="loginLink">Login</a>
 	</div>
 
 </body>

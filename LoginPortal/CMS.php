@@ -27,8 +27,7 @@
 									'home',
 									'about',
 									'product',
-									'workshops',
-									'Search'
+									'workshops'
 							);
 							
 							foreach ( $txtfiles as $file ) {
@@ -70,7 +69,7 @@
 						?>
     	</div>
 		<div class="contentRight">
-			<iframe src="http://localhost:8080/PhpProject1/indexLayout3.php"></iframe>
+			<iframe src="http://localhost:8080/bezoekerssite/index.php"></iframe>
 		</div>
 	</div>
 </body>
