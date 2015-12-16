@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Webpagina Framework</title>
 <link rel="stylesheet" href="Style_chris_3.css">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link
 	href='https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro|Raleway'
@@ -75,6 +76,7 @@
 				href="webshop.php" class="a"><strong>Webshop</strong></a></li>
 			<li class="navbar_img"><a href=""></a></li>
 		</ul>
+		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
 		<?php
 		// $file = file_get_contents ( "navbarLayout3.txt" );
 		// echo $file;
