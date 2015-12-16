@@ -96,7 +96,7 @@ if (isset ( $_POST ['voegtoe'] )) {
 			<tr>
 				<td><input type="submit" name="voegtoe" value="product toevoegen"></td>
 		</form>
-		<form action="inventaris.php" method="post">
+		<form action="../inventaris.php" method="post">
 			<td><input type="submit" name="terug" value="Terug naar overzicht"></td>
 			</tr>
 		</form>

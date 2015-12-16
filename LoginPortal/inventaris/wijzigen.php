@@ -4,12 +4,12 @@ include 'basis.php';
 
 
 //Wijzigen zonder een foto verandering
-if (isset($_POST['wijzig_update']) && !isset($_POST['fileToUpload'])) {
+if (isset($_POST['wijzig_update']) && !isset($_FILES['fileToUpload'])) {
 	$query = $pdo->prepare('UPDATE inventaris SET Product = ?, Beschrijving = ?, WebshopURL = ?, Beschikbaarheid = ?, Eigenschap = ? WHERE productnummer = ?');
 	$query->execute(array($_POST['product'], $_POST['beschrijving'], $_POST['webshopurl'], $_POST['beschikbaarheid'], $_POST['eigenschap'], $_POST['productnummer']));
 	header('location:../inventaris.php');
 	exit();
-} else if (isset($_POST['wijzig_update']) && isset($_POST['fileToUpload'])) {
+} else if (isset($_POST['wijzig_update']) && isset($_FILES['fileToUpload'])) {
 	
 	$target_dir = "../uploads/";
 	$target_file = $target_dir . basename ( $_FILES ["fileToUpload"] ["name"] );
@@ -80,7 +80,7 @@ if (isset($_POST['wijzig_update']) && !isset($_POST['fileToUpload'])) {
 						$eigenschap = $row ['Eigenschap'];
 						
 						print ("<img width='100px' height='auto' src='" . $imageurl . "' /> <br>") ; ?>
-						<form action="wijzigen.php" method="post">
+						<form action="wijzigen.php" method="post" enctype="multipart/form-data">
 						<input type="hidden" value="<?php print ($productnummer); ?>" name="productnummer">
 						<table>
 						<tr><td colspan="2"><input type="file" name="fileToUpload"></td></tr>
