@@ -10,17 +10,17 @@
     	<div class="banner">
     		<img src="" alt="Hier komt het logo">
     		<p>Dynamiek Ateliers Login Portaal</p>
-    		<div class="LoggedInUser"><?php session_start();
-    		$user = $_SESSION['user'];
-    		echo $user;?><br>
-    		<a href="newfile.php">Log uit</a></div>
+    		<a class=button href=inventaris.php>Voorraad</a>
+    		<a class=button href=CMS.php>CMS</a>
+    		<a class=button href=gebruikersbeheer.php>Gebruikersbeheer</a>
+    		<div class="LoggedInUser"><?php 
+    			session_start();
+    			$user = $_SESSION['user'];
+    			echo $user;
+    			?><br>
+    			<a href="login.php" class=button>Log uit</a>
+    		</div>
     	</div>
-    	<div class="addProduct">
-    		<a href='bewerkProduct.php'>Product toevoegen</a><br>
-    		<a href='bewerkProduct.php'>Product verwijderen</a><br>
-    		<a href='bewerkProduct.php'>Product aanpassen</a>
-    	</div><br>
-    	<a href="CMS.php">CMS</a>
     	<?php 
     	if(isset($_SESSION['user'])){
     		
@@ -34,21 +34,19 @@
     	$kwerie = $pdo->prepare("SELECT * FROM inventaris");
     	$kwerie->execute();
     	
-    	while($row = $kwerie->fetch()){
-    		$productnummer = $row['Productnummer'];
-    		$product = $row['Product'];
-    		$beschrijving = $row['Product'];
-    		$beschikbaar = $row['Beschikbaarheid'];
-    		$webshopurl = $row['WebshopURL'];
-    		$imageurl = $row['ImageURL'];
+//     	while($row = $kwerie->fetch()){
+//     		$productnummer = $row['Productnummer'];
+//     		$product = $row['Product'];
+//     		$beschrijving = $row['Product'];
+//     		$beschikbaar = $row['Beschikbaarheid'];
+//     		$webshopurl = $row['WebshopURL'];
+//     		$imageurl = $row['ImageURL'];
     		
-    		echo $productnummer . " " .  $product . " " . $beschrijving . " " . $beschikbaar . " " . $webshopurl . " " . $imageurl;
-    	}
+//     		echo $productnummer . " " .  $product . " " . $beschrijving . " " . $beschikbaar . " " . $webshopurl . " " . $imageurl;
+//     	}
     	
 //     	echo checkUserLevel($pdo, $user);
     	?>
-    	
-    	<div class="plus_button"></div>
     	
     </body>
 </html>

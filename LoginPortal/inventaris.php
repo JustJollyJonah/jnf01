@@ -7,6 +7,7 @@
 </head>
 <body>
     <?php
+
     			include ('../DatabaseFunctions.php');
 				include 'inventaris/basis.php';
 
@@ -78,6 +79,7 @@
 							}
 							?>
     	<form action="inventaris.php" method="post">
+
 		<input type="hidden" value="<?php print ($productnummer);?>" name="productnummer"> 
 		<input type="hidden" value="<?php print ($pagina);?>" name="pagina">
 		<input type="submit" value="plus" name="plus">
@@ -128,12 +130,13 @@
 						echo ("<a href=inventaris.php?page=$nextpage> > </a>");
 						echo ("<a href=inventaris.php?page=$totaalPagina> >| </a>");
 					}
-					
+
 					?>
 	
-    <form action="inventaris/toevoegen.php" method="post">
+
+    	<form action="inventaris/toevoegen.php" method="post">
 		<input type="submit" value="Voeg een product toe" name="toevoegen">
-	</form>  
+		</form>  
 	<?php 			 } ?>
     </body>
 </html>

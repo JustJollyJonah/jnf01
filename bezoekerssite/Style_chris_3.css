@@ -95,22 +95,6 @@
 		padding-left: 0px;
 		margin-top: 0px;
 	}
-	@keyframes imgFadeOut{
-		0%{
-			opacity: 0;
-		}
-		100%{
-			opacity: 1;
-		}
-	}
-	@keyframes imgFadeIn{
-		0%{
-			opacity: 1;
-		}	
-		100%{
-			opacity: 0;
-		}
-	}
 	.navbar_item_home {
 		height: 30px;
 		width: 20%;
@@ -153,15 +137,10 @@
 		background: linear-gradient(to bottom, #d55d15, #efba3d);
 		border-radius: 0 6px 6px 0;
 	}
-	.navbar_item_home:hover{
-		
-	}
 	.navbar_item_home:hover ~ .navbar_img {
 		background-image: url('img/banner_image2.0.png');
 		height: 100%;
 		background-size: 100% 100%;
-		animation-name: imgFadeOut;
-		animation-duration: 0.5s;
 	}
 	.navbar_item_about:hover ~ .navbar_img {
 		background-image: url('img/banner_about.png');
@@ -209,6 +188,8 @@
 	.content{
 		width: 90%;
 		margin: 0 auto;
+		height: 100%;
+		margin-left: 10%;
 	}
 	.searchresult{
 		font-size: 18px;
@@ -218,9 +199,10 @@
 	.searchresult:hover{
 		font-size: 24px;
 	}
-	.pagina {
-		margin: 0 auto;
+	.pagina{
+		margin: auto;
 		width: 60%;
+		height: 100%;
 		display: inline;
 		float: left;
 		overflow: hidden;
@@ -233,6 +215,10 @@
 	.pagina table{
 		margin: 2% auto;
 		display: inline;
+	}
+	.webshop tbody{
+		max-width: 80%;
+		overflow: hidden;
 	}
 	.webshop tbody tr td{
 		white-space: pre-wrap;
@@ -252,14 +238,40 @@
 	.pagina a:hover{
 		background-color: darkgrey;
 	}
+	.pagina div{
+		display: inline;
+	}
+	.pagina table{
+		margin: auto;
+		margin-top: 2%;
+		display: inline;
+	}
+	.webshop tbody tr td{
+		white-space: pre-wrap;
+		padding: 0px 50px 0px 50px;
+	}
 	.pagina pre {
 		white-space: pre-wrap;
 		font-family: inherit;
 		padding: 0px 5px;
 		height: 100%;
 	}
+	.pagina h2{
+		margin-left: 10%;
+	}
 	.pagina h3{
 		display: inline;
+	}
+	.pagina a{
+		color: white;
+		text-decoration: none;
+		background-color: black;
+		border-radius: 6px 6px 6px 6px;
+		padding: 4px 5px;
+		border: solid 1px grey; 
+	}
+	.pagina a:hover{
+		box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);
 	}
 	.fb{
 		margin-top: 10px;

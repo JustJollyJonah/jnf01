@@ -24,7 +24,7 @@ body{
 
 .cmsSelect{
 	float: left;
-	display: inline-block;
+	display: inline;
 	border: solid 1px black;
 	margin-top: 5px;
 	margin-left: 5px;
@@ -40,6 +40,10 @@ body{
 	display: inline;
 	margin-left: 5px;
 	margin-right: 100%;
+}
+
+.BewerkForm{
+	margin-top: 180px;
 }
 
 .cmsBewerk{
