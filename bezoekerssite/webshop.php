@@ -51,18 +51,23 @@
 	?>
 	<div class="navbar">
 		<ul class="navbar_list">
-			<li class="navbar_item_home"><a
-				href="index.php?page=home" class="a"><strong>Home</strong></a></li>
-			<li class="navbar_item_about"><a
-				href="index.php?page=about" class="a"><strong>Over Dynamiek ateliers</strong></a></li>
-			<li class="navbar_item_product"><a
+			<li class="navbar_item_home"><a href="index.php?page=home" class="a"><strong>Home</strong></a></li>
+
+			<li class="navbar_item_about"><a href="index.php?page=about"
+				class="a"><strong>Over Dynamiek ateliers</strong></a></li>
+
+			<li class="navbar_item_product"
+				<?php if($page=='product'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a
 				href="index.php?page=product" class="a"><strong>Accesoires en
 						producten</strong></a></li>
-			<li class="navbar_item_workshops"><a
-				href="index.php?page=workshops" class="a"><strong>Workshops</strong></a></li>
+
+			<li class="navbar_item_workshops"><a href="index.php?page=workshops"
+				class="a"><strong>Workshops</strong></a></li>
+
 			<li class="navbar_item_webshop"
 				<?php echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';?>><a
 				href="webshop.php" class="a"><strong>Webshop</strong></a></li>
+
 			<li class="navbar_img"><a href=""></a></li>
 		</ul>
 		<?php
@@ -91,19 +96,19 @@
 				$pdo = connectToServer ( "mysql:host=localhost;port=3307;", "root", "usbw" );
 				selectDatabase ( $pdo, 'omega' );
 				
-				$query = $pdo->prepare("SELECT * FROM inventaris");
-				$query->execute();
+				$query = $pdo->prepare ( "SELECT * FROM inventaris" );
+				$query->execute ();
 				
-				while($row = $query->fetch()){
-					$product = $row['Product'];
-					$beschrijving = $row['Beschrijving'];
-					$active = $row['Actief'];
-					$image = $row['ImageURL'];
-					$shop_url = $row['WebshopURL'];
-					$categorie = $row['Categorienummer'];
-					$eigenschap = $row['Eigenschap'];
+				while ( $row = $query->fetch () ) {
+					$product = $row ['Product'];
+					$beschrijving = $row ['Beschrijving'];
+					$active = $row ['Actief'];
+					$image = $row ['ImageURL'];
+					$shop_url = $row ['WebshopURL'];
+					$categorie = $row ['Categorienummer'];
+					$eigenschap = $row ['Eigenschap'];
 					
-					if($active){
+					if ($active) {
 						echo "<tr>";
 						echo "<td><img src=$image width=80 height=80 alt='Plaats plaatje hier!'></td>";
 						echo "<td><strong>$beschrijving</strong></td>";
@@ -111,10 +116,31 @@
 						echo "</tr>";
 					}
 				}
+				?>
+					<tr>
+					<td><img src="img/test_product.png" width="80" height="80"
+						alt="Product"></td>
+					<td><strong>Lekker zachte teddy-beer voor uw kind!</strong></td>
+					<td><a href="test">Bestellen</a></td>
+				</tr>
+				<tr>
+					<td><img src="img/test_product2.png" width="80" height="80"
+						alt="Product2"></td>
+					<td><strong>Dit is een geweldig schilderij!</strong></td>
+					<td><a href="test">Bestellen</a></td>
+				</tr>
+				<tr>
+					<td><img src="img/test_product3.png" width="80" height="80"
+						alt="Product3"></td>
+					<td><strong>Last van deuren die dicht slaan? Koop een deurstopper!</strong></td>
+					<td><a href="test">Bestellen</a></td>
+				</tr>
+
+				<?php
 				
 				?>
 				</table>
-			</div>
+		</div>
 		<div class="facebook-feed">
 			<div class="fb">
 				<div id="fb-root"></div>
@@ -129,6 +155,8 @@
 			</div>
 		</div>
 	</div>
+
+	</div>
 	<div class="footer">
 		<img src="img/dynamiek_logo.png" class="img_logo">
 		<ul>
@@ -138,7 +166,7 @@
 			<li><a href="?page=workshops">Workshops</a></li>
 			<li><a href="">Webshop</a></li>
 		</ul>
-		<a href="../LoginPortal/newfile.php" class="loginLink">Login</a>
+		<a href="../LoginPortal/login.php" class="loginLink">Login</a>
 	</div>
 </body>
 </html>

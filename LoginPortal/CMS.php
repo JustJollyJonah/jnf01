@@ -1,21 +1,30 @@
-<!DOCTYPE html>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="StylePortal.css">
 <link rel="stylesheet" href="cmsStyle.css">
+<script src="WYSIWYG\tinymce\js\tinymce\tinymce.min.js"></script>
+<script>
+	tinymce.init({
+		selector: '#mytextarea',
+		plugins: 'autoresize'
+	});
+</script>
 <title>Insert title here</title>
 </head>
 <body>
 	<div class="banner">
 		<img src="" alt="Hier komt het logo">
 		<p>Dynamiek Ateliers Login Portaal</p>
+		<a class=button href=inventaris.php>Voorraad</a> <a class=button
+			href=CMS.php>CMS</a> <a class=button href=gebruikersbeheer.php>Gebruikersbeheer</a>
 		<div class="LoggedInUser"><?php
-		
 		session_start ();
 		$user = $_SESSION ['user'];
 		echo $user;
-		?><br> <a href="newfile.php">Log uit</a>
+		?><br> <a href="login.php" class=button>Log uit</a>
 		</div>
 	</div>
 	<div class="contents">
@@ -27,7 +36,7 @@
 									'home',
 									'about',
 									'product',
-									'workshops'
+									'workshops' 
 							);
 							
 							foreach ( $txtfiles as $file ) {
@@ -48,14 +57,25 @@
 						
 						header ( 'Content-Type: text/html; charset=ISO-8859-1' );
 						if (isset ( $_GET ['toChange'] )) {
-							$toChange = "";
+							$toChange = '';
 							$toChange = $_GET ['toChange'];
-							echo "<form action='Bewerk.php' method='GET'>";
-							echo "<textarea class='cmsTextarea' name='Bewerk'>" . $test . "</textarea><br>";
+							echo "<form action=Bewerk.php method=get class=BewerkForm>";
+							echo "<textarea id=mytextarea name=Bewerk>$test</textarea><br>";
 							echo "<input type='submit' value='Bewerk' class='cmsBewerk'>";
 							echo "<input type='hidden' name=toChange value=" . $toChange . ">";
 							echo "</form>";
 						}
+						
+						// header ( 'Content-Type: text/html; charset=ISO-8859-1' );
+						// if (isset ( $_GET ['toChange'] )) {
+						// $toChange = "";
+						// $toChange = $_GET ['toChange'];
+						// echo "<form action='Bewerk.php' method='GET'>";
+						// echo "<textarea class='cmsTextarea' name='Bewerk'>" . $test . "</textarea><br>";
+						// echo "<input type='submit' value='Bewerk' class='cmsBewerk'>";
+						// echo "<input type='hidden' name=toChange value=" . $toChange . ">";
+						// echo "</form>";
+						// }
 						
 						if (isset ( $_GET ['Bewerkt'] )) {
 							if ($_GET ['Bewerkt']) {
