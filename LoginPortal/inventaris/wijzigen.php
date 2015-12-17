@@ -9,6 +9,8 @@ if (isset($_POST['wijzig_update']) && !isset($_FILES['fileToUpload'])) {
 	$query->execute(array($_POST['product'], $_POST['beschrijving'], $_POST['webshopurl'], $_POST['beschikbaarheid'], $_POST['eigenschap'], $_POST['productnummer']));
 	header('location:../inventaris.php');
 	exit();
+	
+//Wijzigen met een foto verandering
 } else if (isset($_POST['wijzig_update']) && isset($_FILES['fileToUpload'])) {
 	
 	$target_dir = "../uploads/";
@@ -26,6 +28,7 @@ if (isset($_POST['wijzig_update']) && !isset($_FILES['fileToUpload'])) {
 	}
 	// Controleer of het bestand al bestaat
 	if (file_exists ( $target_file )) {
+		
 		echo "Sorry, het bestand bestaal al op de server";
 		$uploadOk = 0;
 	}
