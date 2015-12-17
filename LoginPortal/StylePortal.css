@@ -92,3 +92,6 @@ body {
 .minus_button:hover{
 	background-image: url('img/minus2.png');
 }
+td{
+	text-align: center;
+}

@@ -39,6 +39,7 @@
 	$query->execute();
 	
 	echo "<table>";
+	echo "<tr><th>Nummer</th><th>Voornaam</th><th>Achternaam</th><th>actief</th></tr>";
 	while($row = $query->fetch()){
 		$nummer = $row['Medewerkernummer'];
 		$voornaam = $row['Naam'];
@@ -46,8 +47,14 @@
 		$actief = $row['Actief'];
 // 		echo $voornaam . "<br>";
 		
-		
+		echo "
+    	<tr>
+			<td>$nummer</td><td>$voornaam</td><td>$achternaam</td><td><input type=checkbox name='actief' value=$actief></td>
+			<td><a href=bewerkMedewerker.php?verwijder=$nummer>Verwijder</a></td>
+		</tr>";
 	}
+	echo "</table>";
+	echo "</form>";
 	?>
 	</body>
 </html>

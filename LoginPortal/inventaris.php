@@ -4,8 +4,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=${encoding}">
 <title>Inventaris</title>
 <link type="text/css" rel="stylesheet" src="bootstrap.css">
+<link rel="stylesheet" href="StylePortal.css">
+<!-- <link rel="stylesheet" href="productlistStyle.css"> -->
+<link rel=stylesheet href=inventarisstyle.css>
 </head>
 <body>
+<div class="banner">
+    		<img src="" alt="Hier komt het logo">
+    		<p>Dynamiek Ateliers Login Portaal</p>
+    		<a class=button href=inventaris.php>Voorraad</a>
+    		<a class=button href=CMS.php>CMS</a>
+    		<a class=button href=gebruikersbeheer.php>Gebruikersbeheer</a>
+    		<div class="LoggedInUser"><?php 
+    			session_start();
+    			$user = $_SESSION['user'];
+    			echo $user;
+    			?><br>
+    			<a href="login.php" class=button>Log uit</a>
+    		</div>
+    	</div>
+    	<form action="inventaris/toevoegen.php" method="post" class="product_mgmt">
+			<input type="submit" value="Voeg een product toe" name="toevoegen">
+		</form> 
+		<div class=productList>
     <?php
 		// Toevoegen van de standaardcode die op elke inventaris pagina moet
     	include ('../DatabaseFunctions.php');
@@ -69,7 +90,8 @@
 				$imageurl = $row ['ImageURL'];
 				
 				//het lijstje wat getoond wordt op de site
-				print ("<img width='100px' height='auto' src='" . $imageurl . "' /> <br>") ;
+				echo "<div class='Product'>";
+				print ("<img width='100px' height='auto' src='" . $imageurl . "' alt='No Image Available'/> <br>") ;
 				print ("Productnummer: " . $productnummer . "<br>") ;
 				print ("Naam: " . $product . "<br>") ;
 				print ("Beschrijving: " . $beschrijving . "<br>") ;
@@ -80,6 +102,7 @@
 				} else {
 					print ("<div class='inactief'>Het product is niet actief op de site</div>") ;
 				}
+
 				//De knopjes van plus en min fysiek
 	?>
     		<form action="inventaris.php" method="post">
@@ -114,7 +137,7 @@
 				<input type="hidden" value="<?php print ($productnummer);?>" name="productnummer"> 
 				<input type="submit" value="Wijzigen oude manier" name="wijzigen">	
 			</form>
-		
+		</div>
     <?php
     		//Sluit de While
 			}
@@ -122,6 +145,7 @@
 		}
 		print ("<br>") ;
 				
+		echo "<div class=paginate>";
 				
 		if (!isset ( $_POST ['toevoegen'] ) && !isset($_POST['wijzigen'])) {		
 			if ($pagina != 1) {
@@ -138,15 +162,9 @@
 			echo ("<a href=inventaris.php?pagina=$nextpagina> > </a>");
 			echo ("<a href=inventaris.php?pagina=$totaalPagina> >| </a>");
 		}
-
+	}
 	?>
-	
-
-<form action="inventaris/toevoegen.php" method="post">
-	<input type="submit" value="Voeg een product toe" name="toevoegen">
-</form>  
-	<?php 			 
-	} 
-	?>
+	</div>
+	</div>
     </body>
 </html>

@@ -14,6 +14,8 @@
     	
     		<div class="loginform">
 	    	<?php 
+	    	session_start();
+	    	session_destroy();
 	    	include ("../DatabaseFunctions.php");
 	    	include ("CustomEncryption.php");
     		
