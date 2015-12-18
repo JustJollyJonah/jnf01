@@ -5,7 +5,7 @@
 <title>Inventaris</title>
 <link type="text/css" rel="stylesheet" src="bootstrap.css">
 <link rel="stylesheet" href="StylePortal.css">
-<!-- <link rel="stylesheet" href="productlistStyle.css"> -->
+<link rel="stylesheet" href="productlistStyle.css">
 <link rel=stylesheet href=inventarisstyle.css>
 </head>
 <body>
@@ -23,6 +23,7 @@
     			<a href="login.php" class=button>Log uit</a>
     		</div>
     	</div>
+    	<div class="wrapper">
     	<form action="inventaris/toevoegen.php" method="post" class="product_mgmt">
 			<input type="submit" value="Voeg een product toe" name="toevoegen">
 		</form> 
@@ -48,7 +49,7 @@
 		$query = $pdo->prepare ( "SELECT * FROM inventaris" );
 		$query->execute ();
 		$aantal = $query->rowCount ();
-		$aantalPerPagina = 3;
+		$aantalPerPagina = 12;
 		$totaalPagina = ceil ( $aantal / $aantalPerPagina );
 				
 		//De knop plus, die wordt uitgevoerd door op inventaris pagina op plus te klikken
@@ -91,7 +92,7 @@
 				
 				//het lijstje wat getoond wordt op de site
 				echo "<div class='Product'>";
-				print ("<img width='100px' height='auto' src='" . $imageurl . "' alt='No Image Available'/> <br>") ;
+				print ("<img width='100px' height='100' src='" . $imageurl . "' alt='No Image Available'/> <br>") ;
 				print ("Productnummer: " . $productnummer . "<br>") ;
 				print ("Naam: " . $product . "<br>") ;
 				print ("Beschrijving: " . $beschrijving . "<br>") ;
@@ -145,25 +146,27 @@
 		}
 		print ("<br>") ;
 				
+		
 		echo "<div class=paginate>";
 				
 		if (!isset ( $_POST ['toevoegen'] ) && !isset($_POST['wijzigen'])) {		
 			if ($pagina != 1) {
-				echo ("<a href=inventaris.php?pagina=1> |< </a>");
+				echo ("<a href=inventaris.php?pagina=1 class=paginate_button> |< </a>");
 				$lastpagina = $pagina - 1;
-				echo ("<a href=inventaris.php?pagina=$lastpagina> < </a>");
+				echo ("<a href=inventaris.php?pagina=$lastpagina class=paginate_button> < </a>");
 			}
 				for($i = 1; $i < $totaalPagina + 1; $i ++) {
-				echo ("<a href=inventaris.php?pagina=$i>" . $i . "</a>");
+				echo ("<a href=inventaris.php?pagina=$i class=paginate_button>" . $i . "</a>");
 		}
 						
 		$nextpagina = $pagina + 1;
 		if ($pagina != $totaalPagina) {
-			echo ("<a href=inventaris.php?pagina=$nextpagina> > </a>");
-			echo ("<a href=inventaris.php?pagina=$totaalPagina> >| </a>");
+			echo ("<a href=inventaris.php?pagina=$nextpagina class=paginate_button> > </a>");
+			echo ("<a href=inventaris.php?pagina=$totaalPagina class=paginate_button> >| </a>");
 		}
 	}
 	?>
+	</div>
 	</div>
 	</div>
     </body>

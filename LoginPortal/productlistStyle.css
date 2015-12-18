@@ -14,3 +14,44 @@ body{
 .addProduct a:visited{
 	color: blue;
 }
+
+.product_mgmt{
+	display: inline;
+	width: 17%;
+	float: left;
+	text-align: right;
+}
+
+.product_mgmt input{
+	margin-top: 5px;
+}
+
+.productList{
+	width: 66%;
+	float: left;
+	text-align: center;
+}
+
+.product{
+	display: inline;
+	width: 30%;
+	float: left;
+}
+
+.paginate{
+	display: inline;
+	width: 100%;
+	float: left;
+	margin-bottom: 5px;
+}
+
+.paginate_button{
+	padding: 2px 7px;
+	margin-left: 3px;
+	margin-right: 3px;
+	text-decoration: none;
+	color: black;
+	background: radial-gradient(#e3e3e3, #c0c0c0);
+	border-radius: 3px;
+	border: solid 1px black;
+}
