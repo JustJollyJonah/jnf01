@@ -12,15 +12,17 @@
 <div class="banner">
     		<img src="" alt="Hier komt het logo">
     		<p>Dynamiek Ateliers Login Portaal</p>
-    		<a class=button href=inventaris.php>Voorraad</a>
-    		<a class=button href=CMS.php>CMS</a>
-    		<a class=button href=gebruikersbeheer.php>Gebruikersbeheer</a>
+    		<div class=nav>
+    			<div class=button><a href=inventaris.php>Voorraad</a></div>
+    			<div class=button><a href=CMS.php>CMS</a></div>
+    			<div class=button><a href=gebruikersbeheer.php>Gebruikersbeheer</a></div>
+    		</div>
     		<div class="LoggedInUser"><?php 
     			session_start();
     			$user = $_SESSION['user'];
     			echo $user;
     			?><br>
-    			<a href="login.php" class=button>Log uit</a>
+    			<a href="login.php" class=logoutbutton>Log uit</a>
     		</div>
     	</div>
     	<div class="wrapper">

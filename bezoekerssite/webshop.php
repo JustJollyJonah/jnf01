@@ -110,7 +110,7 @@
 					
 					if ($active) {
 						echo "<tr>";
-						echo "<td><img src=$image width=80 height=80 alt='Plaats plaatje hier!'></td>";
+						echo "<td><img src='../LoginPortal/" . trim($image) . "' width=80 height=80 alt='Plaats plaatje hier!'></td>";
 						echo "<td><strong>$beschrijving</strong></td>";
 						echo "<td><a href=$shop_url>Bestellen</a></td>";
 						echo "</tr>";

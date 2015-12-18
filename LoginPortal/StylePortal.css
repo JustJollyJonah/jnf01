@@ -18,7 +18,7 @@ body {
 
 .banner img {
 	float:left;
-	width:10%;
+	width:17%;
 	height:100%;
 }
 .home_button{
@@ -31,18 +31,35 @@ body {
 .homebutton{
 	width: 30px !important;
 }
-.banner .button{
+.nav{
 	display: inline;
-	float: left;
-	margin-left: 10px;
+	width: 66%;
+}
+.nav .button{
+	width: calc(24% - 168px);
 	padding: 2px 3px;
+	float: left;
+	margin: 0px 60px;
+	background: linear-gradient(to bottom, #e3e3e3, #c0c0c0);
+	border: solid 1px black;
+	border-radius: 2px;
+	text-align: center;
+}
+.nav .button a{
+	text-decoration: none;
+	color: black;
+}
+.banner .logoutbutton{
+	display: inline;
+	float: right;
+	padding: 2px 3px;
+	margin: 0 auto;
 	background: linear-gradient(to bottom, #e3e3e3, #c0c0c0);
 	border: solid 1px black;
 	border-radius: 2px;
 	text-decoration: none;
 	color: black;
 }
-
 .banner .button:active{
 	box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);
 }
