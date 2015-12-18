@@ -74,7 +74,7 @@
 			<li class="navbar_item_webshop"
 				<?php if($page=='webshop'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a
 				href="webshop.php" class="a"><strong>Webshop</strong></a></li>
-			<div class="slider">
+			<div id="slider">
 			<figure> 
 				<div><img src="img/slider/IMG_0884.jpg" height=200 width=356 ></div>
 				<div><img src="img/slider/IMG_0884.jpg" height=200 width=356></div>
