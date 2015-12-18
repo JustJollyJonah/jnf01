@@ -3,15 +3,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="StylePortal.css">
-<title>Insert title here</title>
+<title>Login Portal</title>
 </head>
     <body>
     	<div class="banner">
-    		<img src="" alt="Hier komt het logo">
-    		<p>Dynamiek Ateliers Login Portaal</p>
+    		<a href="../bezoekerssite/index.php"><img src="../bezoekerssite/img/dynamiek_logo.png" alt="Dynamiek Logo"></a>
+    		<a class="home_button" href="../bezoekerssite/index.php"><img class="homebutton" src="../bezoekerssite/img/home_button.png" alt="Home button"></a>
     	</div>
     	<div class="content">
-    	
+    		<img class="dynamiek_text" src="../bezoekerssite/img/dynamiek_text.png" alt="Dynamiek Text"></br>
     		<div class="loginform">
 	    	<?php 
 	    	session_start();
@@ -32,10 +32,9 @@
     				}
     			}
     			
-    			?>
-    				Gebruikersnaam: <input type="text" name="username"><br><br>
-    				Wachtwoord: <input type="password" name="password"><br>
-    				<input type="submit" value="submit" id="submit">
+    			?><input type="text" name="username" placeholder="Gebruikersnaam"><br> 
+    				<br><input type="password" name="password" placeholder="Wachtwoord"><br>
+    				<input type="submit" value="Login" id="submit">
     			</form>
     		</div>
     	</div>
