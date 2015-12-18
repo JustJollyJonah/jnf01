@@ -169,6 +169,10 @@
 		height: 100%;
 		background-size: 100% 100%;
 	}
+	.slider {
+		height:200px;
+		margin:0px;
+	}
 	.a {
 		margin-top: 5px;
 		height: 100%;
