@@ -75,17 +75,17 @@
 				<?php if($page=='webshop'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a
 				href="webshop.php" class="a"><strong>Webshop</strong></a></li>
 			<figure class="slider"> 
-				<div><img src="img/"></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
+				<div><img src="img/slider/IMG_0884.jpg" height=200 width=356 ></div>
+				<div><img src="img/slider/IMG_0885.jpg" height=200 width=356></div>
+				<div><img src="img/slider/IMG_0886.jpg" height=200 width=356></div>
+				<div><img src="img/slider/IMG_0887.jpg" height=200 width=356></div>
+				<div><img src="img/slider/IMG_0888.jpg" height=200 width=356></div>
+				<div><img src="img/slider/IMG_0889.jpg" height=200 width=356></div>
+				<div><img src="img/slider/IMG_0890.jpg" height=200 width=356></div>
+				<div><img src="img/slider/IMG_0891.jpg" height=200 width=356></div>
+				<div><img src="img/slider/IMG_0892.jpg" height=200 width=356></div>
+				<div><img src="img/slider/IMG_0893.jpg" height=200 width=356></div>
+				<div><img src="img/slider/IMG_0894.jpg" height=200 width=356></div>
 			</figure>
 		</ul>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
