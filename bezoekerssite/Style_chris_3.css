@@ -304,6 +304,12 @@
 	.footer ul li a {
 		color: black;
 	}
+	.footer ul li{
+		display: inline-block;
+	}
+	.footer ul li:first-child{
+		padding-top: 20px;
+	}
 	.table {
 		float: left;
 		display: inline;
@@ -321,10 +327,16 @@
 	}
 	.loginLink {
 		float: right;
-		padding-bottom: 5px;
-		padding-right: 5px;
+		margin-right: 20px;
+		margin-top: 65px;
+		padding: 5px 10px 5px 10px;
+		color: #003399;
 		text-decoration: none;
-		color: black;
+		background: linear-gradient(to bottom, #d55d15, #efba3d);
+		border-radius: 6px 6px 6px 6px; 
+	}
+	.loginLink:hover{
+		box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);
 	}
 }
 
