@@ -74,7 +74,19 @@
 			<li class="navbar_item_webshop"
 				<?php if($page=='webshop'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a
 				href="webshop.php" class="a"><strong>Webshop</strong></a></li>
-			<li class="navbar_img"><a href=""></a></li>
+			<figure class="slider"> 
+				<div><img src="img/"></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</figure>
 		</ul>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
 		<?php
