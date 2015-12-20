@@ -5,6 +5,8 @@
 <title>Webpagina Framework</title>
 <link rel="stylesheet" href="Style_chris_3.css">
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+<link rel=stylesheet href=style_mobile_1>
+<link rel=stylesheet href=style_mobile_2>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link
 	href='https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro|Raleway'
@@ -76,17 +78,18 @@
 				href="webshop.php" class="a"><strong>Webshop</strong></a></li>
 			<div id="slider">
 			<figure> 
-				<div><img src="img/slider/IMG_0884.jpg" height=200 width=356 ></div>
-				<div><img src="img/slider/IMG_0884.jpg" height=200 width=356></div>
-				<div><img src="img/slider/IMG_0884.jpg" height=200 width=356></div>
-				<div><img src="img/slider/IMG_0884.jpg" height=200 width=356></div>
-				<div><img src="img/slider/IMG_0888.jpg" height=200 width=356></div>
-				<div><img src="img/slider/IMG_0889.jpg" height=200 width=356></div>
-				<div><img src="img/slider/IMG_0890.jpg" height=200 width=356></div>
-				<div><img src="img/slider/IMG_0891.jpg" height=200 width=356></div>
-				<div><img src="img/slider/IMG_0892.jpg" height=200 width=356></div>
-				<div><img src="img/slider/IMG_0893.jpg" height=200 width=356></div>
-				<div><img src="img/slider/IMG_0894.jpg" height=200 width=356></div>
+				<div><img src="img/slider/slide1.png"></div>
+				<div><img src="img/slider/slide2.png"></div>
+				<div><img src="img/slider/slide3.png"></div>
+				<div><img src="img/slider/slide4.png"></div>
+				<div><img src="img/slider/slide5.png"></div>
+				<div><img src="img/slider/slide6.png"></div>
+				<div><img src="img/slider/slide7.png"></div>
+				<div><img src="img/slider/slide1.png"></div>
+				<div><img src="img/slider/slide2.png"></div>
+				<div><img src="img/slider/slide3.png"></div>
+				<div><img src="img/slider/slide4.png"></div>
+				<div><img src="img/slider/slide5.png"></div>
 			</figure>
 			</div>
 		</ul>
@@ -107,7 +110,7 @@
 		);
 		
 		// 		?>
-		</div>
+	</div>
 
 	<div class="content">
 		<div class="pagina">

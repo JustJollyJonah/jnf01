@@ -19,11 +19,12 @@ if (isset ( $_POST ['Ja_Verwijder'] )) {
 	exit();
 	
 } else if (isset ( $_POST ['verwijder'] )) { // Verwijder knop, echter verwijderen we hem niet, we zetten hem op niet actief
-	print ("Weet u zeker dat u dit product wilt verwijderen, dit is onheroeperlijk.") ?>
-				    	<form action="verwijderen.php" method="post">
-						<input type="hidden" value="<?php print($_POST['productnummer']); ?>" name="productnummer"> 
-						<input type="submit" value="Ja" name="Ja_Verwijder"> 
-						<input type="submit" value="Nee" name="Nee_Verwijder">
-						</form> 
-    	<?php
-				} 
+	print ("Weet u zeker dat u dit product wilt verwijderen, dit is onheroeperlijk.") 
+	?>
+		<form action="verwijderen.php" method="post">
+			<input type="hidden" value="<?php print($_POST['productnummer']); ?>" name="productnummer"> 
+			<input type="submit" value="Ja" name="Ja_Verwijder"> 
+			<input type="submit" value="Nee" name="Nee_Verwijder">
+		</form> 
+    <?php
+} 
