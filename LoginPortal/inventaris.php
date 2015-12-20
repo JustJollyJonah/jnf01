@@ -1,15 +1,14 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=${encoding}">
-<title>Inventaris</title>
-<link type="text/css" rel="stylesheet" src="bootstrap.css">
-<link rel="stylesheet" href="StylePortal.css">
-<link rel="stylesheet" href="productlistStyle.css">
-<link rel=stylesheet href=inventarisstyle.css>
-</head>
-<body>
-<div class="banner">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=${encoding}">
+		<title>Inventaris</title>
+		<link type="text/css" rel="stylesheet" href="bootstrap.css">
+		<link rel="stylesheet" href="StylePortal.css">
+		<link rel="stylesheet" href="productlistStyle.css">
+	</head>
+	<body>
+		<div class="banner">
     		<img src="" alt="Hier komt het logo">
     		<p>Dynamiek Ateliers Login Portaal</p>
     		<div class=nav>

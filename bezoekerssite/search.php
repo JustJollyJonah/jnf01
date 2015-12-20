@@ -52,22 +52,40 @@
 			<li class="navbar_item_home"
 				<?php if($page=='home'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a
 				href="index.php?page=home" class="a"><strong>Home</strong></a></li>
+				
 			<li class="navbar_item_about"
 				<?php if($page=='about'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a
-				href="index.php?page=about" class="a"><strong>Over Dynamiek
-						ateliers</strong></a></li>
+				href="index.php?page=about" class="a"><strong>Over Dynamiek ateliers</strong></a></li>
+				
 			<li class="navbar_item_product"
 				<?php if($page=='product'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a
-				href="index.php?page=product" class="a"><strong>Accesoires en
-						producten</strong></a></li>
+				href="index.php?page=product" class="a"><strong>Accesoires en producten</strong></a></li>
+				
 			<li class="navbar_item_workshops"
 				<?php if($page=='workshops'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a
 				href="index.php?page=workshops" class="a"><strong>Workshops</strong></a></li>
+				
 			<li class="navbar_item_webshop"
 				<?php if($page=='webshop'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a
-				href="" class="a"><strong>Webshop</strong></a></li>
-			<li class="navbar_img"><a href=""></a></li>
+				href="webshop.php" class="a"><strong>Webshop</strong></a></li>
+			<div id="slider">
+			<figure> 
+				<div><img src="img/slider/slide1.png"></div>
+				<div><img src="img/slider/slide2.png"></div>
+				<div><img src="img/slider/slide3.png"></div>
+				<div><img src="img/slider/slide4.png"></div>
+				<div><img src="img/slider/slide5.png"></div>
+				<div><img src="img/slider/slide6.png"></div>
+				<div><img src="img/slider/slide7.png"></div>
+				<div><img src="img/slider/slide1.png"></div>
+				<div><img src="img/slider/slide2.png"></div>
+				<div><img src="img/slider/slide3.png"></div>
+				<div><img src="img/slider/slide4.png"></div>
+				<div><img src="img/slider/slide5.png"></div>
+			</figure>
+			</div>
 		</ul>
+		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
 		<?php
 		// $file = file_get_contents ( "navbarLayout3.txt" );
 		// echo $file;

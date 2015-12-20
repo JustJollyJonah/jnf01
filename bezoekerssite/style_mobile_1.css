@@ -1,0 +1,187 @@
+@media (min-width: 401px) and (max-width: 760px){
+	.fb{
+		display: none;
+	}
+	html {
+		height: 100%;
+		font-family: 'Open Sans', sans-serif;
+		font-family: 'Source Sans Pro', sans-serif;
+	}
+	body {
+		margin: 0px;
+		width: 100%;
+		height: 100%;
+		background-color: beige;
+		background-image: url('img/geometry_@2X.png');
+	}
+	.header {
+		width: 100%;
+		height: 15%;
+		background: radial-gradient(50% 200%, #6699ff, #6666CC);
+	}
+	.img_logo {
+		height: 100%;
+		margin-right: 0px;
+		float: left;
+	}
+	summary::-webkit-details-marker {
+  		display: none;
+	}
+	.navbar_mobile{
+		display: inline-table;
+		width: 100%;
+		overflow: hidden;
+	}
+	.navbar_mobile details div{
+		background: radial-gradient(50% 200%, #6699ff, #2E45FF);
+		height: 100%;
+		overflow: hidden;
+	}
+	@keyframes slideInDown{
+		0%{
+			transform: translateY(-100%);
+		}
+		100%{
+			transform: translateY(0);
+		}
+	}
+	.navbar_mobile details[open] > div ul{
+		animation-name: slideInDown;
+		animation-duration: 1s;
+	}
+	.navbar_mobile details summary{
+		font-size: 18px;
+		background: radial-gradient(50% 200%, #6699ff, #2E45FF);
+	}
+	.navbar_mobile details ul li{
+		background: linear-gradient(to right, darkblue, blue, darkblue);
+		overflow: hidden;
+		width: 80%;
+		display: block;
+		font-size: 24px;
+		border-radius: 6px 6px 6px 6px; 
+		margin: 0 auto;
+		margin-bottom: 5px;
+	}
+	.navbar_mobile details ul{
+		list-style: none;
+		list-style: none;
+		padding-left: 0px;
+		z-index: 999;
+		margin-bottom: 0px;
+		margin-top: 0px;
+		height: 100%;
+		text-align: center;
+		background: radial-gradient(50% 200%, #6699ff, #2E45FF);
+	}
+	.navbar_mobile details{
+		height: 100%;
+	}
+	.navbar {
+		width: 100%;
+		height: 2%;
+		overflow: hidden;
+		display: none;
+	}
+	.navbar_list {
+		height: 65%;
+		width: 100%;
+		list-style: none;
+		padding-left: 0px;
+		margin-top: 0px;
+		background-color: #FF9900;
+		overflow: hidden;
+	}
+	.navbar_item_home {
+		height: 20px;
+		width: 20%;
+		float: left;
+		text-align: center;
+		font-size: 70%;
+	}
+	.navbar_item_about {
+		height: 20px;
+		width: 20%;
+		float: left;
+		text-align: center;
+		font-size: 70%;
+	}
+	.navbar_item_product {
+		height: 20px;
+		width: 20%;
+		float: left;
+		text-align: center;
+		font-size: 70%;
+	}
+	.navbar_item_workshops {
+		height: 20px;
+		width: 20%;
+		float: left;
+		text-align: center;
+		font-size: 70%;
+	}
+	.navbar_item_webshop {
+		height: 20px;
+		width: 20%;
+		float: left;
+		text-align: center;
+		font-size: 70%;
+	}
+	.a{
+		height: 100%;
+		width: 100%;
+		float: left;
+		text-decoration: none;
+		color: white;
+	}
+	.navbar_img {
+		width: 0px;
+		height: 0px;
+	}
+	.content{
+		width: 80%;
+		margin: 0 auto;
+		overflow: hidden;
+		border-style: hidden solid hidden solid;
+		z-index: 1;
+	}
+	.content pre{
+		white-space: pre-wrap;
+		font-family: inherit;
+		padding: 0px 5px;
+	}
+	table {
+		border: solid 1px orange;
+		float: left;
+		display: inline;
+		margin-bottom: 25px;
+	}
+	td, th {
+		border: solid 1px blue;
+	}
+	.footer{
+		width: 100%;
+		float: left;
+		display: none;
+		margin-bottom: height;
+		background-color: blue;
+	}
+	.footer .img_logo{
+		margin-top: 18.75px;
+		height: 75%;
+	}
+	.footer ul {
+		list-style: none;
+		padding-left: 5px;
+	}
+	.footer ul li a {
+		color: black;
+	}
+	.loginLink {
+		float: right;
+		padding-bottom: 5px;
+		padding-right: 5px;
+		text-decoration: none;
+		color: black;
+	}
+}
