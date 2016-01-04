@@ -25,11 +25,25 @@ body{
 .cmsSelect{
 	float: left;
 	display: inline;
+	width: 50%;
 	border: solid 1px black;
 	margin-top: 5px;
 	margin-left: 5px;
-	margin-right: 100%;
 	padding: 5px 5px;
+}
+
+.addPage{
+	float: left;
+	display: inline;
+}
+
+.addPage legend{
+	margin-left: 30px;
+}
+
+.addPage input[type=submit]{
+	margin-left: 30px;
+	margin-top: 5px;
 }
 
 .cmsTextarea{

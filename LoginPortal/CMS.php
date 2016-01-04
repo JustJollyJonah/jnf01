@@ -35,23 +35,42 @@
 				<form class="cmsSelect" method='GET' action="CMS.php">
 					<legend>Change content files</legend>
     					<?php
-							$txtfiles = array (
-									'home',
-									'about',
-									'product',
-									'workshops' 
-							);
+    					
+    					include ("../DatabaseFunctions.php");
+    					$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
+    					selectDatabase ( $pdo, "omega" );
+    					
+// 							$txtfiles = array (
+// 									'home',
+// 									'about',
+// 									'product',
+// 									'workshops' 
+// 							);
 							
-							foreach ( $txtfiles as $file ) {
+							$array = array();
+							
+							$query = $pdo->prepare("SELECT titel FROM pagina");
+							$query->execute();
+							
+							while($row = $query->fetch()){
+								array_push($array, $row['titel']);
+							}
+							
+// 							print_r($array);
+							
+							foreach ( $array as $file ) {
 								echo "<input type='submit' name='toChange' value='$file'><br>";
 							}
 							
 						?>
     			</form>
+    			<form class="addPage" action="addPage.php" method=get>
+    				<legend>Nieuwe pagina toevoegen</legend>
+    				<input type=text placeholder="Pagina naam" name=pagina><br>
+    				<input type=submit value="Maak pagina">
+    			</form>
     				<?php
-						include ("../DatabaseFunctions.php");
-						$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
-						selectDatabase ( $pdo, "omega" );
+						
 						
 						if (isset ( $_GET ['toChange'] )) {
 							$toChange = $_GET ['toChange'];
