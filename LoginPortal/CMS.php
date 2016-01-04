@@ -92,7 +92,12 @@
 						?>
     		</div>
 			<div class="contentRight">
-				<iframe src="http://localhost:8080/bezoekerssite/index.php?page=<?php echo $toChange?>"></iframe>
+				<iframe src="http://localhost:8080/bezoekerssite/index.php?page=<?php 
+					if(isset($toCHange)){
+						echo $toChange;
+					}else{
+						echo 'home';
+					}?>"></iframe>
 			</div>
 		</div>
 	</body>

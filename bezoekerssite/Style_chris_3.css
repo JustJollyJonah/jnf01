@@ -242,8 +242,8 @@
 		float: left;
 		overflow: hidden;
 		border-style: hidden solid hidden solid;
-		height: calc(100% + 10px);
-		min-height: 955px;
+		
+		min-height: 975px;
 	}
 	.pagina div{
 		display: inline;

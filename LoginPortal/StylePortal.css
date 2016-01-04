@@ -49,6 +49,7 @@ body {
 	text-decoration: none;
 	color: black;
 	width: 100%;
+	padding: 0% 30%;
 }
 .banner .logoutbutton{
 	display: inline;
