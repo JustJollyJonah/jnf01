@@ -1,35 +1,35 @@
 @media ( max-width : 960px) and ( min-width : 760px ) {
 	.content .fb{
-		display: none;
+		display: none;												/* Remove facebook feed */
 	}
 	.content .pagina{
-		width: 90%;
+		width: 90%;													/* Set page width */
 	}
 }
 
 @media ( max-width : 1150px) and ( min-width : 960px ) {
 	.content .pagina{
-		width: 40%;
+		width: 40%;													/* Set page width */
 	}
 }
 
 @media ( max-width : 1435px) and ( min-width : 1150px ) {
 	.content .pagina{
-		width: 50%;
+		width: 50%;													/* Set page width */
 	}
 }
 
 @media ( min-width : 760px) {
 	html {
 		height: 100%;
-		font-family: 'Open Sans', sans-serif;
+		font-family: 'Open Sans', sans-serif;						/* Set fonts for page */
 		font-family: 'Source Sans Pro', sans-serif;
 	}
 	body {
 		margin: 0px;
 		width: 100%;
 		height: 100%;
-		background-image: url('img/geometry_@2X.png');
+		background-image: url('img/geometry_@2X.png');				/* Page background */
 	}
 	.header {
 		width: 100%;
@@ -37,28 +37,28 @@
 		background: radial-gradient(50% 200%, #6699ff, #6666CC);
 	}
 	.img_logo {
-		height: 100%;
-		margin-right: 0px;
-		float: left;
+		height: 100%;												/**/
+		margin-right: 0px;											/*Logo image in banner*/
+		float: left;												/**/
 	}
 	.search{
-		display: inline;
-		float: right;
+		display: inline;											/*Search*/
+		float: right;												/**/
 	}
 	.search summary{
-		display: inline;
-		float: right;
-		background-image: url('img/search2.png');
-		width: 40px;
-		height: 40px;
-		background-size: 100%;
-		overflow: hidden;
+		display: inline;											/**/
+		float: right;												/**/
+		background-image: url('img/search2.png');					/**/
+		width: 40px;												/*Search icon*/
+		height: 40px;												/**/
+		background-size: 100%;										/**/
+		overflow: hidden;											/**/
 	}
 	.search summary:hover{
-		background-image: url('img/search.png');
+		background-image: url('img/search.png');					/*Search icon when hovering over it*/
 	}
 	.search summary::-webkit-details-marker{
-		display: none;
+		display: none;												/*Default search marker*/
 	}
 	@keyframes fadeInRight{
 		0%{
@@ -69,541 +69,540 @@
 		}
 	}
 	.search details[open] > form{
-		animation-name: fadeInRight;
-		animation-duration: 1s;
+		animation-name: fadeInRight;								/*Animate search bar*/
+		animation-duration: 1s;										/**/
 	}
 	.search details{
-		overflow: hidden;
+		overflow: hidden;											/*Search bar doesn't move over search icon*/
 	}
 	.search details form input{
-		display: inline;
-		float: right;
+		display: inline;											/*Actual search bar*/
+		float: right;												/**/
 	}
 	.navbar_mobile{
-		display: none;
+		display: none;												/*Mobile navbar(not displayed)*/
 	}
 	.navbar {
-		width: 100%;
-		height: 25%;
-		overflow: hidden;
-		background-color: #0099FF;
+		width: 100%;												/**/
+		height: 25%;												/*Navbar*/
+		overflow: hidden;											/**/
+		background-color: #0099FF;									/**/
 	}
 	.navbar_list {
-		height: 100%;
-		width: 500%;
-		list-style: none;
-		padding-left: 0px;
-		margin-top: 0px;
-		margin-bottom: 0px;
+		height: 100%;												/**/
+		width: 500%;												/*Width 500% because slideshow images won't fit otherwise*/
+		list-style: none;											/*List of buttons in navbar*/
+		padding-left: 0px;											/**/
+		margin-top: 0px;											/**/
+		margin-bottom: 0px;											/**/
 	}
 	.navbar_item_home {
-		height: 30px;
-		width: 4%;
-		display: inline;
-		float: left;
-		font-size: 95%;
-		background: linear-gradient(to bottom, #d55d15, #efba3d);
-		border-radius: 6px 0 0 6px; 
+		height: 30px;												/**/
+		width: 4%;													/**/
+		display: inline;											/**/
+		float: left;												/*Home button*/
+		font-size: 95%;												/**/
+		background: linear-gradient(to bottom, #d55d15, #efba3d);	/**/
+		border-radius: 6px 0 0 6px; 								/**/
 	}
 	.navbar_item_about {
-		height: 30px;
-		width: 4%;
-		display: inline;
-		float: left;
-		font-size: 95%;
+		height: 30px;												/**/
+		width: 4%;													/**/
+		display: inline;											/*About button*/
+		float: left;												/**/
+		font-size: 95%;												/**/
 		background: linear-gradient(to bottom, #d55d15, #efba3d);
 	}
 	.navbar_item_product {
-		height: 30px;
-		width: 4%;
-		display: inline;
-		float: left;
-		font-size: 95%;
+		height: 30px;												/**/
+		width: 4%;													/**/
+		display: inline;											/*Product button*/
+		float: left;												/**/
+		font-size: 95%;												/**/
 		background: linear-gradient(to bottom, #d55d15, #efba3d);
 	}
 	.navbar_item_workshops {
-		height: 30px;
-		width: 4%;
-		display: inline;
-		float: left;
-		font-size: 95%;
+		height: 30px;												/**/
+		width: 4%;													/**/
+		display: inline;											/*Workshops button*/
+		float: left;												/**/
+		font-size: 95%;												/**/
 		background: linear-gradient(to bottom, #d55d15, #efba3d);
 	}
 	.navbar_item_webshop {
-		height: 30px;
-		width: 4%;
-		margin-right: 75%;
-		display: inline;
-		float: left;
-		font-size: 95%;
-		background: linear-gradient(to bottom, #d55d15, #efba3d);
-		border-radius: 0 6px 6px 0;
+		height: 30px;												/**/
+		width: 4%;													/**/
+		margin-right: 75%;											/*Margin because slideshow images come next*/
+		display: inline;											/*Webshop button*/
+		float: left;												/**/
+		font-size: 95%;												/**/
+		background: linear-gradient(to bottom, #d55d15, #efba3d);	/**/
+		border-radius: 0 6px 6px 0;									/**/
 	}
 	.navbar_item_home:hover ~ .navbar_img {
-		background-image: url('img/banner_image2.0.png');
-		height: 100%;
-		background-size: 100% 100%;
-	}
-	.navbar_item_about:hover ~ .navbar_img {
-		background-image: url('img/banner_about.png');
-		height: 100%;
-		background-size: 100% 100%;
-	}
-	.navbar_item_product:hover ~ .navbar_img {
-		background-image: url('img/banner_accessoires.png');
-		height: 100%;
-		background-size: 100% 100%;
-	}
-	.navbar_item_workshops:hover ~ .navbar_img {
-		background-image: url('img/banner_workshops.png');
-		height: 100%;
-		background-size: 100% 100%;
-	}
-	.navbar_item_webshop:hover ~ .navbar_img {
-		background-image: url('img/banner_webshop.png');
-		height: 100%;
-		background-size: 100% 100%;
-	}
-	.navbar_img {
-		float: left;
-		background-image: url('img/banner_standard.png');
-		width: 100%;
-		height: 100%;
-		background-size: 100% 100%;
+		background-image: url('img/banner_image2.0.png');			/**/
+		height: 100%;												/**/		
+		background-size: 100% 100%;									/**/
+	}																/**/
+	.navbar_item_about:hover ~ .navbar_img {						/**/
+		background-image: url('img/banner_about.png');				/**/
+		height: 100%;												/**/
+		background-size: 100% 100%;									/**/
+	}																/**/
+	.navbar_item_product:hover ~ .navbar_img {						/**/
+		background-image: url('img/banner_accessoires.png');		/**/
+		height: 100%;												/**/
+		background-size: 100% 100%;									/**/
+	}																/**/
+	.navbar_item_workshops:hover ~ .navbar_img {					/*NO LONGER IN USE*/
+		background-image: url('img/banner_workshops.png');			/**/
+		height: 100%;												/**/
+		background-size: 100% 100%;									/**/
+	}																/**/
+	.navbar_item_webshop:hover ~ .navbar_img {						/**/
+		background-image: url('img/banner_webshop.png');			/**/
+		height: 100%;												/**/
+		background-size: 100% 100%;									/**/
+	}																/**/
+	.navbar_img {													/**/
+		float: left;												/**/
+		background-image: url('img/banner_standard.png');			/**/
+		width: 100%;												/**/
+		height: 100%;												/**/
+		background-size: 100% 100%;									/**/
 	}
 	@keyframes slide {
-		0% { left: 0%; }
-		5% { left: 0%; }
-		15% { left: calc(-350% / (1/.12) * 1); }
-		20% { left: calc(-350% / (1/.12) * 1); }
-		25% { left: calc(-350% / (1/.12) * 2); }
-		35% { left: calc(-350% / (1/.12) * 2); }
-		40% { left: calc(-350% / (1/.12) * 3); }
-		50% { left: calc(-350% / (1/.12) * 3); }
-		55% { left: calc(-350% / (1/.12) * 4); }
-		65% { left: calc(-350% / (1/.12) * 4); }
-		70% { left: calc(-350% / (1/.12) * 5); }
-		80% { left: calc(-350% / (1/.12) * 5); }
-		85% { left: calc(-350% / (1/.12) * 6); }
-		95% { left: calc(-350% / (1/.12) * 6); }
-		100% { left: calc(-350% / (1/.12) * 7 + 24px); }
+		0% { left: 0%; }														/**/
+		5% { left: 0%; }														/**/
+		15% { left: calc(-350% / (1/.12) * 1); }								/**/
+		20% { left: calc(-350% / (1/.12) * 1); }								/**/
+		25% { left: calc(-350% / (1/.12) * 2); }								/**/
+		35% { left: calc(-350% / (1/.12) * 2); }								/**/
+		40% { left: calc(-350% / (1/.12) * 3); }								/**/
+		50% { left: calc(-350% / (1/.12) * 3); }								/*Slideshow transitions*/
+		55% { left: calc(-350% / (1/.12) * 4); }								/**/
+		65% { left: calc(-350% / (1/.12) * 4); }								/**/
+		70% { left: calc(-350% / (1/.12) * 5); }								/**/
+		80% { left: calc(-350% / (1/.12) * 5); }								/**/
+		85% { left: calc(-350% / (1/.12) * 6); }								/**/
+		95% { left: calc(-350% / (1/.12) * 6); }								/**/
+		100% { left: calc(-350% / (1/.12) * 7 + 24px); }						/**/
 	}
 	#slider{
-		width: 10%;
-		height: calc(100% - 30px);
-		padding-top: 30px;
+		width: 10%;													/**/
+		height: calc(100% - 30px);									/*Slider*/
+		padding-top: 30px;											/**/
 	}
 	div#slider figure div{ width: calc(100% / 12); float: left; height: 100%;}
 	div#slider figure div img{ width: 100%; height: 100%;}
 	div#slider figure { 
-		position: relative;
-		width: 500%;
-		height: 100%;
-		margin: 0;
-		text-align: left;
-		font-size: 0;
-		animation: 50s slide infinite; 
+		position: relative;												/**/
+		width: 500%;													/**/
+		height: 100%;													/**/
+		margin: 0;														/*Actual slider*/
+		text-align: left;												/**/
+		font-size: 0;													/**/
+		animation: 50s slide infinite; 									/**/
 	}
 	
 	.a {
-		margin-top: 5px;
-		height: 100%;
-		width: 100%;
-		float: left;
-		text-align: center;
-		color: #29406b;
-		font-size: 100%;
-		text-decoration: none;
+		margin-top: 5px;											/**/
+		height: 100%;												/**/
+		width: 100%;												/**/
+		float: left;												/**/
+		text-align: center;											/*Links in buttons*/
+		color: #29406b;												/**/
+		font-size: 100%;											/**/
+		text-decoration: none;										/**/
 	}
 	.navbar ul li:hover{
-		box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);
+		box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);				/*When hovering over a link*/
 	}
 	.a:visited{
-		color: #29406b;
+		color: #29406b;												/*Visited links*/
 	}
 	.content{
-		width: 90%;
-		margin: 0 auto;
-		height: 100%;
-		margin-left: 10%;
+		width: 90%;												/**/
+		margin: 0 auto;											/*Page contents (excluding fb feed)*/
+		height: 100%;											/**/
+		margin-left: 10%;										/**/
 	}
 	.searchresult{
-		font-size: 18px;
-		text-decoration: none;
-		color: blue;
+		font-size: 18px;										/**/
+		text-decoration: none;									/*Search result link*/
+		color: blue;											/**/
 	}
 	.searchresult:hover{
-		font-size: 24px;
+		font-size: 24px;										/*When hovering over Searchresult*/
 	}
 	.pagina{
-		margin: auto;
-		width: 60%;
-		display: inline;
-		float: left;
-		overflow: hidden;
-		border-style: hidden solid hidden solid;
-		
-		min-height: 975px;
+		margin: auto;											/**/
+		width: 60%;												/**/
+		display: inline;										/**/
+		float: left;											/*Text field on page*/
+		overflow: hidden;										/**/
+		border-style: hidden solid hidden solid;				/**/
+		min-height: 975px;										/**/
 	}
 	.pagina div{
-		display: inline;
+		display: inline;											/*Webshop table*/
 	}
 	.pagina form{
-		margin-left: 50px;
+		margin-left: 50px;											/*NOT USED*/
 	}
 	.paginate{
-		margin-left: 50px;
-		margin-top: 10px;
+		margin-left: 50px;											/*Pagination*/
+		margin-top: 10px;											/**/
 	}
 	.pagina table{
-		margin: 2% auto;
-		display: inline;
+		margin: 2% auto;											/*Webshop itemlist*/
+		display: inline;											/**/
 	}
 	.webshop tbody{
-		max-width: 80%;
-		overflow: hidden;
+		max-width: 80%;												/*Webshop itemlist*/
+		overflow: hidden;											/**/
 	}
 	.webshop tbody tr td{
-		white-space: pre-wrap;
-		padding: 0px 50px;
+		white-space: pre-wrap;										/*Webshop itemlist item*/
+		padding: 0px 50px;											/**/
 	}
 	.pagina h2{
-		margin-left: 10%;
+		margin-left: 10%;											/*Title on Webshop page*/
 	}
 	.pagina a{
-		color: white;
-		text-decoration: none;
-		background-color: black;
-		border-radius: 6px;
-		padding: 5px 6px;
-		border: solid 1px grey;
-	}
+		color: white;												/**/
+		text-decoration: none;										/**/
+		background-color: black;									/*'Bestellen' button on Webshop page*/
+		border-radius: 6px;											/**/
+		padding: 5px 6px;											/**/
+		border: solid 1px grey;										/**/
+	}											
 	.pagina a:hover{
-		background-color: darkgrey;
+		background-color: darkgrey;									/*Visited 'Bestellen' button*/
 	}
 	.pagina div{
-		display: inline;
+		display: inline;											/*NOT USED*/
 	}
 	.pagina table{
-		margin: auto;
-		margin-top: 2%;
-		display: inline;
+		margin: auto;												/**/
+		margin-top: 2%;												/*Webshop itemlist*/
+		display: inline;											/**/
 	}
 	.webshop tbody tr td{
-		white-space: pre-wrap;
-		padding: 0px 50px 0px 50px;
+		white-space: pre-wrap;										/*Webshop itemlist item*/
+		padding: 0px 50px 0px 50px;									/**/
 	}
 	.pagina pre {
-		white-space: pre-wrap;
-		font-family: inherit;
-		padding: 0px 5px;
-		height: 100%;
+		white-space: pre-wrap;										/**/
+		font-family: inherit;										/*Textfield on page*/
+		padding: 0px 5px;											/**/
+		height: 100%;												/**/
 	}
 	.pagina h2{
-		margin-left: 10%;
+		margin-left: 10%;											/*Title on Webshop page*/
 	}
 	.pagina h3{
-		display: inline;
+		display: inline;											/**/
 	}
 	.pagina a{
-		color: white;
-		text-decoration: none;
-		background-color: black;
-		border-radius: 6px 6px 6px 6px;
-		padding: 4px 5px;
-		border: solid 1px grey; 
+		color: white;												/**/
+		text-decoration: none;										/**/
+		background-color: black;									/*Buttons on Webshop page*/
+		border-radius: 6px 6px 6px 6px;								/**/
+		padding: 4px 5px;											/**/
+		border: solid 1px grey; 									/**/
 	}
 	.pagina a:hover{
-		box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);
+		box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);				/*When hovering over buttons*/
 	}
 	.fb{
-		margin-top: 10px;
-		margin-left: 10px;
-		display: inline;
-		float: left;
+		margin-top: 10px;											/**/
+		margin-left: 10px;											/*Facebook feed*/
+		display: inline;											/**/
+		float: left;												/**/
 	}
 	.test {
-		width: 100%;
-		float: left;
+		width: 100%;												/**/
+		float: left;												/**/
 	}
 	.footer {
-		height: 150px;
-		width: 100%;
-		float: left;
-		display: inline-block;
-		margin-bottom: height;
-		background: radial-gradient(50% 100%, #6699cc, #003399);
-		background-color: blue;
+		height: 150px;												/**/
+		width: 100%;												/**/
+		float: left;												/**/
+		display: inline-block;										/*Footer*/
+		margin-bottom: height;										/**/
+		background: radial-gradient(50% 100%, #6699cc, #003399);	/**/
+		background-color: blue;										/**/
 	}
 	.footer .img_logo{
-		margin-top: 18.75px;
-		height: 75%;
+		margin-top: 18.75px;										/*Logo image in footer*/
+		height: 75%;												/**/
 	}
 	.footer ul {
-		list-style: none;
-		padding-left: 5px;
-		display: inline;
+		list-style: none;											/**/
+		padding-left: 5px;											/*List of links in footer*/
+		display: inline;											/**/
 	}
 	.footer ul li a {
-		color: black;
+		color: black;												/*Links in footer*/
 	}
 	.footer ul li{
-		display: inline-block;
+		display: inline-block;										/*Listitems in list in footer*/
 	}
 	.footer ul li:first-child{
-		padding-top: 20px;
+		padding-top: 20px;											/*First listitem in list*/
 	}
 	.table {
-		float: left;
-		display: inline;
-		margin-bottom: 25px;
+		float: left;												/**/
+		display: inline;											/**/
+		margin-bottom: 25px;										/**/
 	}
 	.home_img {
-		float: left;
-		display: inline;
-		margin-left: 10%;
-		margin-bottom: 25px;
-		width: calc(100%/ 3);
+		float: left;												/**/
+		display: inline;											/**/
+		margin-left: 10%;											/*???*/
+		margin-bottom: 25px;										/**/
+		width: calc(100%/ 3);										/**/
 	}
 	.td, .th {
-		border: solid 1px purple;
+		border: solid 1px purple;									/**/
 	}
 	.loginLink {
-		float: right;
-		margin-right: 20px;
-		margin-top: 65px;
-		padding: 5px 10px 5px 10px;
-		color: #003399;
-		text-decoration: none;
-		background: linear-gradient(to bottom, #d55d15, #efba3d);
-		border-radius: 6px 6px 6px 6px; 
+		float: right;													/**/
+		margin-right: 20px;												/**/
+		margin-top: 65px;												/**/
+		padding: 5px 10px 5px 10px;										/*Login button in footer*/
+		color: #003399;													/**/
+		text-decoration: none;											/**/
+		background: linear-gradient(to bottom, #d55d15, #efba3d);		/**/
+		border-radius: 6px 6px 6px 6px; 								/**/
 	}
 	.loginLink:hover{
-		box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);
+		box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);					/*When hovering over login button*/
 	}
 }
 
 @media (min-width: 401px) and (max-width: 760px){
 	.fb{
-		display: none;
+		display: none;											/*Facebook feed (not displayed now)*/
 	}
 	html {
-		height: 100%;
-		font-family: 'Open Sans', sans-serif;
-		font-family: 'Source Sans Pro', sans-serif;
+		height: 100%;											/**/
+		font-family: 'Open Sans', sans-serif;					/*Set page fonts*/
+		font-family: 'Source Sans Pro', sans-serif;				/**/
 	}
 	body {
-		margin: 0px;
-		width: 100%;
-		height: 100%;
-		background-color: beige;
-		background-image: url('img/geometry_@2X.png');
+		margin: 0px;											/**/
+		width: 100%;											/**/
+		height: 100%;											/**/
+		background-color: beige;								/**/
+		background-image: url('img/geometry_@2X.png');			/**/
 	}
 	.header {
-		width: 100%;
-		height: 15%;
-		background: radial-gradient(50% 200%, #6699ff, #6666CC);
+		width: 100%;												/**/
+		height: 15%;												/**/
+		background: radial-gradient(50% 200%, #6699ff, #6666CC);	/**/
 	}
 	.img_logo {
-		height: 100%;
-		margin-right: 0px;
-		float: left;
+		height: 100%;											/**/
+		margin-right: 0px;										/*Logo image*/
+		float: left;											/**/
 	}
 	summary::-webkit-details-marker {
-  		display: none;
+  		display: none;											/*Navbar button default summary icon*/
 	}
 	.navbar_mobile{
-		display: inline-table;
-		width: 100%;
-		overflow: hidden;
+		display: inline-table;									/**/
+		width: 100%;											/*Mobile navbar*/
+		overflow: hidden;										/**/
 	}
 	.navbar_mobile details div{
-		background: radial-gradient(50% 200%, #6699ff, #2E45FF);
-		height: 100%;
-		overflow: hidden;
+		background: radial-gradient(50% 200%, #6699ff, #2E45FF);	/**/
+		height: 100%;												/*Navbar on mobile*/
+		overflow: hidden;											/**/
 	}
 	@keyframes slideInDown{
 		0%{
-			transform: translateY(-100%);
+			transform: translateY(-100%);											
 		}
 		100%{
 			transform: translateY(0);
 		}
 	}
 	.navbar_mobile details[open] > div ul{
-		animation-name: slideInDown;
-		animation-duration: 1s;
+		animation-name: slideInDown;											/*Animation for navbar*/
+		animation-duration: 1s;													/**/
 	}
 	.navbar_mobile details summary{
-		font-size: 18px;
-		background: radial-gradient(50% 200%, #6699ff, #2E45FF);
+		font-size: 18px;														/*Summary icon*/
+		background: radial-gradient(50% 200%, #6699ff, #2E45FF);				/**/
 	}
 	.navbar_mobile details ul li{
-		background: linear-gradient(to right, darkblue, blue, darkblue);
-		overflow: hidden;
-		width: 80%;
-		display: block;
-		font-size: 24px;
-		border-radius: 6px 6px 6px 6px; 
-		margin: 0 auto;
-		margin-bottom: 5px;
+		background: linear-gradient(to right, darkblue, blue, darkblue);		/**/
+		overflow: hidden;														/**/
+		width: 80%;																/**/
+		display: block;															/*Listitems in mobile navbar*/
+		font-size: 24px;														/**/
+		border-radius: 6px 6px 6px 6px; 										/**/
+		margin: 0 auto;															/**/
+		margin-bottom: 5px;														/**/
 	}
 	.navbar_mobile details ul{
-		list-style: none;
-		list-style: none;
-		padding-left: 0px;
-		z-index: 999;
-		margin-bottom: 0px;
-		margin-top: 0px;
-		height: 100%;
-		text-align: center;
-		background: radial-gradient(50% 200%, #6699ff, #2E45FF);
+		list-style: none;											/**/
+		list-style: none;											/**/
+		padding-left: 0px;											/**/
+		z-index: 999;												/**/
+		margin-bottom: 0px;											/*List in mobile navbar*/
+		margin-top: 0px;											/**/
+		height: 100%;												/**/
+		text-align: center;											/**/
+		background: radial-gradient(50% 200%, #6699ff, #2E45FF);	/**/
 	}
 	.navbar_mobile details{
-		height: 100%;
+		height: 100%;											/**/
 	}
 	.navbar {
-		width: 100%;
-		height: 2%;
-		overflow: hidden;
-		display: none;
-	}
+		width: 100%;											/**/
+		height: 2%;												/*Navbar(not shown right now)*/
+		overflow: hidden;										/**/
+		display: none;											/**/
+	}											
 	.navbar_list {
-		height: 65%;
-		width: 100%;
-		list-style: none;
-		padding-left: 0px;
-		margin-top: 0px;
-		background-color: #FF9900;
-		overflow: hidden;
+		height: 65%;												/**/
+		width: 100%;												/**/
+		list-style: none;											/**/
+		padding-left: 0px;											/*Not shown*/
+		margin-top: 0px;											/**/
+		background-color: #FF9900;									/**/
+		overflow: hidden;											/**/
 	}
 	.navbar_item_home {
-		height: 20px;
-		width: 20%;
-		float: left;
-		text-align: center;
-		font-size: 70%;
+		height: 20px;											/**/
+		width: 20%;												/**/
+		float: left;											/*Not shown*/
+		text-align: center;										/**/
+		font-size: 70%;											/**/
 	}
 	.navbar_item_about {
-		height: 20px;
-		width: 20%;
-		float: left;
-		text-align: center;
-		font-size: 70%;
+		height: 20px;											/**/
+		width: 20%;												/**/
+		float: left;											/*Not shown*/
+		text-align: center;										/**/
+		font-size: 70%;											/**/
 	}
 	.navbar_item_product {
-		height: 20px;
-		width: 20%;
-		float: left;
-		text-align: center;
-		font-size: 70%;
+		height: 20px;											/**/
+		width: 20%;												/**/
+		float: left;											/*Not shown*/
+		text-align: center;										/**/
+		font-size: 70%;											/**/
 	}
 	.navbar_item_workshops {
-		height: 20px;
-		width: 20%;
-		float: left;
-		text-align: center;
-		font-size: 70%;
+		height: 20px;											/**/
+		width: 20%;												/**/
+		float: left;											/*Not shown*/
+		text-align: center;										/**/
+		font-size: 70%;											/**/
 	}
 	.navbar_item_webshop {
-		height: 20px;
-		width: 20%;
-		float: left;
-		text-align: center;
-		font-size: 70%;
+		height: 20px;											/**/
+		width: 20%;												/**/
+		float: left;											/*Not shown*/
+		text-align: center;										/**/
+		font-size: 70%;											/**/
 	}
 	.a{
-		height: 100%;
-		width: 100%;
-		float: left;
-		text-decoration: none;
-		color: white;
+		height: 100%;											/**/
+		width: 100%;											/**/
+		float: left;											/*Not shown*/
+		text-decoration: none;									/**/
+		color: white;											/**/
 	}
 	.navbar_img {
-		width: 0px;
-		height: 0px;
+		width: 0px;												/*Not shown*/
+		height: 0px;											/**/
 	}
 	.content{
-		width: 80%;
-		margin: 0 auto;
-		overflow: hidden;
-		border-style: hidden solid hidden solid;
-		z-index: 1;
+		width: 80%;												/**/
+		margin: 0 auto;											/**/
+		overflow: hidden;										/*Contents of page*/
+		border-style: hidden solid hidden solid;				/**/
+		z-index: 1;												/**/
 	}
 	.content pre{
-		white-space: pre-wrap;
-		font-family: inherit;
-		padding: 0px 5px;
+		white-space: pre-wrap;									/**/
+		font-family: inherit;									/*Text on page*/
+		padding: 0px 5px;										/**/
 	}
 	table {
-		border: solid 1px orange;
-		float: left;
-		display: inline;
-		margin-bottom: 25px;
+		border: solid 1px orange;								/**/
+		float: left;											/*Tables on page*/
+		display: inline;										/**/
+		margin-bottom: 25px;									/**/
 	}
 	td, th {
-		border: solid 1px blue;
+		border: solid 1px blue;									/**/
 	}
 	.footer{
-		width: 100%;
-		float: left;
-		display: none;
-		margin-bottom: height;
-		background-color: blue;
+		width: 100%;											/**/
+		float: left;											/**/
+		display: none;											/*Footer(not shown right now)*/
+		margin-bottom: height;									/**/
+		background-color: blue;									/**/
 	}
 	.footer .img_logo{
-		margin-top: 18.75px;
-		height: 75%;
+		margin-top: 18.75px;									/*Logo image in footer*/
+		height: 75%;											/**/
 	}
 	.footer ul {
-		list-style: none;
-		padding-left: 5px;
+		list-style: none;										/*List of links in footer*/
+		padding-left: 5px;										/**/
 	}
 	.footer ul li a {
-		color: black;
+		color: black;											/*Links in footer*/
 	}
 	.loginLink {
-		float: right;
-		padding-bottom: 5px;
-		padding-right: 5px;
-		text-decoration: none;
-		color: black;
+		float: right;											/**/
+		padding-bottom: 5px;									/**/
+		padding-right: 5px;										/*Login button in footer*/
+		text-decoration: none;									/**/
+		color: black;											/**/
 	}
 }
 
 @media(max-width: 400px){
 	.fb{
-		display: none;
+		display: none;											/*Facebook feed(not shown right now*/
 	}
 	html {
 		height: 100%;
-		font-family: 'Open Sans', sans-serif;
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'Open Sans', sans-serif;					/*Set fonts for page*/
+		font-family: 'Source Sans Pro', sans-serif;				/**/
 	}
 	body {
-		margin: 0px;
-		width: 100%;
-		height: 100%;
-		background-image: url('img/geometry_@2X.png');
+		margin: 0px;											/**/
+		width: 100%;											/**/
+		height: 100%;											/**/
+		background-image: url('img/geometry_@2X.png');			/**/
 	}
 	.header {
-		width: 100%;
-		height: 15%;
-		background: radial-gradient(50% 200%, #6699ff, #6666CC);
+		width: 100%;												/**/
+		height: 15%;												/**/
+		background: radial-gradient(50% 200%, #6699ff, #6666CC);	/**/
 	}
 	.img_logo {
-		height: 100%;
-		margin-right: 0px;
-		float: left;
+		height: 100%;												/**/
+		margin-right: 0px;											/*Logo image in header*/
+		float: left;												/**/
 	}
 	summary::-webkit-details-marker {
-  		display: none;
+  		display: none;												/**/
 	}
 	.navbar_mobile{
-		display: inline-table;
-		width: 100%;
-		background: radial-gradient(50% 200%, #6699ff, #2E45FF);
-		overflow: hidden;
+		display: inline-table;										/**/
+		width: 100%;												/*Mobile navbar*/
+		background: radial-gradient(50% 200%, #6699ff, #2E45FF);	/**/
+		overflow: hidden;											/**/
 	}
 	@keyframes slideInDown{
 		0%{
@@ -614,130 +613,130 @@
 		}
 	}
 	.navbar_mobile details[open] > div ul{
-		animation-name: slideInDown;
-		animation-duration: 1s;
+		animation-name: slideInDown;									/*Animate navbar*/
+		animation-duration: 1s;											/**/
 	}
 	.navbar_mobile details div{
-		font-size: 18px;
-		background: radial-gradient(50% 200%, #6699ff, #2E45FF);
-		overflow: hidden;
+		font-size: 18px;												/**/
+		background: radial-gradient(50% 200%, #6699ff, #2E45FF);		/*Contains navbar*/
+		overflow: hidden;												/**/
 	}
 	.navbar_mobile details ul li{
-		background: linear-gradient(to right, darkblue, blue, darkblue);
-		overflow: hidden;
-		width: 80%;
-		display: block;
-		font-size: 24px;
-		border-radius: 6px 6px 6px 6px; 
-		margin: 0 auto;
-		margin-bottom: 5px;
+		background: linear-gradient(to right, darkblue, blue, darkblue);	/**/
+		overflow: hidden;													/**/
+		width: 80%;															/**/
+		display: block;														/*Nav items*/
+		font-size: 24px;													/**/
+		border-radius: 6px 6px 6px 6px; 									/**/
+		margin: 0 auto;														/**/
+		margin-bottom: 5px;													/**/
 	}
 	.navbar_mobile details ul{
-		list-style: none;
-		list-style: none;
-		padding-left: 0px;
-		z-index: 999;
-		margin-bottom: 0px;
-		margin-top: 0px;
-		text-align: center;
-		background: radial-gradient(50% 200%, #6699ff, #2E45FF);
+		list-style: none;											/**/
+		list-style: none;											/**/
+		padding-left: 0px;											/**/
+		z-index: 999;												/*List of nav items*/
+		margin-bottom: 0px;											/**/
+		margin-top: 0px;											/**/
+		text-align: center;											/**/
+		background: radial-gradient(50% 200%, #6699ff, #2E45FF);	/**/
 	}
 	.navbar_mobile ul li{
 	}
 	.navbar {
-		width: 100%;
-		height: 3%;
-		overflow: hidden;
-		display: none;
+		width: 100%;											/**/
+		height: 3%;												/*Navbar(not shown right now*/
+		overflow: hidden;										/**/
+		display: none;											/**/
 	}
 	.navbar_list {
-		height: 65%;
-		width: 100%;
-		list-style: none;
-		padding-left: 0px;
-		margin-top: 0px;
-		background-color: #FF9900;
-		overflow: hidden;
+		height: 65%;												/**/
+		width: 100%;												/**/
+		list-style: none;											/**/
+		padding-left: 0px;											/*Not shown right now*/
+		margin-top: 0px;											/**/
+		background-color: #FF9900;									/**/
+		overflow: hidden;											/**/
 	}
 	.navbar_item_home {
-		height: 20px;
-		width: 20%;
-		float: left;
-		text-align: center;
+		height: 20px;											/**/
+		width: 20%;												/*Not shown right now*/
+		float: left;											/**/
+		text-align: center;										/**/
 	}
 	.navbar_item_about {
-		height: 20px;
-		width: 20%;
-		float: left;
-		text-align: center;
+		height: 20px;											/**/
+		width: 20%;												/*Not shown right now*/
+		float: left;											/**/
+		text-align: center;										/**/
 	}
 	.navbar_item_product {
-		height: 20px;
-		width: 20%;
-		float: left;
-		text-align: center;
+		height: 20px;											/**/
+		width: 20%;												/*Not shown right now*/
+		float: left;											/**/
+		text-align: center;										/**/
 	}
 	.navbar_item_workshops {
-		height: 20px;
-		width: 20%;
-		float: left;
-		text-align: center;
+		height: 20px;											/**/
+		width: 20%;												/*Not shown right now*/
+		float: left;											/**/
+		text-align: center;										/**/
 	}
 	.navbar_item_webshop {
-		height: 20px;
-		width: 20%;
-		float: left;
-		text-align: center;
+		height: 20px;											/**/
+		width: 20%;												/*Not shown right now*/
+		float: left;											/**/
+		text-align: center;										/**/
 	}
 	.a{
-		height: 100%;
-		width: 100%;
-		float: left;
-		text-decoration: none;
-		color: white;
+		height: 100%;											/**/
+		width: 100%;											/**/
+		float: left;											/*Not shown right now*/
+		text-decoration: none;									/**/
+		color: white;											/**/
 	}
 	.navbar_img {
-		width: 0px;
-		height: 0px;
+		width: 0px;												/*Not shown right now*/
+		height: 0px;											/**/
 	}
 	.content{
-		width: 100%;
-		margin: 0 auto;
-		overflow: hidden;
+		width: 100%;											/**/
+		margin: 0 auto;											/*Contents of page*/
+		overflow: hidden;										/**/
 	}
 	.content pre{
-		white-space: pre-wrap;
-		font-family: inherit;
-		padding: 0px 5px;
+		white-space: pre-wrap;									/**/
+		font-family: inherit;									/*Text on page*/
+		padding: 0px 5px;										/**/
 	}
 	table {
-		border: solid 1px orange;
-		float: left;
-		display: inline;
-		margin-bottom: 25px;
+		border: solid 1px orange;								/**/
+		float: left;											/*Tables on page*/
+		display: inline;										/**/
+		margin-bottom: 25px;									/**/
 	}
 	td, th {
-		border: solid 1px blue;
+		border: solid 1px blue;									/**/
 	}
 	.footer{
-		width: 100%;
-		float: left;
-		display: none;
-		margin-bottom: height;
-		background-color: blue;
+		width: 100%;											/**/
+		float: left;											/**/
+		display: none;											/*Footer(not shown right now)*/
+		margin-bottom: height;									/**/
+		background-color: blue;									/**/
 	}
 	.footer ul {
-		list-style: none;
-		padding-left: 5px;
+		list-style: none;										/*Not shown right now*/
+		padding-left: 5px;										/**/
 	}
 	.footer ul li a {
-		color: black;
+		color: black;											/*Not shown right now*/
 	}
 	.loginLink {
-		float: right;
-		padding-bottom: 5px;
-		padding-right: 5px;
-		text-decoration: none;
-		color: black;
+		float: right;											/**/
+		padding-bottom: 5px;									/**/
+		padding-right: 5px;										/*Not shown right now*/
+		text-decoration: none;									/**/
+		color: black;											/**/
 	}
 }

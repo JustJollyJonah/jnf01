@@ -34,7 +34,16 @@
     	include ('../DatabaseFunctions.php');
 		include 'inventaris/basis.php';
 
-				
+		if(isset($_SESSION['user'])){
+			if(checkUserLevel($pdo, $user) == 1){
+					
+			}else{
+				header('Location: login.php');
+			}
+		}else{
+			header('Location: login.php');
+		}		
+		
 		// pagina vaststellen
 		if (isset ( $_GET ['pagina'] )) {
 			$pagina = $_GET ["pagina"];

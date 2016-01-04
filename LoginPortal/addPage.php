@@ -32,9 +32,16 @@
     	</div>
     	
     	<div class="content">
-    		<form method=post>
+    		<form method=post class=pageAdd>
     			<?php echo "<h1>" . $_GET['pagina'] . "</h1>"?>
-    			<textarea id=mytextarea name=tekst></textarea><br>
+    			<input type=text placeholder=Beschrijving name=Beschrijving><br>
+    			<div class=pageContents>
+    				<textarea id=mytextarea name=tekst><?php 
+    				if(isset($_POST['tekst'])){
+    					echo $_POST['tekst'];
+    				}
+    				?></textarea><br>
+    			</div>
     			<input type="submit" value="Maak pagina" name=Add>
     		</form>
     		<?php 
@@ -42,6 +49,16 @@
 			include ("../DatabaseFunctions.php");
 			$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
 			selectDatabase ( $pdo, "omega" );
+			
+			if(isset($_SESSION['user'])){
+				if(checkUserLevel($pdo, $user) == 1){
+						
+				}else{
+					header('Location: login.php');
+				}
+			}else{
+				header('Location: login.php');
+			}
 	
 			if(isset($_POST['Add'])){
 				$submit = $_POST['Add'];
@@ -50,13 +67,14 @@
 			}
 	
 			if(isset($submit)){
-				echo $submit;
-				$query = $pdo->prepare("INSERT INTO pagina (Titel,Tekst,Actief,Versie) VALUES (?,?,?,?)");
-				$query->execute(array($_GET['pagina'],$_POST['tekst'],'0','1'));
-				echo $query->countRows();
+// 				echo $submit;
+				$query = $pdo->prepare("INSERT INTO pagina (Titel,Beschrijving,Tekst,Actief,Versie) VALUES (?,?,?,?,?)");
+				$query->execute(array($_GET['pagina'],$_POST['Beschrijving'],$_POST['tekst'],'0','1'));
+// 				echo $query->rowCount();
 			}
 	
 			?>
+			<a href=CMS.php>Terug naar het CMS</a>
     	</div>
 	</body>
 </html>
