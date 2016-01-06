@@ -146,7 +146,7 @@
 			<li><a href="?page=about">Over Dynamiek ateliers</a></li>
 			<li><a href="?page=product">Accesoires en producten</a></li>
 			<li><a href="?page=workshops">Workshops</a></li>
-			<li><a href="">Webshop</a></li>
+			<li><a href="webshop.php">Webshop</a></li>
 		</ul>
 		<a href="../LoginPortal/login.php" class="loginLink">Login</a>
 	</div>

@@ -326,7 +326,7 @@
 		float: left;												/**/
 	}
 	.footer {
-		height: 150px;												/**/
+		height: 100px;												/**/
 		width: 100%;												/**/
 		float: left;												/**/
 		display: inline-block;										/*Footer*/
@@ -335,7 +335,7 @@
 		background-color: blue;										/**/
 	}
 	.footer .img_logo{
-		margin-top: 18.75px;										/*Logo image in footer*/
+		margin-top: 12.50px;										/*Logo image in footer*/
 		height: 75%;												/**/
 	}
 	.footer ul {
@@ -344,13 +344,19 @@
 		display: inline;											/**/
 	}
 	.footer ul li a {
-		color: black;												/*Links in footer*/
+		color: #003399;
+		text-decoration: none;												/*Links in footer*/
 	}
 	.footer ul li{
-		display: inline-block;										/*Listitems in list in footer*/
+		display: inline-block;	
+		padding: 3px 6px 3px 6px;										/*Login button in footer*//**/
+		text-decoration: none;											/**/
+		background: linear-gradient(to bottom, #d55d15, #efba3d);		/**/
+		border-radius: 6px 6px 6px 6px; 									/*Listitems in list in footer*/
 	}
 	.footer ul li:first-child{
-		padding-top: 20px;											/*First listitem in list*/
+		margin-top: 35px;
+		margin-left: 20px;											/*First listitem in list*/
 	}
 	.table {
 		float: left;												/**/
@@ -370,7 +376,7 @@
 	.loginLink {
 		float: right;													/**/
 		margin-right: 20px;												/**/
-		margin-top: 65px;												/**/
+		margin-top: 35px;												/**/
 		padding: 5px 10px 5px 10px;										/*Login button in footer*/
 		color: #003399;													/**/
 		text-decoration: none;											/**/
