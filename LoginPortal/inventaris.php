@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<div class="banner">
-    		<img src="" alt="Hier komt het logo">
+    		<a href="../bezoekerssite/index.php"><img src="../bezoekerssite/img/dynamiek_logo.png" alt="Dynamiek Logo"></a>
     		<p>Dynamiek Ateliers Login Portaal</p>
     		<div class=nav>
     			<div class=button><a href=inventaris.php>Voorraad</a></div>

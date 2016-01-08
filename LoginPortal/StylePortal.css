@@ -18,7 +18,7 @@ body {
 
 .banner img {
 	float:left;
-	width:15%;
+	width:12%;
 	height:100%;
 }
 .home_button{
@@ -37,6 +37,7 @@ body {
 }
 .nav .button{
 	width: calc(24% - 168px);
+	min-width: 15%;
 	padding: 2px 3px;
 	float: left;
 	margin: 0px 60px;
