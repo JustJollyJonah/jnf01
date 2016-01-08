@@ -43,32 +43,38 @@
 		</details>
 	</div>
 	<?php
-	if (isset ( $_GET ['page'] )) {
-		$page = $_GET ['page'];
-	} else {
-		$page = "home";
-	}
+	$page = 'webshop';																			//Set current page
 	?>
 	<div class="navbar">
 		<ul class="navbar_list">
 			<li class="navbar_item_home"
-				<?php if($page=='home'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a
+				<?php if($page=='home'){
+					echo 'style="box-shadow: inset 0 010px 1px rgba(0,0,0,.3);"';				//Create box shadow on current page button
+				}?>><a
 				href="index.php?page=home" class="a"><strong>Home</strong></a></li>
 				
 			<li class="navbar_item_about"
-				<?php if($page=='about'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a
+				<?php if($page=='about'){
+					echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';				//Create box shadow on current page button
+				}?>><a
 				href="index.php?page=about" class="a"><strong>Over Dynamiek ateliers</strong></a></li>
 				
 			<li class="navbar_item_product"
-				<?php if($page=='product'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a
+				<?php if($page=='product'){
+					echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';				//Create box shadow on current page button
+				}?>><a
 				href="index.php?page=product" class="a"><strong>Accesoires en producten</strong></a></li>
 				
 			<li class="navbar_item_workshops"
-				<?php if($page=='workshops'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a
+				<?php if($page=='workshops'){
+					echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';				//Create box shadow on current page button
+				}?>><a
 				href="index.php?page=workshops" class="a"><strong>Workshops</strong></a></li>
 				
 			<li class="navbar_item_webshop"
-				<?php if($page=='webshop'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a
+				<?php if($page=='webshop'){
+					echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';				//Create box shadow on current page button
+				}?>><a
 				href="webshop.php" class="a"><strong>Webshop</strong></a></li>
 			<div id="slider">
 			<figure> 
@@ -121,49 +127,49 @@
 			</form>
 			<table class=webshop>
 				<?php
-				$pdo = connectToServer ( "mysql:host=localhost;port=3307;", "root", "usbw" );
-				selectDatabase ( $pdo, 'omega' );
+				$pdo = connectToServer ( "mysql:host=localhost;port=3307;", "root", "usbw" );		//
+				selectDatabase ( $pdo, 'omega' );													//Connect to database
 				
-				if(isset($_GET['results_per_page'])){
-					$aantalPerPagina = $_GET['results_per_page'];
-				}else{
-					$aantalPerPagina = 5;
+				if(isset($_GET['results_per_page'])){												//
+					$aantalPerPagina = $_GET['results_per_page'];									//
+				}else{																				//Get/Set results per page
+					$aantalPerPagina = 5;															//
 				}
 				
-				if (isset ( $_GET ['page'] )) {
-					$page = $_GET ["page"];
-				} else {
-					if (isset ($_POST['page'])){
-						$page = $_POST ['page'];
-					} else {
-						$page = 1;
+				if (isset ( $_GET ['page'] )) {														//
+					$page = $_GET ["page"];															//
+				} else {																			//
+					if (isset ($_POST['page'])){													//Get page number
+						$page = $_POST ['page'];													//
+					} else {																		//
+						$page = 1;																	//
 					}
 				}
 				
 				
-				$query = $pdo->prepare ( "SELECT * FROM inventaris" );
-				$query->execute ();
-				$aantal = $query->rowCount ();
-				$totaalPagina = ceil ( $aantal / $aantalPerPagina );
-				$start_from = ($page - 1) * $aantalPerPagina;
+				$query = $pdo->prepare ( "SELECT * FROM inventaris WHERE actief=1" );				//Fetch all products from database
+				$query->execute ();																	//
+				$aantal = $query->rowCount ();														//Count the amount of products
+				$totaalPagina = ceil ( $aantal / $aantalPerPagina );								//Calc total amount of pages
+				$start_from = ($page - 1) * $aantalPerPagina;										//Calc at what product to start from
 				
-				$query = $pdo->prepare ( "SELECT * FROM inventaris WHERE actief=1 LIMIT $start_from, $aantalPerPagina" );
-				$query->execute ();
+				$query = $pdo->prepare ( "SELECT * FROM inventaris WHERE actief=1 LIMIT $start_from, $aantalPerPagina" );	//Fetch products. LIMIT for fetching the right products
+				$query->execute ();																							//
 			
 				while ( $row = $query->fetch () ) {
-					$product = $row ['Product'];
-					$beschrijving = $row ['Beschrijving'];
-					$active = $row ['Actief'];
-					$image = $row ['ImageURL'];
-					$shop_url = $row ['WebshopURL'];
-					$categorie = $row ['Categorienummer'];
-					$eigenschap = $row ['Eigenschap'];
+					$product = $row ['Product'];						//Get product name
+					$beschrijving = $row ['Beschrijving'];				//Get product description
+					$active = $row ['Actief'];							//
+					$image = $row ['ImageURL'];							//Get image path
+					$shop_url = $row ['WebshopURL'];					//Get URL to webshop
+					$categorie = $row ['Categorienummer'];				//Get category
+					$eigenschap = $row ['Eigenschap'];					//Get Details
 				
 					if ($active) {
 						echo "<tr>";
-						echo "<td><img src='../LoginPortal/" . trim($image) . "' width=80 height=80 alt='Plaats plaatje hier!'></td>";
-						echo "<td><strong>$beschrijving</strong></td>";
-						echo "<td><a href=$shop_url>Bestellen</a></td>";
+						echo "<td><img src='../LoginPortal/" . trim($image) . "' width=80 height=80 alt='Plaats plaatje hier!'></td>";	//Place image
+						echo "<td><strong>$beschrijving</strong></td>";																	//Place description
+						echo "<td><a href=$shop_url>Bestellen</a></td>";																//Place webshop url
 						echo "</tr>";
 					}
 				}
@@ -175,20 +181,20 @@
 				<?php 
 				echo "<div class=paginate>";
 				
-				if (!isset ( $_POST ['toevoegen'] ) && !isset($_POST['wijzigen'])) {
-					if ($page != 1) {
-						echo ("<a href=webshop.php?page=1&results_per_page=$aantalPerPagina class=paginate_button> |< </a>");
-						$lastpagina = $page - 1;
-						echo ("<a href=webshop.php?page=$lastpagina&results_per_page=$aantalPerPagina class=paginate_button> < </a>");
-					}
-					for($i = 1; $i < $totaalPagina + 1; $i ++) {
-						echo ("<a href=webshop.php?page=$i&results_per_page=$aantalPerPagina class=paginate_button>" . $i . "</a>");
-					}
-				
-					$nextpagina = $page + 1;
-					if ($page != $totaalPagina) {
-						echo ("<a href=webshop.php?page=$nextpagina&results_per_page=$aantalPerPagina class=paginate_button> > </a>");
-						echo ("<a href=webshop.php?page=$totaalPagina&results_per_page=$aantalPerPagina class=paginate_button> >| </a>");
+				if (!isset ( $_POST ['toevoegen'] ) && !isset($_POST['wijzigen'])) {														
+					if ($page != 1) {																										//
+						echo ("<a href=webshop.php?page=1&results_per_page=$aantalPerPagina class=paginate_button> |< </a>");				//Button for 1st page. Only echo if you're not on page 1
+						$lastpagina = $page - 1;																							//Calc previous page number
+						echo ("<a href=webshop.php?page=$lastpagina&results_per_page=$aantalPerPagina class=paginate_button> < </a>");		//Button for previous page. Only echo if you're not o page 1
+					}																														//
+					for($i = 1; $i < $totaalPagina + 1; $i ++) {																			//
+						echo ("<a href=webshop.php?page=$i&results_per_page=$aantalPerPagina class=paginate_button>" . $i . "</a>");		//Buttons for every individual page
+					}																														//
+																																			//
+					$nextpagina = $page + 1;																								//Calc next page number
+					if ($page != $totaalPagina) {																							//
+						echo ("<a href=webshop.php?page=$nextpagina&results_per_page=$aantalPerPagina class=paginate_button> > </a>");		//Button for next page. Only show when not on last page
+						echo ("<a href=webshop.php?page=$totaalPagina&results_per_page=$aantalPerPagina class=paginate_button> >| </a>");	//Button for last page. Only show when not on last page
 					}
 				}
 				?>
