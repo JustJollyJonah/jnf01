@@ -41,32 +41,42 @@
 		</details>
 	</div>
 	<?php
-	if (isset ( $_GET ['page'] )) {
-		$page = $_GET ['page'];
-	} else {
-		$page = "home";
+	if (isset ( $_GET ['page'] )) {				//
+		$page = $_GET ['page'];					//Get current page
+	} else {									//
+		$page = "home";							//
 	}
 	?>
 	<div class="navbar">
 		<ul class="navbar_list">
 			<li class="navbar_item_home"
-				<?php if($page=='home'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a
+				<?php if($page=='home'){
+					echo 'style="box-shadow: inset 0 010px 1px rgba(0,0,0,.3);"';				//Create box shadow on current page button
+				}?>><a
 				href="index.php?page=home" class="a"><strong>Home</strong></a></li>
 				
 			<li class="navbar_item_about"
-				<?php if($page=='about'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a
+				<?php if($page=='about'){
+					echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';				//Create box shadow on current page button
+				}?>><a
 				href="index.php?page=about" class="a"><strong>Over Dynamiek ateliers</strong></a></li>
 				
 			<li class="navbar_item_product"
-				<?php if($page=='product'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a
+				<?php if($page=='product'){
+					echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';				//Create box shadow on current page button
+				}?>><a
 				href="index.php?page=product" class="a"><strong>Accesoires en producten</strong></a></li>
 				
 			<li class="navbar_item_workshops"
-				<?php if($page=='workshops'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a
+				<?php if($page=='workshops'){
+					echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';				//Create box shadow on current page button
+				}?>><a
 				href="index.php?page=workshops" class="a"><strong>Workshops</strong></a></li>
 				
 			<li class="navbar_item_webshop"
-				<?php if($page=='webshop'){echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';}?>><a
+				<?php if($page=='webshop'){
+					echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';				//Create box shadow on current page button
+				}?>><a
 				href="webshop.php" class="a"><strong>Webshop</strong></a></li>
 			<div id="slider">
 			<figure> 
@@ -94,14 +104,7 @@
 		include ("../DatabaseFunctions.php");
 		include ("../phpfuncties.php");
 		
-		$contents = array (
-				"home" => "home.txt",
-				"about" => "about.txt",
-				"product" => "product.txt",
-				"workshops" => "workshops.txt" 
-		);
-		
-		// 		?>
+		?>
 		</div>
 	<div class="content">
 		<div class="pagina"><?php
@@ -109,20 +112,20 @@
 		// include ("DatabaseFunctions.php");
 		// include ("phpfuncties.php");
 		$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
-		selectDatabase ( $pdo, "omega" );
-		$searchquery = $_GET ['searchquery'];
-		echo "<h3>Zoekresultaten voor: </h3>  <i>$searchquery</i><br><br>";
+		selectDatabase ( $pdo, "omega" );												//Connect to database
+		$searchquery = $_GET ['searchquery'];											//Get search query
+		echo "<h3>Zoekresultaten voor: </h3>  <i>$searchquery</i><br><br>";				//Echo search query
 		
-		$query = $pdo->prepare ( "SELECT * FROM pagina WHERE Tekst LIKE '%$searchquery%'" );
-		$query->execute ();
+		$query = $pdo->prepare ( "SELECT * FROM pagina WHERE Tekst LIKE '%$searchquery%'" );		//
+		$query->execute ();																			//fetch search results
 		
 		while ( $row = $query->fetch () ) {
-			$page = $row ['Titel']; // get page title
-			$tekst = explode ( ".", $row ['Tekst'] ); // get text from page(individual sentences
+			$page = $row ['Titel']; 																// get page title
+			$tekst = explode ( ".", $row ['Tekst'] ); 												// get text from page(individual sentences
 			
-			echo "<a href=index.php?page=$page class=searchresult>$page</a><br>"; // create link to page
-			foreach ( $tekst as $zin ) { // loop through text
-				if (stripos ( $zin, trim ( $searchquery ) ) !== false) { // separate search query from sentence
+			echo "<a href=index.php?page=$page class=searchresult>$page</a><br>"; 					// create link to page
+			foreach ( $tekst as $zin ) { 															// loop through text
+				if (stripos ( $zin, trim ( $searchquery ) ) !== false) { 							// separate search query from sentence
 					echo ucfirst ( ltrim ( $zin ) );
 				}
 			}
