@@ -23,9 +23,9 @@
     			<div class=button><a href=gebruikersbeheer.php>Gebruikersbeheer</a></div>
     		</div>
     		<div class="LoggedInUser"><?php 
-    			session_start();
-    			$user = $_SESSION['user'];
-    			echo $user;
+    			session_start();															//
+    			$user = $_SESSION['user'];													//Check current user		
+    			echo $user;																	//
     			?><br>
     			<a href="login.php" class=logoutbutton>Log uit</a>
     		</div>
@@ -37,9 +37,9 @@
     			<input type=text placeholder=Beschrijving name=Beschrijving><br>
     			<div class=pageContents>
     				<textarea id=mytextarea name=tekst><?php 
-    				if(isset($_POST['tekst'])){
-    					echo $_POST['tekst'];
-    				}
+    				if(isset($_POST['tekst'])){												//
+    					echo $_POST['tekst'];												//Put text back in editor if page was already added
+    				}																		//
     				?></textarea><br>
     			</div>
     			<input type="submit" value="Maak pagina" name=Add>
@@ -47,29 +47,29 @@
     		<?php 
 	
 			include ("../DatabaseFunctions.php");
-			$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
-			selectDatabase ( $pdo, "omega" );
+			$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );	//
+			selectDatabase ( $pdo, "omega" );												//Connect to database
 			
-			if(isset($_SESSION['user'])){
-				if(checkUserLevel($pdo, $user) == 1){
-						
-				}else{
-					header('Location: login.php');
-				}
-			}else{
-				header('Location: login.php');
+			if(isset($_SESSION['user'])){													//Check if user is logged in
+				if(checkUserLevel($pdo, $user) == 1){										//Check user level
+																							//
+				}else{																		//
+					header('Location: login.php');											//Send unauthorized users back
+				}																			//
+			}else{																			//
+				header('Location: login.php');												//Send non-logged in users back
 			}
 	
-			if(isset($_POST['Add'])){
-				$submit = $_POST['Add'];
-			}else{
+			if(isset($_POST['Add'])){														//
+				$submit = $_POST['Add'];													//Check if adding page
+			}else{																			//
 					
 			}
 	
-			if(isset($submit)){
+			if(isset($submit)){																//Check if adding page
 // 				echo $submit;
-				$query = $pdo->prepare("INSERT INTO pagina (Titel,Beschrijving,Tekst,Actief,Versie) VALUES (?,?,?,?,?)");
-				$query->execute(array($_GET['pagina'],$_POST['Beschrijving'],$_POST['tekst'],'0','1'));
+				$query = $pdo->prepare("INSERT INTO pagina (Titel,Beschrijving,Tekst,Actief,Versie) VALUES (?,?,?,?,?)");		//Insert new page into database
+				$query->execute(array($_GET['pagina'],$_POST['Beschrijving'],$_POST['tekst'],'0','1'));							//Insert values
 // 				echo $query->rowCount();
 			}
 	
