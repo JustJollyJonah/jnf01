@@ -167,7 +167,7 @@
 				
 					if ($active) {
 						echo "<tr>";
-						echo "<td><img src='../LoginPortal/" . trim($image) . "' width=80 height=80 alt='Plaats plaatje hier!'></td>";	//Place image
+						echo "<td><img src='../LoginPortal/" . trim($image) . "' width=80 height=80 alt='Plaats plaatje hier!'><div class=titel><i>$product</i></div></td>";	//Place image
 						echo "<td><strong>$beschrijving</strong></td>";																	//Place description
 						echo "<td><a href=$shop_url>Bestellen</a></td>";																//Place webshop url
 						echo "</tr>";

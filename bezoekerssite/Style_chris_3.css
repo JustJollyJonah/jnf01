@@ -258,13 +258,17 @@
 		margin: 2% auto;											/*Webshop itemlist*/
 		display: inline;											/**/
 	}
+	.webshop .titel{
+		width: 100%;
+		margin-right: 30%;
+	}
 	.webshop tbody{
 		max-width: 80%;												/*Webshop itemlist*/
 		overflow: hidden;											/**/
 	}
 	.webshop tbody tr td{
 		white-space: pre-wrap;										/*Webshop itemlist item*/
-		padding: 0px 50px;											/**/
+		padding: 10px 50px 18px 50px;								/**/
 	}
 	.pagina h2{
 		margin-left: 10%;											/*Title on Webshop page*/
@@ -290,7 +294,7 @@
 	}
 	.webshop tbody tr td{
 		white-space: pre-wrap;										/*Webshop itemlist item*/
-		padding: 0px 50px 0px 50px;									/**/
+		padding: 10px 50px 18px 50px;									/**/
 	}
 	.pagina pre {
 		white-space: pre-wrap;										/**/
