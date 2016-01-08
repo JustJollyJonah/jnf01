@@ -26,7 +26,7 @@
     		</div>
     		<div class="LoggedInUser"><?php 
     			session_start();
-    			$user = $_SESSION['user'];
+    			$user = $_SESSION['user'];					//Get current user
     			echo $user;
     			?><br>
     			<a href="login.php" class=logoutbutton>Log uit</a>
@@ -41,15 +41,15 @@
     					<?php
     					
     					include ("../DatabaseFunctions.php");
-    					$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );
-    					selectDatabase ( $pdo, "omega" );
+    					$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );	//
+    					selectDatabase ( $pdo, "omega" );												//Connect to database
     					
-    					if(isset($_GET['Delete'])){
-    						if(isset($_GET['Verwijder'])){
-    							$query = "DELETE FROM `pagina` WHERE `Pagina ID` = ?";
+    					if(isset($_GET['Delete'])){														//Check if we're deleting pages
+    						if(isset($_GET['Verwijder'])){												//Check which page to delete
+    							$query = "DELETE FROM `pagina` WHERE `Pagina ID` = ?";					//Prepare query
 //     							echo $query;
-    							$query = $pdo->prepare($query);
-    							$query->execute(array($_GET['Verwijder']));
+    							$query = $pdo->prepare($query);											//
+    							$query->execute(array($_GET['Verwijder']));								//Delete page
     						}else{
     							
     						}
@@ -57,37 +57,29 @@
     						
     					}
     					
-    					if(isset($_SESSION['user'])){
-    						if(checkUserLevel($pdo, $user) == 1){
+    					if(isset($_SESSION['user'])){													//Check if user is logged in
+    						if(checkUserLevel($pdo, $user) == 1){										//Check user level
     								
     						}else{
-    							header('Location: login.php');
+    							header('Location: login.php');											//Redirect if insufficient permissions
     						}
     					}else{
-    						header('Location: login.php');
+    						header('Location: login.php');												//Redirect if no user logged in
     					}
-    					
-// 							$txtfiles = array (
-// 									'home',
-// 									'about',
-// 									'product',
-// 									'workshops' 
-// 							);
 							
-							$array = array();
-							
-							$query = $pdo->prepare("SELECT * FROM pagina");
-							$query->execute();
+							$array = array();															//Create array
+							$query = $pdo->prepare("SELECT * FROM pagina");								//Prepare query
+							$query->execute();															//Fetch pages
 							
 							while($row = $query->fetch()){
-								$array[$row['Pagina ID']] = $row['Titel'];
+								$array[$row['Pagina ID']] = $row['Titel'];								//Fetch page titles
 							}
 							
 // 							print_r($array);
 							
-							foreach ( $array as $ID => $file) {
-								echo "<tr><td><input type='submit' name='toChange' value='$file'></td>";
-								echo "<th><input type='radio' name='Verwijder' value='$ID'></th></tr>";
+							foreach ( $array as $ID => $file) {												//Loop through array of page titles
+								echo "<tr><td><input type='submit' name='toChange' value='$file'></td>";	//Make button
+								echo "<th><input type='radio' name='Verwijder' value='$ID'></th></tr>";		//Make delete selector button
 							}
 // 							echo $_GET['Verwijder'];
 							
@@ -104,19 +96,19 @@
 						
 						
 						if (isset ( $_GET ['toChange'] )) {
-							$toChange = $_GET ['toChange'];
-							$test = fetchWithException ( $pdo, 'pagina', 'tekst', "titel='$toChange'" );
+							$toChange = $_GET ['toChange'];																	//
+							$test = fetchWithException ( $pdo, 'pagina', 'tekst', "titel='$toChange'" );					//
 						}
 						
-						header ( 'Content-Type: text/html; charset=ISO-8859-1' );
-						if (isset ( $_GET ['toChange'] )) {
-							$toChange = '';
-							$toChange = $_GET ['toChange'];
-							echo "<form action=Bewerk.php method=get class=BewerkForm>";
-							echo "<div class=WYSIWYG><textarea id=mytextarea name=Bewerk>$test</textarea></div><br>";
-							echo "<input type='submit' value='Bewerk' class='cmsBewerk'>";
-							echo "<input type='hidden' name=toChange value=" . $toChange . ">";
-							echo "</form>";
+						header ( 'Content-Type: text/html; charset=ISO-8859-1' );											//Set right character set
+						if (isset ( $_GET ['toChange'] )) {																	//Check if we're changing text
+							$toChange = '';																					//Reset the text to cange
+							$toChange = $_GET ['toChange'];																	//Get the text to change
+							echo "<form action=Bewerk.php method=get class=BewerkForm>";									//Create form
+							echo "<div class=WYSIWYG><textarea id=mytextarea name=Bewerk>$test</textarea></div><br>";		//Create text editor. Put in text from page
+							echo "<input type='submit' value='Bewerk' class='cmsBewerk'>";									//Create submit button
+							echo "<input type='hidden' name=toChange value=" . $toChange . ">";								//Create hidden value for text changed
+							echo "</form>";																					//
 						}
 						
 						// header ( 'Content-Type: text/html; charset=ISO-8859-1' );
@@ -124,7 +116,7 @@
 						// $toChange = "";
 						// $toChange = $_GET ['toChange'];
 						// echo "<form action='Bewerk.php' method='GET'>";
-						// echo "<textarea class='cmsTextarea' name='Bewerk'>" . $test . "</textarea><br>";
+						// echo "<textarea class='cmsTextarea' name='Bewerk'>" . $test . "</textarea><br>";						OLD SYSTEM
 						// echo "<input type='submit' value='Bewerk' class='cmsBewerk'>";
 						// echo "<input type='hidden' name=toChange value=" . $toChange . ">";
 						// echo "</form>";
@@ -132,7 +124,7 @@
 						
 						if (isset ( $_GET ['Bewerkt'] )) {
 							if ($_GET ['Bewerkt']) {
-								echo '<div class="bewerkSuccess">Bestand succesvol bijgewerkt</div>';
+								echo '<div class="bewerkSuccess">Bestand succesvol bijgewerkt</div>';						//Check if page was edited
 							}
 						}
 						
