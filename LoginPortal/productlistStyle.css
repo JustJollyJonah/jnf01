@@ -1,80 +1,80 @@
 html{
-	height: 100%;
+	height: 100%;									/*Default page settings*/
 }
 
 body{
-	background-color: #669999;
-	height: 100%;
+	background-color: #669999;						/*Default settings for page*/
+	height: 100%;									/**/
 }
 
 .addProduct{
-	display: inline-block;
-	border: solid 1px black;
+	display: inline-block;							/*Area for adding products*/
+	border: solid 1px black;						/**/
 }
 
 .addProduct a{
-	text-decoration: none;
+	text-decoration: none;							/*Link in product adding area*/
 }
 
 .addProduct a:visited{
-	color: blue;
+	color: blue;									/*Visited links*/
 }
 
 .wrapper{
-	height: 100%;
+	height: 100%;									/*Wrapper*/
 }
 
 .product_mgmt{
-	width: 17%;
-	height: 100%;
-	float: left;
-	text-align: right;
+	width: 17%;										/**/
+	height: 100%;									/*Area for managing products*/
+	float: left;									/**/
+	text-align: right;								/**/
 }
 
 .product_mgmt input{
-	margin-top: 5px;
+	margin-top: 5px;								/*Inputs for product management area*/
 }
 
 .productList{
-	width: 66%;
-	float: left;
-	text-align: center;
+	width: 66%;										/**/
+	float: left;									/*Product listing*/
+	text-align: center;								/**/
 }
 
 .product{
-	display: inline;
-	width: calc(100% / 3);
-	float: left;
+	display: inline;								/**/
+	width: calc(100% / 3);							/*Area for each product*/
+	float: left;									/**/
 }
 
 .wijzigForm{
-	margin-left: 5px;
-	margin-top: 5px;
-	width: 66%;
-	float: left;
+	margin-left: 5px;								/**/
+	margin-top: 5px;								/*Form in which proucts are edited*/
+	width: 66%;										/**/
+	float: left;									/**/
 }
 
 .paginate{
-	display: inline;
-	width: 100%;
-	float: left;
-	margin: 0 auto;
-	margin-bottom: 5px;
+	display: inline;								/**/
+	width: 100%;									/**/
+	float: left;									/*Pagination area*/
+	margin: 0 auto;									/**/
+	margin-bottom: 5px;								/**/
 }
 
 .paginate_button{
-	padding: 2px 7px;
-	margin-left: 3px;
-	margin-right: 3px;
-	text-decoration: none;
-	color: black;
-	background: linear-gradient(to bottom, #e3e3e3, #c0c0c0);
-	border-radius: 5px;
-	border: solid 1px black;
+	padding: 2px 7px;											/**/
+	margin-left: 3px;											/**/
+	margin-right: 3px;											/**/
+	text-decoration: none;										/*Pagination page buttons*/
+	color: black;												/**/
+	background: linear-gradient(to bottom, #e3e3e3, #c0c0c0);	/**/
+	border-radius: 5px;											/**/
+	border: solid 1px black;									/**/
 }
 
 .paginate_button:active{
-	box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);
+	box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);				/*When clicking page buttons*/
 }
 
 .wijzig_form{
@@ -82,9 +82,9 @@ body{
 }
 
 .wijzig_form input{
-	margin-left: 0px !important;
+	margin-left: 0px !important;									/*Inputs in editing form*/
 }
 
 .wijzig_form td{
-	text-align: left !important;
+	text-align: left !important;									/*Table data cells in editing form*/
 }
