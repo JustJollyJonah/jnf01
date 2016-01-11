@@ -1,170 +1,168 @@
 body {
-	margin: 0px;
-	height: auto;
+	margin: 0px;									/*default settings for page*/
+	height: auto;									/**/
 }
 
 .banner {
-	width: 100%;
-	height:77px;
-	background-color:lightblue;
-	margin:0px 0px 0px 0px;
+	width: 100%;									/**/
+	height:77px;									/*Banner settings*/
+	background-color:lightblue;						/**/
+	margin:0px 0px 0px 0px;							/**/
 }
 
 .banner p {
-	font-size:24px;
-	padding-top:7px;
-	margin-bottom: 0px;
+	font-size:24px;								/**/
+	padding-top:7px;							/*Title in banner*/
+	margin-bottom: 0px;							/**/
 }
 
 .banner img {
-	float:left;
-	width:12%;
-	height:100%;
+	float:left;									/**/
+	width:12%;									/*Logo img in banner*/
+	height:100%;								/**/
 }
 .home_button{
-	float: right;
-	display: inline;
-	height: 30px;
-	margin-top: 20px;
-	margin-right: 20px;
+	float: right;									/**/
+	display: inline;								/**/
+	height: 30px;									/*Home button in banner*/
+	margin-top: 20px;								/**/
+	margin-right: 20px;								/**/
 }
 .homebutton{
-	width: 30px !important;
+	width: 30px !important;							/*Home button in banner*/
 }
 .nav{
-	display: inline;
-	width: 66%;
+	display: inline;								/*Navbar settings*/
+	width: 66%;										/**/
 }
 .nav .button{
-	width: calc(24% - 168px);
-	min-width: 15%;
-	padding: 2px 3px;
-	float: left;
-	margin: 0px 60px;
-	background: linear-gradient(to bottom, #e3e3e3, #c0c0c0);
-	border: solid 1px black;
-	border-radius: 2px;
-	text-align: center;
+	width: calc(24% - 168px);										/**/
+	min-width: 15%;													/**/
+	padding: 2px 3px;												/**/
+	float: left;													/**/
+	margin: 0px 60px;												/*Buttons in navbar*/
+	background: linear-gradient(to bottom, #e3e3e3, #c0c0c0);		/**/
+	border: solid 1px black;										/**/
+	border-radius: 2px;												/**/
+	text-align: center;												/**/
 }
 .nav .button a{
-	text-decoration: none;
-	color: black;
-	width: 100%;
-	padding: 0% 22%;
+	text-decoration: none;									/**/
+	color: black;											/*Links in navbar buttons*/
+	width: 100%;											/**/
+	padding: 0% 22%;										/**/
 }
 .banner .logoutbutton{
-	display: inline;
-	float: right;
-	padding: 2px 3px;
-	margin: 0 auto;
-	background: linear-gradient(to bottom, #e3e3e3, #c0c0c0);
-	border: solid 1px black;
-	border-radius: 2px;
-	text-decoration: none;
-	color: black;
+	display: inline;												/**/
+	float: right;													/**/
+	padding: 2px 3px;												/**/
+	margin: 0 auto;													/**/
+	background: linear-gradient(to bottom, #e3e3e3, #c0c0c0);		/*Logout button in banner*/
+	border: solid 1px black;										/**/
+	border-radius: 2px;												/**/
+	text-decoration: none;											/**/
+	color: black;													/**/
 }
 .banner .button:active{
-	box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);
+	box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);					/*When clicking the buttons*/
 }
 
 .loggedInUser{
-	display: inline;
-	float: right;
-	color: beige;
-	text-align: right;
+	display: inline;									/**/
+	float: right;										/*Area to display logged in user*/
+	color: beige;										/**/
+	text-align: right;									/**/
 }
 
 #error{
-	color: red;
+	color: red;											/*Error messages*/
 }
 
 .loginform {
-	margin-top: 3.5%;
-	border-radius: 6px 6px 6px 6px; 
-	display: inline-block;
-	padding: 20px 8px;
-	background-color: lightblue;
+	margin-top: 3.5%;									/**/
+	border-radius: 6px 6px 6px 6px; 					/**/
+	display: inline-block;								/*Form for login details*/
+	padding: 20px 8px;									/**/
+	background-color: lightblue;						/**/
 }
 
 .loginform form{
-	text-align: center;
-	float: right;
+	text-align: center;									/*Actual form for login details*/
+	float: right;										/**/
 }
 
 .loginform form input{
-	width: 75%;
+	width: 75%;											/*Input fields in form*/
 }
 
 #submit{
-	margin-top: 15px;
-	margin-left: 75px;
-	margin-right: 150px;
-	width: 50%;
-	height: 4.5%;
-	font-size: 18px;
+	margin-top: 15px;									/**/
+	margin-left: 75px;									/**/
+	margin-right: 150px;								/*Submit button in form*/
+	width: 50%;											/**/
+	height: 4.5%;										/**/
+	font-size: 18px;									/**/
 }
 .dynamiek-text{
-	text-align: center;
-	margin: 0px;
-	padding: 30px;
-	font-size: 30px;
-	color: #283e68;
-	font-family: 'Open Sans', sans-serif;
-	font-family: 'Source Sans Pro', sans-serif;
+	text-align: center;											/**/
+	margin: 0px;												/**/
+	padding: 30px;												/**/
+	font-size: 30px;											/*Logo text*/
+	color: #283e68;												/**/
+	font-family: 'Open Sans', sans-serif;						/**/
+	font-family: 'Source Sans Pro', sans-serif;					/**/
 }
 #submit:hover{
-	box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);
+	box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);				/*When hovering over submit button*/
 }
 input[type=text]{
-	float: left;
-	margin-top: 10px;
-	margin-left: 35px;
-	padding: 4px;
-	border: solid 1px darkgrey;
-	border-radius: 6px 6px 6px 6px;
-	
-	-webkit-appearance: none;
+	float: left;												/**/
+	margin-top: 10px;											/**/
+	margin-left: 35px;											/**/
+	padding: 4px;												/*Text inputs*/
+	border: solid 1px darkgrey;									/**/
+	border-radius: 6px 6px 6px 6px;								/**/
+	-webkit-appearance: none;									/**/
 }
 input[type=password]{
-	float: left;
-	margin-top: 20px;
-	margin-left: 35px;
-	padding: 4px;
-	border: solid 1px darkgrey;
-	border-radius: 6px 6px 6px 6px;
-	
-	-webkit-appearance: none;
+	float: left;												/**/
+	margin-top: 20px;											/**/
+	margin-left: 35px;											/**/
+	padding: 4px;												/*Password inputs*/
+	border: solid 1px darkgrey;									/**/
+	border-radius: 6px 6px 6px 6px;								/**/
+	-webkit-appearance: none;									/**/
 }
 .content{
-	text-align:center;
-	height: 100%;
-	background-color: #669999;
+	text-align:center;											/**/
+	height: 100%;												/*Content container on page*/
+	background-color: #669999;									/**/
 }
 .plus_button{
-	background-image: url('../bezoekerssite/img/plus2.png');
-	width: 30px;
-	height: 30px;
-	background-size: 100% 100%;
+	background-image: url('../bezoekerssite/img/plus2.png');	/**/
+	width: 30px;												/*NOT USED*/
+	height: 30px;												/**/
+	background-size: 100% 100%;									/**/
 }
 .plus_button:hover{
-	background-image: url('../bezoekerssite/img/plus.png');
+	background-image: url('../bezoekerssite/img/plus.png');		/*NOT USED*/
 }
 .minus_button{
-	background-image: url('img/minus.png');
+	background-image: url('img/minus.png');						/*NOT USED*/
 }
 .minus_button:hover{
-	background-image: url('img/minus2.png');
+	background-image: url('img/minus2.png');					/*NOT USED*/
 }
 td{
-	text-align: center;
+	text-align: center;											/*Table data cells*/
 }
 .gebruikbeh {
-	padding-left: 35%;
+	padding-left: 35%;											/*User management*/
 }
 
 .tdgebruikbeh {
-	padding-right: 3%;
-	border: solid 2px lightblue;
+	padding-right: 3%;											/*Table data cells in User management*/
+	border: solid 2px lightblue;								/**/
 }
 
  
