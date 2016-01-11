@@ -77,7 +77,12 @@
 				?>><a href="webshop.php" class="a"><strong>Webshop</strong></a></li>
 			
 		</ul>
-		<div id="slider">
+		
+		<script type="text/javascript"
+			src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+		
+	</div>
+	<div id="slider">
 				<figure>
 					<div><img src="img/slider/slide1.png"></div>
 					<div><img src="img/slider/slide8.png"></div>
@@ -93,10 +98,6 @@
 					<div><img src="img/slider/slide5.png"></div>
 				</figure>
 			</div>
-		<script type="text/javascript"
-			src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
-		
-	</div>
 	</div>
 
 	<div class="navbar_mobile">

@@ -43,9 +43,13 @@ body{
 
 .product{
 	display: inline;								/**/
-	width: calc(100% / 3);							/*Area for each product*/
+	width: calc(100% / 3 - 42px);						/*Area for each product*/
 	float: left;									/**/
 	min-height: 380px;								/**/
+	border: solid 2px black;
+	border-radius: 12px;
+	margin: 5px;
+	padding: 5px 0px 0px 0px;
 }
 
 .wijzigForm{
