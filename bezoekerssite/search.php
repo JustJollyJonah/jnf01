@@ -81,14 +81,14 @@
 			<div id="slider">
 			<figure> 
 				<div><img src="img/slider/slide1.png"></div>
-				<div><img src="img/slider/slide2.png"></div>
+				<div><img src="img/slider/slide8.png"></div>
 				<div><img src="img/slider/slide3.png"></div>
 				<div><img src="img/slider/slide4.png"></div>
 				<div><img src="img/slider/slide5.png"></div>
 				<div><img src="img/slider/slide6.png"></div>
 				<div><img src="img/slider/slide7.png"></div>
 				<div><img src="img/slider/slide1.png"></div>
-				<div><img src="img/slider/slide2.png"></div>
+				<div><img src="img/slider/slide8.png"></div>
 				<div><img src="img/slider/slide3.png"></div>
 				<div><img src="img/slider/slide4.png"></div>
 				<div><img src="img/slider/slide5.png"></div>
