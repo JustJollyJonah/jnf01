@@ -18,7 +18,7 @@ selectDatabase($db, "omega");
  
 
 if(isset($_SESSION['user'])){
-	if(checkUserLevel($pdo, $user) == 1){
+	if(checkUserLevel($db, $user) == 1){
 			
 	}else{
 		header('Location: login.php');
