@@ -25,17 +25,18 @@
 
 	<div class="header">
 		<img src="img/dynamiek_logo.png" class="img_logo">
-		<div class="search">
-			<details>
-				<summary title="Zoeken"></summary>
-				<form action=search.php?page=search method=get>
-					<input type=text name=searchquery placeholder=Search> <input
-						type=submit name=page value=Search>
-				</form>
-			</details>
-		</div>
+		
 		<div class="navbar">
 		<ul class="navbar_list">
+			<div class="search">
+				<details>
+					<summary title="Zoeken"></summary>
+					<form action=search.php?page=search method=get>
+						<input type=text name=searchquery placeholder=Search> <input
+						type=submit name=page value=Search>
+					</form>
+				</details>
+			</div>
 			<li class="navbar_item_home"
 				<?php if($page=='home'){
 					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
