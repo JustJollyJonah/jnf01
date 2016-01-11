@@ -42,7 +42,7 @@
     					<?php
     					
     					include ("../DatabaseFunctions.php");
-    					$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );	//
+    					$pdo = connectToServer ( "mysql:host=178.62.201.206;port=3306", "omega", "usbw" );	//
     					selectDatabase ( $pdo, "omega" );												//Connect to database
     					
     					if(isset($_GET['Delete'])){														//Check if we're deleting pages
@@ -136,7 +136,7 @@
 						?>
     		</div>
 			<div class="contentRight">
-				<iframe height=100% src="http://localhost:8080/bezoekerssite/index.php?page=<?php 
+				<iframe height=100% src="../bezoekerssite/index.php?page=<?php 
 					if(isset($toChange)){
 						echo $toChange;
 					}else{

@@ -11,7 +11,7 @@
 	$toChange = $_GET ['toChange'];																	//Get text
 	$bewerkt = $_GET ['Bewerk'];																	//Get page title
 	
-	$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );					//
+	$pdo = connectToServer ( "mysql:host=178.62.201.206;port=3306", "omega", "usbw" );					//
 	selectDatabase ( $pdo, "omega" );																//Connect to database
 	
 	$query = $pdo->prepare("UPDATE pagina SET tekst='$bewerkt' WHERE titel='$toChange'");			//Setup query
