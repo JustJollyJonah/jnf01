@@ -749,4 +749,9 @@
 		text-decoration: none;									/**/
 		color: black;											/**/
 	}
+	.gebruikerbeh tbody, tr, td{
+		max-width: 80%;												
+		padding-left: 20%;
+		background-color: yellow;
+		}
 }

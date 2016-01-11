@@ -158,3 +158,13 @@ input[type=password]{
 td{
 	text-align: center;
 }
+.gebruikbeh {
+	padding-left: 35%;
+}
+
+.tdgebruikbeh {
+	padding-right: 3%;
+	border: solid 2px lightblue;
+}
+
+ 
