@@ -45,6 +45,7 @@ body{
 	display: inline;								/**/
 	width: calc(100% / 3);							/*Area for each product*/
 	float: left;									/**/
+	min-height: 380px;								/**/
 }
 
 .wijzigForm{
