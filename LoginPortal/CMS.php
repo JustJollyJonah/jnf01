@@ -10,7 +10,8 @@
 				selector: '#mytextarea',
 				plugins: 'autoresize',
 				plugins: 'link',
-				menubar: 'insert'
+				menubar: 'insert',
+				height: 300
 			});
 		</script>
 		<title>Insert title here</title>
@@ -90,7 +91,8 @@
     			<form class="addPage" action="addPage.php" method=get>
     				<legend>Nieuwe pagina toevoegen</legend>
     				<input type=text placeholder="Pagina naam" name=pagina><br>
-    				<input type=submit value="Maak pagina">
+    				<input type=submit value="Maak pagina"><br>
+    				Om tussen pagina's te linken moet de Url beginnen met '?page='
     			</form>
     				<?php
 						
