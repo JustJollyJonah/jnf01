@@ -8,7 +8,7 @@ $user = $_SESSION['user'];
  
 // Load the database, and the respective functions.
 include("../DatabaseFunctions.php");
-$db = connectToServer("mysql:host=localhost;port=3307", "root", "usbw");
+$db = connectToServer("mysql:host=178.62.201.206;port=3306", "omega", "usbw");
 selectDatabase($db, "omega");
  
 //if(!isset($_SESSION['user']) || checkUserLevel($db, $user) != 1)

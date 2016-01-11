@@ -47,7 +47,7 @@
     		<?php 
 	
 			include ("../DatabaseFunctions.php");
-			$pdo = connectToServer ( "mysql:host=localhost;port=3307", "root", "usbw" );	//
+			$pdo = connectToServer ( "mysql:host=178.62.201.206;port=3306", "omega", "usbw" );	//
 			selectDatabase ( $pdo, "omega" );												//Connect to database
 			
 			if(isset($_SESSION['user'])){													//Check if user is logged in
