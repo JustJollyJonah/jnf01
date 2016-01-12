@@ -76,6 +76,7 @@ while($row = $query->fetch())
                 <th>Achternaam</th>
                 <th>Actief</th>
             </tr>
+            <a href=Gebruikertoevoegen.php>Gebruiker toevoegen</a>
             <?php echo $txt_user; ?>
         </table>
     </body>
