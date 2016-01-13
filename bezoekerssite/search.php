@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Webpagina Framework</title>
-<link rel="stylesheet" href="Style_chris_3.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link
+	<meta charset="UTF-8">
+	<title>Webpagina Framework</title>
+	<link rel="stylesheet" href="Style_chris_3.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link
 	href='https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro|Raleway'
 	rel='stylesheet' type='text/css'>
-<!--<link rel="stylesheet" href="stylejonah.css">-->
+	<!--<link rel="stylesheet" href="stylejonah.css">-->
 </head>
 <body>
 	<div class="header">
+	
+	<?php
+	if (isset ( $_GET ['page'] )) {				//
+		$page = $_GET ['page'];					//Get current page
+	} else {									//
+		$page = "home";							//
+	}
+	?>
 		<img src="img/dynamiek_logo.png" class="img_logo">
 		<div class="search">
 			<details>
@@ -22,6 +30,62 @@
 				</form>
 			</details>
 		</div>
+		<div class="navbar">
+		<ul class="navbar_list">
+			<li class="navbar_item_webshop"
+				<?php if($page=='webshop'){
+					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
+				}?>><a
+				href="webshop.php" class="a"><strong>Webshop</strong></a></li>
+			<li class="navbar_item_workshops"
+				<?php if($page=='workshops'){
+					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
+				}?>><a
+				href="index.php?page=workshops" class="a"><strong>Workshops</strong></a></li>
+				
+			<li class="navbar_item_product"
+				<?php if($page=='product'){
+					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
+				}?>><a
+				href="index.php?page=product" class="a"><strong>Accesoires en producten</strong></a></li>
+			<li class="navbar_item_about"
+				<?php if($page=='about'){
+					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
+				}?>><a
+				href="index.php?page=about" class="a"><strong>Over Dynamiek ateliers</strong></a></li>
+			<li class="navbar_item_home"
+				<?php if($page=='home'){
+					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
+				}?>><a
+				href="index.php?page=home" class="a"><strong>Home</strong></a></li>
+			
+		</ul>
+		<?php
+		// $file = file_get_contents ( "navbarLayout3.txt" );
+		// echo $file;
+		
+		header ( 'Content-Type: text/html; charset=ISO-8859-1' );
+		include ("../DatabaseFunctions.php");
+		include ("../phpfuncties.php");
+		
+		?>
+		</div>
+		<div id="slider">
+			<figure> 
+				<div><img src="img/slider/slide1.png"></div>
+				<div><img src="img/slider/slide8.png"></div>
+				<div><img src="img/slider/slide3.png"></div>
+				<div><img src="img/slider/slide4.png"></div>
+				<div><img src="img/slider/slide5.png"></div>
+				<div><img src="img/slider/slide6.png"></div>
+				<div><img src="img/slider/slide7.png"></div>
+				<div><img src="img/slider/slide1.png"></div>
+				<div><img src="img/slider/slide8.png"></div>
+				<div><img src="img/slider/slide3.png"></div>
+				<div><img src="img/slider/slide4.png"></div>
+				<div><img src="img/slider/slide5.png"></div>
+			</figure>
+			</div>
 	</div>
 	<div class="navbar_mobile">
 		<details value='test'>
@@ -40,72 +104,7 @@
 			</ul>
 		</details>
 	</div>
-	<?php
-	if (isset ( $_GET ['page'] )) {				//
-		$page = $_GET ['page'];					//Get current page
-	} else {									//
-		$page = "home";							//
-	}
-	?>
-	<div class="navbar">
-		<ul class="navbar_list">
-			<li class="navbar_item_home"
-				<?php if($page=='home'){
-					echo 'style="box-shadow: inset 0 010px 1px rgba(0,0,0,.3);"';				//Create box shadow on current page button
-				}?>><a
-				href="index.php?page=home" class="a"><strong>Home</strong></a></li>
-				
-			<li class="navbar_item_about"
-				<?php if($page=='about'){
-					echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';				//Create box shadow on current page button
-				}?>><a
-				href="index.php?page=about" class="a"><strong>Over Dynamiek ateliers</strong></a></li>
-				
-			<li class="navbar_item_product"
-				<?php if($page=='product'){
-					echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';				//Create box shadow on current page button
-				}?>><a
-				href="index.php?page=product" class="a"><strong>Accesoires en producten</strong></a></li>
-				
-			<li class="navbar_item_workshops"
-				<?php if($page=='workshops'){
-					echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';				//Create box shadow on current page button
-				}?>><a
-				href="index.php?page=workshops" class="a"><strong>Workshops</strong></a></li>
-				
-			<li class="navbar_item_webshop"
-				<?php if($page=='webshop'){
-					echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"';				//Create box shadow on current page button
-				}?>><a
-				href="webshop.php" class="a"><strong>Webshop</strong></a></li>
-			<div id="slider">
-			<figure> 
-				<div><img src="img/slider/slide1.png"></div>
-				<div><img src="img/slider/slide8.png"></div>
-				<div><img src="img/slider/slide3.png"></div>
-				<div><img src="img/slider/slide4.png"></div>
-				<div><img src="img/slider/slide5.png"></div>
-				<div><img src="img/slider/slide6.png"></div>
-				<div><img src="img/slider/slide7.png"></div>
-				<div><img src="img/slider/slide1.png"></div>
-				<div><img src="img/slider/slide8.png"></div>
-				<div><img src="img/slider/slide3.png"></div>
-				<div><img src="img/slider/slide4.png"></div>
-				<div><img src="img/slider/slide5.png"></div>
-			</figure>
-			</div>
-		</ul>
-		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
-		<?php
-		// $file = file_get_contents ( "navbarLayout3.txt" );
-		// echo $file;
-		
-		header ( 'Content-Type: text/html; charset=ISO-8859-1' );
-		include ("../DatabaseFunctions.php");
-		include ("../phpfuncties.php");
-		
-		?>
-		</div>
+	
 	<div class="content">
 		<div class="pagina"><?php
 		

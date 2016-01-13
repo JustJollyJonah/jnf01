@@ -48,38 +48,34 @@
 		// 		?>
 		<div class="navbar">
 		<ul class="navbar_list">
-			<li class="navbar_item_home"<?php
-				if ($page == 'home') {
-					echo 'style="box-shadow: inset 0 010px 1px rgba(0,0,0,.3);"'; // Create box shadow on current page button
-				}
-				?>><a href="index.php?page=home" class="a"><strong>Home</strong></a></li>
-			<li class="navbar_item_about"<?php
-				if ($page == 'about') {
-					echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"'; // Create box shadow on current page button
-				}
-				?>><a href="index.php?page=about" class="a"><strong>Over Dynamiek
-						ateliers</strong></a></li>
-			<li class="navbar_item_product"<?php
-				if ($page == 'product') {
-					echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"'; // Create box shadow on current page button
-				}
-				?>><a href="index.php?page=product" class="a"><strong>Accesoires en
-						producten</strong></a></li>
-			<li class="navbar_item_workshops"<?php
-				if ($page == 'workshops') {
-					echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"'; // Create box shadow on current page button
-				}
-				?>><a href="index.php?page=workshops" class="a"><strong>Workshops</strong></a></li>
-			<li class="navbar_item_webshop"<?php
-				if ($page == 'webshop') {
-					echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"'; // Create box shadow on current page button
-				}
-				?>><a href="webshop.php" class="a"><strong>Webshop</strong></a></li>
+			<li class="navbar_item_webshop"
+				<?php if($page=='webshop'){
+					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
+				}?>><a
+				href="webshop.php" class="a"><strong>Webshop</strong></a></li>
+			<li class="navbar_item_workshops"
+				<?php if($page=='workshops'){
+					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
+				}?>><a
+				href="index.php?page=workshops" class="a"><strong>Workshops</strong></a></li>
+				
+			<li class="navbar_item_product"
+				<?php if($page=='product'){
+					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
+				}?>><a
+				href="index.php?page=product" class="a"><strong>Accesoires en producten</strong></a></li>
+			<li class="navbar_item_about"
+				<?php if($page=='about'){
+					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
+				}?>><a
+				href="index.php?page=about" class="a"><strong>Over Dynamiek ateliers</strong></a></li>
+			<li class="navbar_item_home"
+				<?php if($page=='home'){
+					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
+				}?>><a
+				href="index.php?page=home" class="a"><strong>Home</strong></a></li>
 			
 		</ul>
-		
-		<script type="text/javascript"
-			src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
 		
 	</div>
 	<div id="slider">
