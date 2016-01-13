@@ -37,20 +37,19 @@ if(isset($_SESSION['user'])){
 } 
 if(isset($_POST['LoginSubmit']))
 {
-	echo 'het is verzonden';
 	$stmt = $db ->prepare ( "DELETE FROM login WHERE Gebruikersnaam=?");
 	$stmt->execute (array($_POST['gebruikersnaam']));
-
+	header("Location: gebruikersbeheer.php")
 }
 ?>
-<form action="loginverwijderen.php">
+<form action="loginverwijderen.php" onsubmit="return confirm('Weet u zeker dat u deze gebruiker wilt verwijderen')">
 <table class="tabelinfo">
 			<tr>
 				<td>Gebruikersnaam:</td>
 				<td><input type="text" value="" name="gebruikersnaam" placeholder="Inlognaam" required /></td>
 			</tr>
 			<tr>
-			<td><input type="submit" name="LoginSubmit" value="Verzend" onClick="return confirm('Weet u zeker dat u gebruiker <?php print($_POST['gebruikersnaam']) ?> wilt verwijderen?')"></td>
+			<td><input type="submit" name="LoginSubmit" value="Verzend"></td>
 			</tr>
 			</form>
         </body>
