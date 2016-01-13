@@ -26,7 +26,7 @@ if (isset ( $_GET ['verwijder'] )) {
 		$user2 = $row ['Naam'];
 	}
 	if (checkUserLevel ( $pdo, $user2 ) != 1) {
-		// :id staat voor $id
+		
 		$delfunction = "DELETE FROM login WHERE medewerkernummer = ?; DELETE FROM medewerker WHERE Medewerkernummer = ?";
 		$query = $pdo->prepare ( $delfunction );
 		$query->execute ( array ($id,$id ) );

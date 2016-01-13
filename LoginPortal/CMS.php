@@ -14,7 +14,7 @@
 				height: 300
 			});
 		</script>
-		<title>Insert title here</title>
+		<title>CMS</title>
 	</head>
 	<body>
 		<div class="banner">
@@ -45,6 +45,16 @@
     					$pdo = connectToServer ( "mysql:host=178.62.201.206;port=3306", "omega", "usbw" );	//
     					selectDatabase ( $pdo, "omega" );												//Connect to database
     					
+    					if(isset($_SESSION['user'])){													//Check if user is logged in
+    						if(checkUserLevel($pdo, $user) == 1){										//Check user level
+    					
+    						}else{
+    							header('Location: login.php');											//Redirect if insufficient permissions
+    						}
+    					}else{
+    						header('Location: login.php');												//Redirect if no user logged in
+    					}
+    					
     					if(isset($_GET['Delete'])){														//Check if we're deleting pages
     						if(isset($_GET['Verwijder'])){												//Check which page to delete
     							$query = "DELETE FROM `pagina` WHERE `Pagina ID` = ?";					//Prepare query
@@ -57,17 +67,7 @@
     					}else{
     						
     					}
-    					
-    					if(isset($_SESSION['user'])){													//Check if user is logged in
-    						if(checkUserLevel($pdo, $user) == 1){										//Check user level
-    								
-    						}else{
-    							header('Location: login.php');											//Redirect if insufficient permissions
-    						}
-    					}else{
-    						header('Location: login.php');												//Redirect if no user logged in
-    					}
-							
+    				
 							$array = array();															//Create array
 							$query = $pdo->prepare("SELECT * FROM pagina");								//Prepare query
 							$query->execute();															//Fetch pages

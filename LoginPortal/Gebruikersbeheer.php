@@ -9,11 +9,6 @@ $user = $_SESSION['user'];
 include("../DatabaseFunctions.php");
 $db = connectToServer("mysql:host=178.62.201.206;port=3306", "omega", "usbw");
 selectDatabase($db, "omega");
-//if(!isset($_SESSION['user']) || checkUserLevel($db, $user) != 1)
-//{
-//    header('Location: login.php');
-//}
- 
 
 if(isset($_SESSION['user'])){
 	if(checkUserLevel($db, $user) == 1){
@@ -28,7 +23,7 @@ if(isset($_SESSION['user'])){
 // EN nu de custom database functies.
 
  
-$txt_user = '';
+//$txt_user = '';
 
 //     $txt_user .= 
 //     	"<tr>
@@ -85,13 +80,16 @@ $txt_user = '';
             	$naam = $row['Naam'];
             	$achternaam = $row['Naam'];
             	$actief = $row['Actief'];
-            	echo "<tr><td>$nummer</td><td>$naam</td><td>$achternaam</td>";
+            	echo "<tr><td>$nummer</td><td>$naam</td><td>$achternaam</td>"; 
             	if($actief){
             		echo "<td><input type=checkbox checked></td>";
             	}else{
             		echo "<td><input type=checkbox></td>";
             	}
+            	echo "<td><a href=\"bewerkMedewerker.php?verwijder={$row['Medewerkernummer']}\">Verwijder</a></td>
+            	<td><a href=\"Gebruikerwijzig.php?wijzig={$row['Medewerkernummer']}\">Wijzigen</a></td>";
             }
+
             ?>
         </table>
     </body>
