@@ -46,6 +46,9 @@ if(isset($_SESSION['user'])){
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="StylePortal.css">
 <link rel="stylesheet" href="productlistStyle.css">
+<link
+	href='https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro|Raleway'
+	rel='stylesheet' type='text/css'>
 <title>Gebruikersbeheer</title>
 </head>
     <body>
