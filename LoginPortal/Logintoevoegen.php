@@ -1,21 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="StylePortal.css">
-<link rel="stylesheet" href="productlistStyle.css">
-<title>Gebruikersbeheer</title>
-</head>
-    <body>
-        <div class="banner">
-            <a href="../bezoekerssite/index.php"><img src="../bezoekerssite/img/dynamiek_logo.png" alt="Dynamiek Logo" /></a>
-            <h1>Dynamiek Ateliers Login Portaal</h1>
-            <div class="nav">
-                <div class="button"><a href="inventaris.php">Voorraad</a></div>
-                <div class="button"><a href="CMS.php">CMS</a></div>
-                <div class="button active"><a href="gebruikersbeheer.php">Gebruikersbeheer</a></div>
-            </div>
-<?php
+<?php 
+
 //Sessie, database connectie en userlevelcheck
 session_start();
 $user = $_SESSION['user'];
@@ -35,78 +19,73 @@ if(isset($_SESSION['user'])){
 	header('Location: login.php');
 }
 
-// SQL die uitgevoerd word als de form hieronder ingevuld wordt.
+
+
 if(isset($_POST['MedewerkerSubmit']))
 {
-	echo 'het is verzonden';
-	$stmt = $db ->prepare ( "INSERT INTO medewerker (Naam, Achternaam, Adres, Woonplaats, Postcode, Medewerkernummer, Locatienummer, Actief, Functie) VALUES (?,?,?,?,?,?,?,?,?)");
-	$stmt->execute (array($_POST ['Naam'], $_POST ['Achternaam'], $_POST ['Adres'], $_POST ['Woonplaats'], $_POST ['Postcode'], $_POST['Medewerkernummer'], $_POST ['Locatienummer'], $_POST ['Actief'], $_POST ['Functie']));
-	
+	$id = $_POST ['Medewerkernummer'];
+	$functie = $_POST ['Functie'];
+	$return_msg = "Het is verzonden, kut.";
+	$stmt = $db ->prepare ( "INSERT INTO login (Gebruikersnaam, Wachtwoord, Medewerkernummer, Functie) VALUES (?,?,?,?)");
+	$stmt->execute (array($_POST ['Gebruikersnaam'], encrypt ($_POST ['wachtwoord']), $id, $functie));
 }
 ?>
-
-	<!-- Tabel voor de toevoeging van nieuwe gebruikers  -->
-    	<h2 class=titeltoevoegen>Medewerker toevoegen</h2>
-    <!-- $_SERVER['PHP_SELF'] zorgt er voor dat als je ooit de naam veranderd van deze file hij alsnog werkt. -->
-    	<form method="POST">
-		<table class="tabelinfo">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="StylePortal.css">
+<link rel="stylesheet" href="productlistStyle.css">
+<title>Gebruikersbeheer</title>
+</head>
+    <body>
+        <div class="banner">
+            <a href="../bezoekerssite/index.php"><img src="../bezoekerssite/img/dynamiek_logo.png" alt="Dynamiek Logo" /></a>
+            <h1>Dynamiek Ateliers Login Portaal</h1>
+            <div class="nav">
+                <div class="button"><a href="inventaris.php">Voorraad</a></div>
+                <div class="button"><a href="CMS.php">CMS</a></div>
+                <div class="button active"><a href="gebruikersbeheer.php">Gebruikersbeheer</a></div>
+            </div>
+            <div class="LoggedInUser">
+                <?php print("<p>".$user."</p>") ?>
+                <a href="login.php" class="logoutbutton">Log uit</a>
+            </div>
+        </div>
+        <table class="tabelinfo">
+        <form method="POST">
+        	<h2>Login toevoegen</h2>
+        	<?php if(isset($return_msg) && !empty($return_msg)) { echo '<tr><td>' . $return_msg . '</td></tr>'; } ?>
 			<tr>
-				<td>Voornaam:</td>
-				<td><input type="text" value="" name="Naam" placeholder="Naam van medewerker" required /></td>
-			</tr>
-			<tr>
-				<td>Achternaam:</td>
-				<td><input type="text" placeholder="achternaam" name="Achternaam" required /></td>
-			</tr>
-			<tr>
-				<td>Adres:</td>
-				<td><input type="text" placeholder="adres" name="Adres"></td>
-			</tr>
-			<tr>
-				<td>Woonplaats:</td>
-				<td><input type="text" placeholder="woonplaats" name="Woonplaats"></td>
-			</tr>
-			<tr>
-				<td>Postcode:</td>
-				<td><input type="text" placeholder="postcode" name="Postcode"></td>
-			</tr>
-			<tr>
-				<td>Medewerkernummer:</td>
-				<td><input type="text" name= "Medewerkernummer"></td>
-			<tr>
-				<td>Locatienummer:</td>
+				<td>Voor wie wilt u login gegevens toevoegen:</td>
 				<td>
-				<select name=Locatienummer>
-				<?php 
-					$query = $db->prepare("SELECT * FROM locatie");
+					<select name="Medewerkernummer">
+					<?php 
+					$query = $db->prepare("SELECT * FROM medewerker");
 					$query->execute();
 					while($row = $query->fetch()){
-						echo "<option>" . $row['Locatienummer'] . "</option>";
+						echo "<option>" . $row['Medewerkernummer'] . "</option>";
 					}
-				?>
-				</select>
+					?>
+					</select>
 				</td>
-			</tr>
-			<tr>
+			</tr>			
 				<td>Functie: </td>
-				<td>
-				<select name=Functie>
-				<?php 
-					$query = $db->prepare("SELECT * FROM functie");
+				<td><select name="Functie"><?php $query = $db->prepare("SELECT * FROM functie");
 					$query->execute();
 					while($row = $query->fetch()){
 						echo "<option>" . $row['Functie'] . "</option>";
-					}
-					
-				?>
-				</select>
-				</td>
+					} ?></select></td>
 			</tr>
 			<tr>
-				<td>Actief:</td>
-				<td><input type="radio" name="Actief" value="1"> Ja 
-				<input type="radio" name="Actief" value="0"> Nee</td>
-			</tr>	
+				<td>Gebruikersnaam:</td>
+				<td><input type="text" value="" name="Gebruikersnaam" placeholder="gebruikersnaam" required /></td>
+			</tr>
+			<tr>
+				<td>Wachtwoord:</td>
+				<td><input type="password" placeholder="Wachtwoord" name="wachtwoord" required /></td>
+			</tr>
+			<tr>	
 			<td><input type="submit" name="MedewerkerSubmit" value="Verzend"></td>
 			</tr>
 		</table>
