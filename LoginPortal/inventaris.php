@@ -116,37 +116,14 @@
 
 				//De knopjes van plus en min fysiek
 	?>
-    		<form action="inventaris.php" method="post">
-				<input type="hidden" value="<?php print ($productnummer);?>" name="productnummer"> 
-				<input type="hidden" value="<?php print ($pagina);?>" name="pagina">
-				<input type="submit" value="plus" name="plus">
-				<input type="submit" value="min" name="min">
-	<?php
-				// Laat de knop zien om hem snel te wijzigen van actief naar inactief
-				if ($actief == 1) {
-					print ('<input type="submit" value="Maak inactief" name="maak_inactief">') ;
-				} else {
-					print ('<input type="submit" value="Maak Actief" name="maak_actief">') ;
-				}
-	?>
-    	
-			</form>
-			
-			<!-- Dit moet een knop worden die verwijsd naar de Wijzigen pagina -->
-			<button onclick="window.location=inventaris/wijzigen.php?productnummer=<?php print ($productnummer);?>">Wijzigen</button>
-	
-			<!-- Dit moet een knop worden die verwijsd naar de Verwijder pagina -->
-			<button onclick="window.location=inventaris/verwijderen.php?productnummer=<?php print ($productnummer);?>">Verwijderen</button>
-			
-			<!-- Dit is nog debug code -->
 			<form action="inventaris/verwijderen.php" method="post">
 				<input type="hidden" value="<?php print ($productnummer);?>" name="productnummer"> 
-				<input type="submit" value="Verwijder oude manier" name="verwijder">	
+				<input type="submit" value="Verwijder" name="verwijder">	
 			</form>
 			
 			<form action="inventaris/wijzigen.php" method="post">
 				<input type="hidden" value="<?php print ($productnummer);?>" name="productnummer"> 
-				<input type="submit" value="Wijzigen oude manier" name="wijzigen">	
+				<input type="submit" value="Wijzigen" name="wijzigen">	
 			</form>
 		</div>
     <?php
