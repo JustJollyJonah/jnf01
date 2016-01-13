@@ -23,7 +23,6 @@
     	</div>
     </div>
 <?php
-session_start();
 $user = $_SESSION['user'];
 
 include ("../DatabaseFunctions.php");
@@ -81,10 +80,10 @@ while($row = $query->fetch()){
 ?>
 
 	<!-- Tabel voor de wijziging van gebruikers  -->
-    	<h2>Medewerker wijzigen</h2>
+    	<h2 class=titeltoevoegen>Medewerker wijzigen</h2>
     <!-- $_SERVER['PHP_SELF'] zorgt er voor dat als je ooit de naam veranderd van deze file hij alsnog werkt. -->
     	<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
-		<table>
+		<table class=tabelinfo>
 			<tr>
 				<td>Voornaam:</td>
 				<td><input type="text" value="" placeholder=<?php echo $naam?> name="Naam" required /></td>
@@ -116,7 +115,8 @@ while($row = $query->fetch()){
 						echo "<option>" . $row['Functie'] . "</option>";
 					} ?></select></td>
 			</tr>
-			<tr>		
+			<tr>
+			<td></td>		
 			<td><input type="submit" name="MedewerkerUpdate" value="Verzend"></td>
 			</tr>
 		</table>

@@ -71,7 +71,8 @@ if(isset($_SESSION['user'])){
                 <th>Actief</th>
             </tr>
             <div class='voegtoe'>
-            <a href="Gebruikertoevoegen.php"><img src="../LoginPortal/uploads/plus.png" alt="Voeg gebruiker toe"></a>
+            <a href="Gebruikertoevoegen.php">Medewerker toevoegen</a>
+            <a href="logintoevoegen.php">Login Toevoegen</a>
             </div>
             <?php 
             $query = $db->prepare("SELECT * FROM medewerker");
