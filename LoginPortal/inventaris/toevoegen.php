@@ -88,40 +88,40 @@
 	<table>
 		<form action="toevoegen.php" method="post" enctype="multipart/form-data">
 			<tr>
-				<td>Productnaam:</td>
-				<td><input type="text" value="Naam van product" name="name" required></td>
+				<td class=toevoegen>Productnaam:</td>
+				<td class=toevoegen><input type="text" value="Naam van product" name="name" required></td>
 			</tr>
 			<tr>
-				<td>Product beschrijving</td>
+				<td class=toevoegen>Product beschrijving</td>
 			<tr>
-				<td colspan="2"><textarea rows="3" cols="50" name="beschrijving" required></textarea></td>
+				<td colspan="2" class=toevoegen><textarea rows="3" cols="50" name="beschrijving" required></textarea></td>
 			</tr>
 			<tr>
-				<td>Aantal:</td>
-				<td><input type="text" name="aantal" required></td>
+				<td class=toevoegen>Aantal:</td>
+				<td class=toevoegen_submit><input type="text" name="aantal" required></td>
 			</tr>
 			<tr>
-				<td>Eigenschap:</td>
-				<td><input type="text" name="eigenschap" required></td>
+				<td class=toevoegen>Eigenschap:</td>
+				<td class=toevoegen_submit><input type="text" name="eigenschap" required></td>
 			</tr>
 			<tr>
-				<td>Actief:</td>
-				<td><input type="radio" name="actief" value="1"> Ja 
+				<td class=toevoegen>Actief:</td>
+				<td class=toevoegen style="padding-left: 35px;"><input type="radio" name="actief" value="1"> Ja 
 				<input type="radio" name="actief" value="0"> Nee</td>
 			</tr>
 			<tr>
-				<td>Foto bestand</td>
-				<td><input type="file" name="fileToUpload" ></td>
+				<td class=toevoegen>Foto bestand</td>
+				<td class=toevoegen_submit style="padding-left: 35px;"><input type="file" name="fileToUpload" ></td>
 			</tr>
 			<tr>
-				<td>Webshop url</td>
-				<td><input type="text" name="webshopurl" value="voer webshop url in" required></td>
+				<td class=toevoegen>Webshop url</td>
+				<td class=toevoegen_submit><input type="text" name="webshopurl" value="voer webshop url in" required></td>
 			</tr>
 			<tr>
-				<td><input type="submit" name="voegtoe" value="product toevoegen"></td>
+				<td class=toevoegen><input type="submit" name="voegtoe" value="product toevoegen"></td>
 		</form>
 		<form action="../inventaris.php" method="post">
-			<td><input type="submit" name="terug" value="Terug naar overzicht"></td>
+			<td class=toevoegen_submit><input type="submit" name="terug" value="Terug naar overzicht"></td>
 			</tr>
 		</form>
 	</table>

@@ -43,13 +43,13 @@ body{
 
 .product{
 	display: inline;								/**/
-	width: calc(100% / 3 - 42px);						/*Area for each product*/
+	width: calc(100% / 3 - 42px);					/*Area for each product*/
 	float: left;									/**/
-	min-height: 380px;								/**/
-	border: solid 2px black;
-	border-radius: 12px;
-	margin: 5px;
-	padding: 5px 0px 0px 0px;
+	min-height: 425px;								/**/
+	border: solid 2px black;						/**/
+	border-radius: 12px;							/**/
+	margin: 5px;									/**/
+	padding: 5px 0px 0px 0px;						/**/
 }
 
 .wijzigForm{
@@ -92,4 +92,12 @@ body{
 
 .wijzig_form td{
 	text-align: left !important;									/*Table data cells in editing form*/
+}
+
+.toevoegen{
+	text-align: left;						/*Addproduct form*/
+}
+
+.toevoegen_submit{
+	text-align: right;						/*Addproduct form*/
 }
