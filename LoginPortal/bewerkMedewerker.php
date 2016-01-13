@@ -23,8 +23,6 @@
     	</div>
     </div>
 <?php
-session_start ();
-$user = $_SESSION ['user'];
 
 include ("../DatabaseFunctions.php");
 $pdo = connectToServer ( "mysql:host=178.62.201.206;port=3306", "omega", "usbw" );
