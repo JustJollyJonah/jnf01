@@ -45,7 +45,7 @@ body{
 	display: inline;								/**/
 	width: calc(100% / 3 - 42px);						/*Area for each product*/
 	float: left;									/**/
-	min-height: 380px;								/**/
+	min-height: 425px;								/**/
 	border: solid 2px black;
 	border-radius: 12px;
 	margin: 5px;
@@ -92,4 +92,12 @@ body{
 
 .wijzig_form td{
 	text-align: left !important;									/*Table data cells in editing form*/
+}
+
+.toevoegen{
+	text-align: left;
+}
+
+.toevoegen_submit{
+	text-align: right;
 }
