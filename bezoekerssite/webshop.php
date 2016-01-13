@@ -48,38 +48,34 @@
 		// 		?>
 		<div class="navbar">
 		<ul class="navbar_list">
-			<li class="navbar_item_home"<?php
-				if ($page == 'home') {
-					echo 'style="box-shadow: inset 0 010px 1px rgba(0,0,0,.3);"'; // Create box shadow on current page button
-				}
-				?>><a href="index.php?page=home" class="a"><strong>Home</strong></a></li>
-			<li class="navbar_item_about"<?php
-				if ($page == 'about') {
-					echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"'; // Create box shadow on current page button
-				}
-				?>><a href="index.php?page=about" class="a"><strong>Over Dynamiek
-						ateliers</strong></a></li>
-			<li class="navbar_item_product"<?php
-				if ($page == 'product') {
-					echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"'; // Create box shadow on current page button
-				}
-				?>><a href="index.php?page=product" class="a"><strong>Accesoires en
-						producten</strong></a></li>
-			<li class="navbar_item_workshops"<?php
-				if ($page == 'workshops') {
-					echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"'; // Create box shadow on current page button
-				}
-				?>><a href="index.php?page=workshops" class="a"><strong>Workshops</strong></a></li>
-			<li class="navbar_item_webshop"<?php
-				if ($page == 'webshop') {
-					echo 'style="box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);"'; // Create box shadow on current page button
-				}
-				?>><a href="webshop.php" class="a"><strong>Webshop</strong></a></li>
+			<li class="navbar_item_webshop"
+				<?php if($page=='webshop'){
+					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
+				}?>><a
+				href="webshop.php" class="a"><strong>Webshop</strong></a></li>
+			<li class="navbar_item_workshops"
+				<?php if($page=='workshops'){
+					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
+				}?>><a
+				href="index.php?page=workshops" class="a"><strong>Workshops</strong></a></li>
+				
+			<li class="navbar_item_product"
+				<?php if($page=='product'){
+					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
+				}?>><a
+				href="index.php?page=product" class="a"><strong>Accesoires en producten</strong></a></li>
+			<li class="navbar_item_about"
+				<?php if($page=='about'){
+					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
+				}?>><a
+				href="index.php?page=about" class="a"><strong>Over Dynamiek ateliers</strong></a></li>
+			<li class="navbar_item_home"
+				<?php if($page=='home'){
+					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
+				}?>><a
+				href="index.php?page=home" class="a"><strong>Home</strong></a></li>
 			
 		</ul>
-		
-		<script type="text/javascript"
-			src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
 		
 	</div>
 	<div id="slider">
@@ -190,9 +186,9 @@
 					$eigenschap = $row ['Eigenschap']; // Get Details
 					
 					echo "<tr>";
-					echo "<td><img src='../LoginPortal/" . trim ( $image ) . "' width=80 height=80 alt='Plaats plaatje hier!'><div class=titel><i>$product</i></div></td>"; // Place image
-					echo "<td><strong>$beschrijving</strong></td>"; // Place description
-					echo "<td><a href=$shop_url>Bestellen</a></td>"; // Place webshop url
+					echo "<td class=img><img src='../LoginPortal/" . trim ( $image ) . "' width=80 height=80 alt='Plaats plaatje hier!'><div class=titel><i>$product</i></div></td>"; // Place image
+					echo "<td class=desc><strong>$beschrijving</strong></td>"; // Place description
+					echo "<td class=order><a href=$shop_url>Bestellen</a></td>"; // Place webshop url
 					echo "</tr>";
 					
 				}
@@ -219,6 +215,27 @@
 					}
 				}
 				?>
+			</div>
+			<div class=paginate_mobile>
+				Pagina:<select name=page onchange="gotoPage(this.options[this.selectedIndex].value, <?php echo $results_per_page?>)">
+				<?php 
+					if (! isset ( $_POST ['toevoegen'] ) && ! isset ( $_POST ['wijzigen'] )) {
+						
+						for($i = 1; $i < $totaalPagina + 1; $i ++) { //
+							if($page != $i){
+								echo ("<option><a href=webshop.php?page=$i&results_per_page=$aantalPerPagina class=paginate_button>" . $i . "</a></option>"); // Buttons for every individual page
+							}else{
+								echo ("<option selected><a href=webshop.php?page=$i&results_per_page=$aantalPerPagina class=paginate_button>" . $i . "</a></option>"); // Buttons for every individual page
+							}
+						}
+					}
+				?>
+				</select>
+				<script type="text/javascript">
+					function gotoPage(page, perpagina){
+						window.location.assign('?page=' + page + '&results_per_page=' + perpagina);
+					}
+				</script>
 			</div>
 			<div class="facebook-feed">
 		

@@ -1,6 +1,6 @@
-@media ( max-width : 960px) and ( min-width : 760px ) {
+@media ( max-width : 1370px) and ( min-width : 760px ) {
 	.content .fb{
-		display: none;
+		display: none !important;
 	}
 	.content .pagina{
 		width: 90%;
@@ -33,7 +33,7 @@
 	}
 	.header {
 		width: 100%;
-		height: 25%;
+		height: 27%;
 		background: #779AB4;
 	}
 	.header ul {
@@ -173,6 +173,9 @@
 		background-color:#EDF0F1;
 		border-radius:20px;
 		min-height: 975px;
+		padding-left:10px;
+		padding-right:5px;
+		padding-bottom: 10px;
 	}
 	.pagina div{
 		display: inline;
@@ -183,6 +186,7 @@
 	.paginate{
 		margin-left: 50px;
 		margin-top: 10px;
+		margin-bottom: 10px;
 	}
 	.pagina table{
 		margin: 2% auto;
@@ -194,7 +198,7 @@
 	}
 	.webshop tbody tr td{
 		white-space: pre-wrap;
-		padding: 0px 50px;
+		padding: 0px 15px;
 	}
 	.pagina h2{
 		margin-left: 10%;
@@ -217,9 +221,24 @@
 		margin-top: 2%;
 		display: inline;
 	}
+	.webshop tbody tr{
+		margin-bottom: 10px;
+	}
 	.webshop tbody tr td{
 		white-space: pre-wrap;
-		padding: 0px 50px 0px 50px;
+		padding-bottom: 20px !important;
+	}
+	.webshop tbody tr .img{
+		white-space: pre-wrap;
+		padding: 0px 5px 10px 50px;
+	}
+	.webshop tbody tr .desc{
+		white-space: pre-wrap;
+		padding: 0px 5px 10px 5px;
+	}
+	.webshop tbody tr .order{
+		white-space: pre-wrap;
+		padding: 0px 50px 10px 50px;
 	}
 	.pagina pre {
 		white-space: pre-wrap;
@@ -255,17 +274,16 @@
 		float: left;
 	}
 	.footer {
-		height: 150px;
+		height: 80px;
 		width: 100%;
 		float: left;
 		display: inline-block;
 		margin-bottom: height;
-		background: radial-gradient(50% 100%, #6699cc, #003399);
-		background-color: blue;
+		background-color:#779AB4;
 	}
 	.footer .img_logo{
-		margin-top: 18.75px;
-		height: 75%;
+		height: 100%;
+		
 	}
 	.footer ul {
 		list-style: none;
@@ -274,9 +292,15 @@
 	}
 	.footer ul li a {
 		color: black;
+		text-decoration:none;
+	}
+	.footer ul li a:hover {
+		border-bottom:1px solid black;
 	}
 	.footer ul li{
 		display: inline-block;
+		margin-left:10px;
+		margin-top:1%;
 	}
 	.footer ul li:first-child{
 		padding-top: 20px;
@@ -299,20 +323,30 @@
 	.loginLink {
 		float: right;
 		margin-right: 20px;
-		margin-top: 65px;
+		margin-top: 2%;
 		padding: 5px 10px 5px 10px;
 		color: #003399;
 		text-decoration: none;
-		background: linear-gradient(to bottom, #d55d15, #efba3d);
+		background-color:#efba3d;
 		border-radius: 6px 6px 6px 6px; 
+		border:2px solid  #003399;
 	}
 	.loginLink:hover{
 		box-shadow: inset 0 0 10px 1px rgba(0,0,0,.3);
+	}
+	.paginate_mobile{
+		display: none !important;
 	}
 }
 
 @media (min-width: 401px) and (max-width: 760px){
 	.fb{
+		display: none;
+	}
+	#slider{
+		display: none;
+	}
+	.paginate{
 		display: none;
 	}
 	html {
@@ -464,13 +498,15 @@
 		padding: 0px 5px;
 	}
 	table {
-		border: solid 1px orange;
 		float: left;
 		display: inline;
 		margin-bottom: 25px;
 	}
 	td, th {
 		border: solid 1px blue;
+	}
+	.paginate_mobile{
+		
 	}
 	.footer{
 		width: 100%;
@@ -501,6 +537,12 @@
 
 @media(max-width: 400px){
 	.fb{
+		display: none;
+	}
+	#slider{
+		display: none;
+	}
+	.paginate{
 		display: none;
 	}
 	html {
@@ -639,7 +681,6 @@
 		padding: 0px 5px;
 	}
 	table {
-		border: solid 1px orange;
 		float: left;
 		display: inline;
 		margin-bottom: 25px;

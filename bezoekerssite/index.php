@@ -37,35 +37,40 @@
 					</form>
 				</details>
 			</div>
-			<li class="navbar_item_home"
-				<?php if($page=='home'){
+			
+				
+			
+				
+			
+				
+			
+			<li class="navbar_item_webshop"
+				<?php if($page=='webshop'){
 					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
 				}?>><a
-				href="index.php?page=home" class="a"><strong>Home</strong></a></li>
-				
-			<li class="navbar_item_about"
-				<?php if($page=='about'){
-					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
-				}?>><a
-				href="index.php?page=about" class="a"><strong>Over Dynamiek ateliers</strong></a></li>
-				
-			<li class="navbar_item_product"
-				<?php if($page=='product'){
-					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
-				}?>><a
-				href="index.php?page=product" class="a"><strong>Accesoires en producten</strong></a></li>
-				
+				href="webshop.php" class="a"><strong>Webshop</strong></a></li>
 			<li class="navbar_item_workshops"
 				<?php if($page=='workshops'){
 					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
 				}?>><a
 				href="index.php?page=workshops" class="a"><strong>Workshops</strong></a></li>
 				
-			<li class="navbar_item_webshop"
-				<?php if($page=='webshop'){
+			<li class="navbar_item_product"
+				<?php if($page=='product'){
 					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
 				}?>><a
-				href="webshop.php" class="a"><strong>Webshop</strong></a></li>
+				href="index.php?page=product" class="a"><strong>Accesoires en producten</strong></a></li>
+			<li class="navbar_item_about"
+				<?php if($page=='about'){
+					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
+				}?>><a
+				href="index.php?page=about" class="a"><strong>Over Dynamiek ateliers</strong></a></li>
+			<li class="navbar_item_home"
+				<?php if($page=='home'){
+					echo 'style="border-bottom:1px solid black;"';				//Create box shadow on current page button
+				}?>><a
+				href="index.php?page=home" class="a"><strong>Home</strong></a></li>
+			
 			</ul>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
 		<?php
@@ -78,21 +83,21 @@
 		?>
 	</div>
 	<div id="slider">
-			<figure> 
-				<div><img src="img/slider/slide1.png"></div>
-				<div><img src="img/slider/slide8.png"></div>
-				<div><img src="img/slider/slide3.png"></div>
-				<div><img src="img/slider/slide4.png"></div>
-				<div><img src="img/slider/slide5.png"></div>
-				<div><img src="img/slider/slide6.png"></div>
-				<div><img src="img/slider/slide7.png"></div>
-				<div><img src="img/slider/slide1.png"></div>
-				<div><img src="img/slider/slide8.png"></div>
-				<div><img src="img/slider/slide3.png"></div>
-				<div><img src="img/slider/slide4.png"></div>
-				<div><img src="img/slider/slide5.png"></div>
-			</figure>
-			</div>
+		<figure> 
+			<div><img src="img/slider/slide1.png"></div>
+			<div><img src="img/slider/slide8.png"></div>
+			<div><img src="img/slider/slide3.png"></div>
+			<div><img src="img/slider/slide4.png"></div>
+			<div><img src="img/slider/slide5.png"></div>
+			<div><img src="img/slider/slide6.png"></div>
+			<div><img src="img/slider/slide7.png"></div>
+			<div><img src="img/slider/slide1.png"></div>
+			<div><img src="img/slider/slide8.png"></div>
+			<div><img src="img/slider/slide3.png"></div>
+			<div><img src="img/slider/slide4.png"></div>
+			<div><img src="img/slider/slide5.png"></div>
+		</figure>
+	</div>
 	
 	</div>
 
