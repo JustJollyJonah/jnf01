@@ -7,7 +7,7 @@
 	</head>
 	<body>
 	<div class="banner">
-    		<a href="../bezoekerssite/index.php"><img src="../bezoekerssite/img/dynamiek_logo.png" alt="Dynamiek Logo"></a>
+    		<a href="../bezoekerssite/index.php"><img src="../../bezoekerssite/img/dynamiek_logo.png" alt="Dynamiek Logo"></a>
     		<p>Dynamiek Ateliers Login Portaal</p>
     		<div class=nav>
     			<div class=button><a href=inventaris.php>Voorraad</a></div>
@@ -60,7 +60,7 @@
 		// Controleert of de variable uploadOk is gezet op 0 door een fout
 		if ($uploadOk == 0) {
 			echo "Sorry, er is iets fout gegaan bij het uploaden";
-			print (' <form action="inventaris.php" method="post">
+			print (' <form action="../inventaris.php" method="post">
 						<input type="submit" value="klik hier om terug te gaan" name="toevoegen">
 						</form>
 						') ;

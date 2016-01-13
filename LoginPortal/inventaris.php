@@ -59,7 +59,7 @@
 		$query = $pdo->prepare ( "SELECT * FROM inventaris" );
 		$query->execute ();
 		$aantal = $query->rowCount ();
-		$aantalPerPagina = 21;
+		$aantalPerPagina = 22;
 		$totaalPagina = ceil ( $aantal / $aantalPerPagina );
 				
 		//De knop plus, die wordt uitgevoerd door op inventaris pagina op plus te klikken
