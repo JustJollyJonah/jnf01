@@ -185,14 +185,14 @@ input[type=password]{
 td{
 	text-align: center;											/*Table data cells*/
 }
-.gebruikbeh {
-	padding-left: 35%;
-	font-family: Ariel;											/*User management*/
+.gebruikbeh  {
+	margin-left: 35%;	
+	border: solid 2px lightblue;
+	font-family: Verdana;									/*User management*/
 }
 
-.tdgebruikbeh {
-	padding-right: 3%;											/*Table data cells in User management*/
-	border: solid 2px lightblue;								/**/
+
+												/*Table data cells in User management*/								
 }
 
 .voegtoe{
@@ -210,12 +210,18 @@ td{
 	border: 1px white 
 }
 .tabelinfo {
-	margin-left:30%;
-	font-family: Arial;
+	margin-left:35%;
+	font-family: Verdana;
 }
-.tabelinfo h2{
-	margin-left:20%;
-	font-family: Arial;
+.headtext{
+	padding-left:38%;
+	font-family: Verdana;
+}
+
+.ptext{
+	margin-left: 40%;
+	font-family: Verdana;
+	
 }
 
 .titeltoevoegen {

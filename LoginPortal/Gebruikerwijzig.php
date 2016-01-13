@@ -66,8 +66,8 @@ while($row = $query->fetch()){
 		$udpostcode = $_POST ['Postcode'];
 		$udlocatienummer = $_POST ['Locatienummer'];
 		$udfunctie = $_POST ['Functie'];
+		$return_msg = "Het is opgeslagen.";
 		
-		echo 'het is verzonden';
 		
 		$stmt = $db ->prepare ( "UPDATE medewerker SET Naam = '$udnaam', Achternaam = '$udachternaam', Adres = '$udadres', Woonplaats = '$udwoonplaats', Postcode = '$udpostcode', Locatienummer = '$udlocatienummer', Functie = '$udfunctie' WHERE medewerkernummer = $id");
 		$stmt->execute();
@@ -79,17 +79,17 @@ while($row = $query->fetch()){
 ?>
 
 	<!-- Tabel voor de wijziging van gebruikers  -->
-    	<h2>Medewerker wijzigen</h2>
+    	<h2 class="headtext">Medewerker wijzigen</h2>
     <!-- $_SERVER['PHP_SELF'] zorgt er voor dat als je ooit de naam veranderd van deze file hij alsnog werkt. -->
     	<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
 		<table class="tabelinfo">
 			<tr>
 				<td>Voornaam:</td>
-				<td><input type="text" value="" placeholder=<?php echo $naam?> name="Naam" required /></td>
+				<td><input type="text" value="" placeholder=<?php echo $naam?> name="Naam"  /></td>
 			</tr>
 			<tr>
 				<td>Achternaam:</td>
-				<td><input type="text" placeholder=<?php echo $achternaam?> name="Achternaam" required /></td>
+				<td><input type="text" placeholder=<?php echo $achternaam?> name="Achternaam"  /></td>
 			</tr>
 			<tr>
 				<td>Adres:</td>
@@ -105,7 +105,7 @@ while($row = $query->fetch()){
 			</tr>
 			<tr>
 				<td>Locatienummer:</td>
-				<td><input type="number" placeholder=<?php echo $locatienummer?> name="Locatienummer" required></td>
+				<td><input type="number" placeholder=<?php echo $locatienummer?> name="Locatienummer"></td>
 			</tr>			
 				<td>Functie: </td>
 				<td><select name="Functie"><?php $query = $db->prepare("SELECT * FROM functie");
@@ -114,9 +114,11 @@ while($row = $query->fetch()){
 						echo "<option>" . $row['Functie'] . "</option>";
 					} ?></select></td>
 			</tr>
-			<tr>		
+			<tr>
+			<td></td>		
 			<td><input type="submit" name="MedewerkerUpdate" value="Verzend"></td>
-			</tr>
+			</tr>	
 		</table>
 	</form>
+	<p class="ptext"><b><?php if(isset($return_msg) && !empty($return_msg)) { echo '<tr><td>' . $return_msg . '</td></tr>'; } ?></b></p>
 </body>

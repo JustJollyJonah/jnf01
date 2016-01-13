@@ -44,10 +44,11 @@ if(isset($_POST['MedewerkerSubmit']))
 }
 ?>
 	<!-- Tabel voor de toevoeging van nieuwe gebruikers  -->
-    	<h2 class=titeltoevoegen>Medewerker toevoegen</h2>
+    	
     <!-- $_SERVER['PHP_SELF'] zorgt er voor dat als je ooit de naam veranderd van deze file hij alsnog werkt. -->
     	<form method="POST">
 		<table class="tabelinfo">
+		 <h2 class="headtext">Medewerker toevoegen</h2>
 			<tr>
 				<td>Voornaam:</td>
 				<td><input type="text" value="" name="Naam" placeholder="Naam van medewerker" required /></td>

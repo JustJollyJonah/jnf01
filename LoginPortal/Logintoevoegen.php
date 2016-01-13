@@ -20,12 +20,12 @@ if(isset($_SESSION['user'])){
 }
 
 
-
+//
 if(isset($_POST['MedewerkerSubmit']))
 {
 	$id = $_POST ['Medewerkernummer'];
 	$functie = $_POST ['Functie'];
-	$return_msg = "Het is verzonden, kut.";
+	$return_msg = "Het is opgeslagen.";
 	$stmt = $db ->prepare ( "INSERT INTO login (Gebruikersnaam, Wachtwoord, Medewerkernummer, Functie) VALUES (?,?,?,?)");
 	$stmt->execute (array($_POST ['Gebruikersnaam'], encrypt ($_POST ['wachtwoord']), $id, $functie));
 }
@@ -52,9 +52,10 @@ if(isset($_POST['MedewerkerSubmit']))
                 <a href="login.php" class="logoutbutton">Log uit</a>
             </div>
         </div>
+        <!-- tabel voor invullen login gegevens  -->
         <table class="tabelinfo">
         <form method="POST">
-        	<h2>Login toevoegen</h2>
+        	<h2 class= "headtext">Login toevoegen</h2>
         	<?php if(isset($return_msg) && !empty($return_msg)) { echo '<tr><td>' . $return_msg . '</td></tr>'; } ?>
 			<tr>
 				<td>Voor wie wilt u login gegevens toevoegen:</td>
@@ -86,6 +87,7 @@ if(isset($_POST['MedewerkerSubmit']))
 				<td><input type="password" placeholder="Wachtwoord" name="wachtwoord" required /></td>
 			</tr>
 			<tr>	
+			<td></td>
 			<td><input type="submit" name="MedewerkerSubmit" value="Verzend"></td>
 			</tr>
 		</table>

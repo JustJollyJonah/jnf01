@@ -63,9 +63,9 @@ if(isset($_SESSION['user'])){
                 <a href="login.php" class="logoutbutton">Log uit</a>
             </div>
         </div>
-        <div class="tdgebruikbeh">
+        <div class="">
         <table class="gebruikbeh">
-            <tr>
+            <tr class= "arielfont">
                 <th>Nummer</th>
                 <th>Voornaam</th>
                 <th>Achternaam</th>
