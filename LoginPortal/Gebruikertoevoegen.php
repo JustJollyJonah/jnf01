@@ -22,8 +22,8 @@ if(isset($_SESSION['user'])){
 if(isset($_POST['MedewerkerSubmit']))
 {
 	echo 'het is verzonden';
-	$stmt = $db ->prepare ( "INSERT INTO medewerker (Naam, Achternaam, Adres, Woonplaats, Postcode, Locatienummer, Actief, Functie) VALUES (?,?,?,?,?,?,?,?)");
-	$stmt->execute (array($_POST ['Naam'], $_POST ['Achternaam'], $_POST ['Adres'], $_POST ['Woonplaats'], $_POST ['Postcode'], $_POST ['Locatienummer'], $_POST ['Actief'], $_POST ['Functie']));
+	$stmt = $db ->prepare ( "INSERT INTO medewerker (Naam, Achternaam, Adres, Woonplaats, Postcode, Medewerkernummer, Locatienummer, Actief, Functie) VALUES (?,?,?,?,?,?,?,?,?)");
+	$stmt->execute (array($_POST ['Naam'], $_POST ['Achternaam'], $_POST ['Adres'], $_POST ['Woonplaats'], $_POST ['Postcode'], $_POST['Medewerkernummer'], $_POST ['Locatienummer'], $_POST ['Actief'], $_POST ['Functie']));
 	
 }
 ?>
@@ -57,6 +57,9 @@ if(isset($_POST['MedewerkerSubmit']))
 				<td>Postcode:</td>
 				<td><input type="text" placeholder="postcode" name="Postcode"></td>
 			</tr>
+			<tr>
+				<td>Medewerkernummer:</td>
+				<td><input type="text" name= "Medewerkernummer"></td>
 			<tr>
 				<td>Locatienummer:</td>
 				<td>
