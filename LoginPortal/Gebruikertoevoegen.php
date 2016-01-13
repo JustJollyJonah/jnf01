@@ -21,10 +21,9 @@ if(isset($_SESSION['user'])){
 // SQL die uitgevoerd word als de form hieronder ingevuld wordt.
 if(isset($_POST['MedewerkerSubmit']))
 {
-	echo 'het is verzonden';
 	$stmt = $db ->prepare ( "INSERT INTO medewerker (Naam, Achternaam, Adres, Woonplaats, Postcode, Medewerkernummer, Locatienummer, Actief, Functie) VALUES (?,?,?,?,?,?,?,?,?)");
 	$stmt->execute (array($_POST ['Naam'], $_POST ['Achternaam'], $_POST ['Adres'], $_POST ['Woonplaats'], $_POST ['Postcode'], $_POST['Medewerkernummer'], $_POST ['Locatienummer'], $_POST ['Actief'], $_POST ['Functie']));
-	
+	header('Location: \LoginPortal\Gebruikersbeheer.php');
 }
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">

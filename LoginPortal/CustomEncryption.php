@@ -13,3 +13,4 @@ function Encrypt($string){
     }
 	return $hash;
 }
+
