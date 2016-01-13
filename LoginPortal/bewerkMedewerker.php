@@ -46,3 +46,11 @@ if (isset ( $_GET ['verwijder'] )) {
 
 ?>
 
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+<h1>Wilt u ook de login gegevens van </h1>
+</body>
+</html>
