@@ -175,6 +175,7 @@
 		min-height: 975px;
 		padding-left:10px;
 		padding-right:5px;
+		padding-bottom: 10px;
 	}
 	.pagina div{
 		display: inline;
@@ -185,6 +186,7 @@
 	.paginate{
 		margin-left: 50px;
 		margin-top: 10px;
+		margin-bottom: 10px;
 	}
 	.pagina table{
 		margin: 2% auto;
@@ -219,9 +221,24 @@
 		margin-top: 2%;
 		display: inline;
 	}
+	.webshop tbody tr{
+		margin-bottom: 10px;
+	}
 	.webshop tbody tr td{
 		white-space: pre-wrap;
-		padding: 0px 50px 0px 50px;
+		padding-bottom: 20px !important;
+	}
+	.webshop tbody tr .img{
+		white-space: pre-wrap;
+		padding: 0px 5px 10px 50px;
+	}
+	.webshop tbody tr .desc{
+		white-space: pre-wrap;
+		padding: 0px 5px 10px 5px;
+	}
+	.webshop tbody tr .order{
+		white-space: pre-wrap;
+		padding: 0px 50px 10px 50px;
 	}
 	.pagina pre {
 		white-space: pre-wrap;
