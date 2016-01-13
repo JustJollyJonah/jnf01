@@ -1,4 +1,3 @@
-
 <?php
 
 // Start the session, so we can retriev client information.
@@ -63,7 +62,14 @@ if(isset($_SESSION['user'])){
                 <a href="login.php" class="logoutbutton">Log uit</a>
             </div>
         </div>
-        <div class="">
+        <div class="tdgebruikbeh">
+         <div class='voegtoe'>
+            <a class=buttonleft href="Gebruikertoevoegen.php">Medewerker toevoegen</a><br>
+            </br>
+            <a class=buttonleft href="logintoevoegen.php">Login Toevoegen</a><br>
+            </br>
+            <a class=buttonleft href="loginverwijderen.php">Login verwijderen</a>
+            </div>
         <table class="gebruikbeh">
             <tr class= "arielfont">
                 <th>Nummer</th>
@@ -72,11 +78,7 @@ if(isset($_SESSION['user'])){
                 <th>Actief</th>
             </tr>
           
-            <div class='voegtoe'>
-            <a href="Gebruikertoevoegen.php">Medewerker toevoegen</a>
-            <a href="logintoevoegen.php">Login Toevoegen</a>
-            <a href="loginverwijderen.php">Login verwijderen</a>
-            </div>
+           
             <?php 
             $query = $db->prepare("SELECT * FROM medewerker");
             $query->execute();

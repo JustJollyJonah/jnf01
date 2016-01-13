@@ -185,45 +185,45 @@ input[type=password]{
 td{
 	text-align: center;											/*Table data cells*/
 }
-.gebruikbeh  {
-	margin-left: 35%;	
-	border: solid 2px lightblue;
-	font-family: Verdana;									/*User management*/
+.gebruikbeh {
+	font-family: Ariel;											/*User management*/
 }
 
-
-												/*Table data cells in User management*/								
+.tdgebruikbeh {											/*Table data cells in User management*/
+	float:right;								/**/
+	display:inline-block;
+	width:612px;
+	margin-right:37%;
+	margin-top:10px;
 }
 
 .voegtoe{
-	width: 10px;
-	height: 10px;
-	margin-left: 410px;
-}
-.voegtoe img {
-	display: inline;
-	margin-top: 30px;
-	height: 50px;
-	width: 50px;
-}
-.voegtoe img:hover{
-	border: 1px white 
+	display:inline-block;
+	width:200px;
+	float:left;
+	height:inherit;
+	margin-top:10px;
 }
 .tabelinfo {
-	margin-left:35%;
-	font-family: Verdana;
+	margin-left:30%;
+	font-family: Arial;
 }
-.headtext{
-	padding-left:38%;
-	font-family: Verdana;
-}
-
-.ptext{
-	margin-left: 40%;
-	font-family: Verdana;
-	
+.tabelinfo h2{
+	margin-left:20%;
+	font-family: Arial;
 }
 
 .titeltoevoegen {
 	text-align:center;
+}
+.buttonleft {
+	border:1px solid grey;
+	padding:5px 5px 5px 5px;
+	background:linear-gradient(to bottom, #e3e3e3, #c0c0c0);
+	border-radius:6px;
+	text-decoration:none !important;
+	color:black;
+}
+.buttonleft a:visited {
+	color:black;
 }
