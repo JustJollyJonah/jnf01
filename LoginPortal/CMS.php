@@ -14,22 +14,22 @@
 				height: 300
 			});
 		</script>
-		<title>Insert title here</title>
+		<title>CMS</title>
 	</head>
 	<body>
 		<div class="banner">
     		<a href="../bezoekerssite/index.php"><img src="../bezoekerssite/img/dynamiek_logo.png" alt="Dynamiek Logo"></a>
-    		<p>Dynamiek Ateliers Login Portaal</p>
+    		<h1>Dynamiek Ateliers Login Portaal</h1>
     		<div class=nav>
     			<div class=button><a href=inventaris.php>Voorraad</a></div>
-    			<div class=button><a href=CMS.php>CMS</a></div>
+    			<div class="button active"><a href=CMS.php>CMS</a></div>
     			<div class=button><a href=gebruikersbeheer.php>Gebruikersbeheer</a></div>
     		</div>
     		<div class="LoggedInUser"><?php 
     			session_start();
     			$user = $_SESSION['user'];					//Get current user
-    			echo $user;
-    			?><br>
+    			print("<p>".$user."</p>");
+    			?>
     			<a href="login.php" class=logoutbutton>Log uit</a>
     		</div>
     	</div>
@@ -45,6 +45,16 @@
     					$pdo = connectToServer ( "mysql:host=178.62.201.206;port=3306", "omega", "usbw" );	//
     					selectDatabase ( $pdo, "omega" );												//Connect to database
     					
+    					if(isset($_SESSION['user'])){													//Check if user is logged in
+    						if(checkUserLevel($pdo, $user) == 1){										//Check user level
+    					
+    						}else{
+    							header('Location: login.php');											//Redirect if insufficient permissions
+    						}
+    					}else{
+    						header('Location: login.php');												//Redirect if no user logged in
+    					}
+    					
     					if(isset($_GET['Delete'])){														//Check if we're deleting pages
     						if(isset($_GET['Verwijder'])){												//Check which page to delete
     							$query = "DELETE FROM `pagina` WHERE `Pagina ID` = ?";					//Prepare query
@@ -57,17 +67,7 @@
     					}else{
     						
     					}
-    					
-    					if(isset($_SESSION['user'])){													//Check if user is logged in
-    						if(checkUserLevel($pdo, $user) == 1){										//Check user level
-    								
-    						}else{
-    							header('Location: login.php');											//Redirect if insufficient permissions
-    						}
-    					}else{
-    						header('Location: login.php');												//Redirect if no user logged in
-    					}
-							
+    				
 							$array = array();															//Create array
 							$query = $pdo->prepare("SELECT * FROM pagina");								//Prepare query
 							$query->execute();															//Fetch pages

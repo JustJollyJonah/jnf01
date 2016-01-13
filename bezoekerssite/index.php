@@ -5,8 +5,6 @@
 <title>Webpagina Framework</title>
 <link rel="stylesheet" href="Style_chris_3.css">
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
-<link rel=stylesheet href=style_mobile_1>
-<link rel=stylesheet href=style_mobile_2>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link
 	href='https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro|Raleway'
