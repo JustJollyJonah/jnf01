@@ -49,6 +49,7 @@ if(isset($_POST['LoginSubmit']))
 				<td><input type="text" value="" name="gebruikersnaam" placeholder="Inlognaam" required /></td>
 			</tr>
 			<tr>
+			<td></td>
 			<td><input type="submit" name="LoginSubmit" value="Verzend"></td>
 			</tr>
 			</form>
