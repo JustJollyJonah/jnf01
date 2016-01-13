@@ -1,6 +1,6 @@
 @media ( max-width : 1370px) and ( min-width : 760px ) {
 	.content .fb{
-		display: none;
+		display: none !important;
 	}
 	.content .pagina{
 		width: 90%;
@@ -196,7 +196,7 @@
 	}
 	.webshop tbody tr td{
 		white-space: pre-wrap;
-		padding: 0px 50px;
+		padding: 0px 15px;
 	}
 	.pagina h2{
 		margin-left: 10%;
