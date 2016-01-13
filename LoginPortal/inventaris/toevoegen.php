@@ -1,8 +1,32 @@
-<?php
-include ('../../DatabaseFunctions.php');
-include 'basis.php';
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Product toevoegen</title>
+		<link rel=stylesheet href=../StylePortal.css>
+		<link rel=stylesheet href=../productlistStyle.css>
+	</head>
+	<body>
+	<div class="banner">
+    		<a href="../bezoekerssite/index.php"><img src="../bezoekerssite/img/dynamiek_logo.png" alt="Dynamiek Logo"></a>
+    		<p>Dynamiek Ateliers Login Portaal</p>
+    		<div class=nav>
+    			<div class=button><a href=inventaris.php>Voorraad</a></div>
+    			<div class=button><a href=CMS.php>CMS</a></div>
+    			<div class=button><a href=gebruikersbeheer.php>Gebruikersbeheer</a></div>
+    		</div>
+    		<div class="LoggedInUser"><?php 
+    			session_start();
+    			$user = $_SESSION['user'];
+    			echo $user;
+    			?><br>
+    			<a href="login.php" class=logoutbutton>Log uit</a>
+    		</div>
+    	</div>
+	<?php
+	include ('../../DatabaseFunctions.php');
+	include 'basis.php';
 
-if (isset ( $_POST ['voegtoe'] )) {
+	if (isset ( $_POST ['voegtoe'] )) {
 		
 		// afbeelding upload script
 		$target_dir = "../uploads/";
@@ -60,7 +84,7 @@ if (isset ( $_POST ['voegtoe'] )) {
 	} else if (isset ( $_POST ['toevoegen'] )) { // Voeg toe knop, hier komt een heel formulier te voorschijn
 	?>
     	
-    	<h2>Product toevoegen</h2>
+    <h2>Product toevoegen</h2>
 	<table>
 		<form action="toevoegen.php" method="post" enctype="multipart/form-data">
 			<tr>
@@ -103,3 +127,6 @@ if (isset ( $_POST ['voegtoe'] )) {
 	</table>
 	<?php 
 	}
+	?>
+	</body>
+</html>

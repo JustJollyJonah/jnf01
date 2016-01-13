@@ -315,6 +315,9 @@
 	.fb{
 		display: none;
 	}
+	#slider{
+		display: none;
+	}
 	html {
 		height: 100%;
 		font-family: 'Open Sans', sans-serif;
@@ -501,6 +504,9 @@
 
 @media(max-width: 400px){
 	.fb{
+		display: none;
+	}
+	#slider{
 		display: none;
 	}
 	html {
