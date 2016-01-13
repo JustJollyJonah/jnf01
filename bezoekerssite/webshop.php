@@ -220,6 +220,27 @@
 				}
 				?>
 			</div>
+			<div class=paginate_mobile>
+				<select name=page onchange="gotoPage(this.options[this.selectedIndex].value, <?php echo $results_per_page?>)">
+				<?php 
+					if (! isset ( $_POST ['toevoegen'] ) && ! isset ( $_POST ['wijzigen'] )) {
+						
+						for($i = 1; $i < $totaalPagina + 1; $i ++) { //
+							if($page != $i){
+								echo ("<option><a href=webshop.php?page=$i&results_per_page=$aantalPerPagina class=paginate_button>" . $i . "</a></option>"); // Buttons for every individual page
+							}else{
+								echo ("<option selected><a href=webshop.php?page=$i&results_per_page=$aantalPerPagina class=paginate_button>" . $i . "</a></option>"); // Buttons for every individual page
+							}
+						}
+					}
+				?>
+				</select>
+				<script type="text/javascript">
+					function gotoPage(page, perpagina){
+						window.location.assign('?page=' + page + '&results_per_page=' + perpagina);
+					}
+				</script>
+			</div>
 			<div class="facebook-feed">
 		
 		</div>
