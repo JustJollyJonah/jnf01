@@ -87,10 +87,10 @@ if(isset($_SESSION['user'])){
             $query->execute();
            	
             while($row = $query->fetch()){
-            	$nummer = $row['Medewerkernummer'];
-            	$naam = $row['Naam'];
-            	$achternaam = $row['Naam'];
-            	$actief = $row['Actief'];
+            	$nummer = htmlspecialchars($row['Medewerkernummer']);
+            	$naam = htmlspecialchars($row['Naam']);
+            	$achternaam = htmlspecialchars($row['Achternaam']);
+            	$actief = htmlspecialchars($row['Actief']);
             	echo "<tr><td>$nummer</td><td>$naam</td><td>$achternaam</td>"; 
             	if($actief){
             		echo "<td><input type=checkbox checked></td>";
