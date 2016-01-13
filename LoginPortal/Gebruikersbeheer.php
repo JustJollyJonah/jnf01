@@ -73,6 +73,7 @@ if(isset($_SESSION['user'])){
             <div class='voegtoe'>
             <a href="Gebruikertoevoegen.php">Medewerker toevoegen</a>
             <a href="logintoevoegen.php">Login Toevoegen</a>
+            <a href="loginverwijderen.php">Login verwijderen</a>
             </div>
             <?php 
             $query = $db->prepare("SELECT * FROM medewerker");
