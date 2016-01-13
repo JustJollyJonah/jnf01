@@ -16,12 +16,6 @@
 	    	<?php 
 	    	session_start();
 	    	session_destroy();
-	    	include ("../DatabaseFunctions.php");
-	    	include ("CustomEncryption.php");
-    		
-    		$pdo = connectToServer ( "mysql:host=localhost;port=3307;", "root", "usbw" );
-    		selectDatabase($pdo, 'omega');
-    		
     		?>
     			<form method="POST" action="checklogin.php">
     			<?php 
