@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" href="StylePortal.css">
-		<link rel="stylesheet" href="../productlistStyle.css">
+		<link rel="stylesheet" href="productlistStyle.css">
 	</head>
 	<body>
 	<div class="banner">

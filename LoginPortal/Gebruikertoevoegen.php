@@ -3,15 +3,16 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" href="StylePortal.css">
+		<link rel="stylesheet" href="productliststyle.css">
 	</head>
 	<body>
 	<div class="banner">
     	<a href="../bezoekerssite/index.php"><img src="../../bezoekerssite/img/dynamiek_logo.png" alt="Dynamiek Logo"></a>
     	<h1>Dynamiek Ateliers Login Portaal</h1>
     	<div class=nav>
-    		<div class=button><a href=../inventaris.php>Voorraad</a></div>
-    		<div class=button><a href=../CMS.php>CMS</a></div>
-    		<div class=button><a href=../gebruikersbeheer.php>Gebruikersbeheer</a></div>
+    		<div class=button><a href=inventaris.php>Voorraad</a></div>
+    		<div class=button><a href=CMS.php>CMS</a></div>
+    		<div class=button><a href=gebruikersbeheer.php>Gebruikersbeheer</a></div>
     	</div>
     </div>
 <?php
