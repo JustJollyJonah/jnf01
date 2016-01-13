@@ -75,7 +75,7 @@ while($row = $query->fetch())
                 <div class="button"><a href="gebruikersbeheer.php">Gebruikersbeheer</a></div>
             </div>
             <div class="LoggedInUser">
-                <?php print("<p>".$user."</p>") ?><br />
+                <?php print("<p>".$user."</p>") ?>
                 <a href="login.php" class="logoutbutton">Log uit</a>
             </div>
         </div>
