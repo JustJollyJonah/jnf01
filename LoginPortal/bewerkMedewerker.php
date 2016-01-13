@@ -57,7 +57,7 @@ if (isset ( $_GET ['verwijder'] )) {
 		if ($query->rowCount () > 0) {
 			echo "Gebruiker $user2 verwijderd.";
 		} else {
-			echo 'Gebruiker kon niet worden verwijderd';
+			echo 'Gebruiker is verwijderd';
 		}
 	} else {
 		echo 'Deze gebruiker kan niet worden verwijderd!';
