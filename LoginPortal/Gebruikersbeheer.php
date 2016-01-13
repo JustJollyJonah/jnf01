@@ -26,31 +26,20 @@ if(isset($_SESSION['user'])){
 }
 
 // EN nu de custom database functies.
-$query = $db->prepare("SELECT * FROM medewerker");
-$query->execute();
+
  
 $txt_user = '';
 
-while($row = $query->fetch())
-{
-	if($row['Actief'] == 1)
-	{
-		$checked = "Ja";
-	}else{
-		$checked = "Nee";
-	}
-	
-    $txt_user .= "
-        <tr>
-            <td>{$row['Medewerkernummer']}</td>
-            <td>{$row['Naam']}</td>
-            <td>{$row['Achternaam']}</td>
-            <td>{$checked}</td>
-            <td><a href=\"bewerkMedewerker.php?verwijder={$row['Medewerkernummer']}\">Verwijder</a></td>
-            <td><a href=\"bewerkMedewerker.php?wijzig={$row['Medewerkernummer']}\">Wijzigen</a></td>
-        </tr>";
-}
-
+//     $txt_user .= 
+//     	"<tr>
+//             <td>{$row['Medewerkernummer']}</td>
+//             <td>{$row['Naam']}</td>
+//             <td>{$row['Achternaam']}</td>
+//             <td>{$checked}</td>
+//             <td><a href=\"bewerkMedewerker.php?verwijder={$row['Medewerkernummer']}\">Verwijder</a></td>
+//             <td><a href=\"bewerkMedewerker.php?wijzig={$row['Medewerkernummer']}\">Wijzigen</a></td>
+//         </tr>";
+// }
 
 
 //{$row['Actief']}
@@ -87,7 +76,23 @@ while($row = $query->fetch())
                 <th>Actief</th>
             </tr>
             <a class="voegtoe" href="Gebruikertoevoegen.php">Voeg gebruiker toe</a>
-            <?php echo $txt_user; ?>
+            <?php 
+            $query = $db->prepare("SELECT * FROM medewerker");
+            $query->execute();
+           	
+            while($row = $query->fetch()){
+            	$nummer = $row['Medewerkernummer'];
+            	$naam = $row['Naam'];
+            	$achternaam = $row['Naam'];
+            	$actief = $row['Actief'];
+            	echo "<tr><td>$nummer</td><td>$naam</td><td>$achternaam</td>";
+            	if($actief){
+            		echo "<td><input type=checkbox checked></td>";
+            	}else{
+            		echo "<td><input type=checkbox></td>";
+            	}
+            }
+            ?>
         </table>
     </body>
 </html>
