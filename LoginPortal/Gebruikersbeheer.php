@@ -63,6 +63,7 @@ if(isset($_SESSION['user'])){
                 <a href="login.php" class="logoutbutton">Log uit</a>
             </div>
         </div>
+        <div class="tdgebruikbeh">
         <table class="gebruikbeh">
             <tr>
                 <th>Nummer</th>
@@ -70,6 +71,7 @@ if(isset($_SESSION['user'])){
                 <th>Achternaam</th>
                 <th>Actief</th>
             </tr>
+          
             <div class='voegtoe'>
             <a href="Gebruikertoevoegen.php">Medewerker toevoegen</a>
             <a href="logintoevoegen.php">Login Toevoegen</a>
@@ -96,5 +98,6 @@ if(isset($_SESSION['user'])){
 
             ?>
         </table>
+        </div>
     </body>
 </html>
