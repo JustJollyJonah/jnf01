@@ -10,17 +10,17 @@
 	<body>
 		<div class="banner">
     		<a href="../bezoekerssite/index.php"><img src="../bezoekerssite/img/dynamiek_logo.png" alt="Dynamiek Logo"></a>
-    		<p>Dynamiek Ateliers Login Portaal</p>
+    		<h1>Dynamiek Ateliers Login Portaal</h1>
     		<div class=nav>
-    			<div class=button><a href=inventaris.php>Voorraad</a></div>
+    			<div class="button active"><a href=inventaris.php>Voorraad</a></div>
     			<div class=button><a href=CMS.php>CMS</a></div>
     			<div class=button><a href=gebruikersbeheer.php>Gebruikersbeheer</a></div>
     		</div>
     		<div class="LoggedInUser"><?php 
     			session_start();
     			$user = $_SESSION['user'];
-    			echo $user;
-    			?><br>
+    			print("<p>".$user."</p>");
+    			?>
     			<a href="login.php" class=logoutbutton>Log uit</a>
     		</div>
     	</div>
