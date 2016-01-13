@@ -42,7 +42,7 @@ if(isset($_POST['LoginSubmit']))
 	header("Location: gebruikersbeheer.php");
 }
 ?>
-<form action="loginverwijderen.php" onsubmit="return confirm('Weet u zeker dat u deze gebruiker wilt verwijderen')">
+<form action="loginverwijderen.php" method="post" onsubmit="return confirm('Weet u zeker dat u deze gebruiker wilt verwijderen')">
 <table class="tabelinfo">
 			<tr>
 				<td>Gebruikersnaam:</td>
