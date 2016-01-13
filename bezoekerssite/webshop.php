@@ -120,14 +120,7 @@
 			<h2>Producten</h2>
 			<form action="" method="get">
 				Producten per pagina: <select name="results_per_page">
-					<option value=5
-						<?php
-						if (isset ( $results_per_page )) {
-							if ($results_per_page == 5) {
-								echo 'selected=selected';
-							}
-						}
-						?>>5</option>
+					
 					<option value=10
 						<?php
 						if (isset ( $results_per_page )) {

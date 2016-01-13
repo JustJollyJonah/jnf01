@@ -118,7 +118,7 @@
 	?>
 			<form action="inventaris/verwijderen.php" method="post">
 				<input type="hidden" value="<?php print ($productnummer);?>" name="productnummer"> 
-				<input type="submit" value="Verwijder" name="verwijder">	
+				<input type="submit" value="Verwijder" name="Verwijder" onclick="return confirm('Weet je zeker dat je dit item wilt verwijderen');">	
 			</form>
 			
 			<form action="inventaris/wijzigen.php" method="post">
