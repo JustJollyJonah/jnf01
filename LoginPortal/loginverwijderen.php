@@ -39,11 +39,11 @@ if(isset($_POST['LoginSubmit']))
 {
 	echo 'het is verzonden';
 	$stmt = $db ->prepare ( "DELETE FROM login WHERE Gebruikersnaam=?");
-	$stmt->execute (array($_POST ['gebruikersnaam']));
+	$stmt->execute (array($_POST['gebruikersnaam']));
 
 }
 ?>
-<form action="post">
+<form action="loginverwijderen.php">
 <table class="tabelinfo">
 			<tr>
 				<td>Gebruikersnaam:</td>
