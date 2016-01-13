@@ -39,7 +39,7 @@ if(isset($_POST['LoginSubmit']))
 {
 	$stmt = $db ->prepare ( "DELETE FROM login WHERE Gebruikersnaam=?");
 	$stmt->execute (array($_POST['gebruikersnaam']));
-	header("Location: gebruikersbeheer.php")
+	header("Location: gebruikersbeheer.php");
 }
 ?>
 <form action="loginverwijderen.php" onsubmit="return confirm('Weet u zeker dat u deze gebruiker wilt verwijderen')">
