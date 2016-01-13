@@ -208,3 +208,9 @@ td{
 .voegtoe img:hover{
 	border: 1px white 
 }
+.tabelinfo {
+	margin-left:30%;
+}
+.titeltoevoegen {
+	text-align:center;
+}

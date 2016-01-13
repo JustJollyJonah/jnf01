@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" href="StylePortal.css">
+	</head>
+	<body>
+	<div class="banner">
+    	<a href="../bezoekerssite/index.php"><img src="../../bezoekerssite/img/dynamiek_logo.png" alt="Dynamiek Logo"></a>
+    	<h1>Dynamiek Ateliers Login Portaal</h1>
+    	<div class=nav>
+    		<div class=button><a href=../inventaris.php>Voorraad</a></div>
+    		<div class=button><a href=../CMS.php>CMS</a></div>
+    		<div class=button><a href=../gebruikersbeheer.php>Gebruikersbeheer</a></div>
+    	</div>
+    </div>
 <?php
 //Sessie, database connectie en userlevelcheck
 session_start();
@@ -26,16 +42,11 @@ if(isset($_POST['MedewerkerSubmit']))
 	header('Location: \LoginPortal\Gebruikersbeheer.php');
 }
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
-<html>
-<head>
-</head>
-<body>
 	<!-- Tabel voor de toevoeging van nieuwe gebruikers  -->
-    	<h2>Medewerker toevoegen</h2>
+    	<h2 class=titeltoevoegen>Medewerker toevoegen</h2>
     <!-- $_SERVER['PHP_SELF'] zorgt er voor dat als je ooit de naam veranderd van deze file hij alsnog werkt. -->
     	<form method="POST">
-		<table>
+		<table class="tabelinfo">
 			<tr>
 				<td>Voornaam:</td>
 				<td><input type="text" value="" name="Naam" placeholder="Naam van medewerker" required /></td>
@@ -93,7 +104,8 @@ if(isset($_POST['MedewerkerSubmit']))
 				<td><input type="radio" name="Actief" value="1"> Ja 
 				<input type="radio" name="Actief" value="0"> Nee</td>
 			</tr>	
-			<td><input type="submit" name="MedewerkerSubmit" value="Verzend"></td>
+				<td></td>
+				<td><input type="submit" name="MedewerkerSubmit" value="Verzend"></td>
 			</tr>
 		</table>
 	</form>
