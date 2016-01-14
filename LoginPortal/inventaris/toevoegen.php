@@ -84,12 +84,12 @@
 	} else if (isset ( $_POST ['toevoegen'] )) { // Voeg toe knop, hier komt een heel formulier te voorschinj
 	?>
     	
-    <h2>Product toevoegen</h2>
-	<table>
+    <h2 class="headtext">Product toevoegen</h2>
+	<table class="tabelinfo">
 		<form action="toevoegen.php" method="post" enctype="multipart/form-data">
 			<tr>
 				<td class=toevoegen>Productnaam:</td>
-				<td class=toevoegen><input type="text" value="Naam van product" name="name" required></td>
+				<td class=toevoegen><input type="text"  name="name" required></td>
 			</tr>
 			<tr>
 				<td class=toevoegen>Product beschrijving</td>
@@ -121,7 +121,7 @@
 				<td class=toevoegen><input type="submit" name="voegtoe" value="product toevoegen"></td>
 		</form>
 		<form action="../inventaris.php" method="post">
-			<td class=toevoegen_submit><input type="submit" name="terug" value="Terug naar overzicht"></td>
+			<td class=><input type="submit" name="terug" value="Terug naar overzicht"></td>
 			</tr>
 		</form>
 	</table>

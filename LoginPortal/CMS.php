@@ -92,7 +92,7 @@
     				<legend>Nieuwe pagina toevoegen</legend>
     				<input type=text placeholder="Pagina naam" name=pagina><br>
     				<input type=submit value="Maak pagina"><br>
-    				Om tussen pagina's te linken moet de Url beginnen met '?page='
+    			<!-- 	Om tussen pagina's te linken moet de Url beginnen met '?page=' -->
     			</form>
     				<?php
 						
