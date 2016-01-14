@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link rel="stylesheet" href="StylePortal.css">
-		<link rel="stylesheet" href="../productlistStyle.css">
+		<title>Product toevoegen</title>
+		<link rel=stylesheet href=../StylePortal.css>
+		<link rel=stylesheet href=../productlistStyle.css>
 	</head>
 	<body>
 	<div class="banner">
-    	<a href="../bezoekerssite/index.php"><img src="../../bezoekerssite/img/dynamiek_logo.png" alt="Dynamiek Logo"></a>
-    	<h1>Dynamiek Ateliers Login Portaal</h1>
-    	<div class=nav>
-    		<div class=button><a href=inventaris.php>Voorraad</a></div>
-    		<div class=button><a href=CMS.php>CMS</a></div>
-    		<div class=button><a href=gebruikersbeheer.php>Gebruikersbeheer</a></div>
+    		<a href="../bezoekerssite/index.php"><img src="../../bezoekerssite/img/dynamiek_logo.png" alt="Dynamiek Logo"></a>
+    		<h1>Dynamiek Ateliers Login Portaal</h1>
+    		<div class=nav>
+    			<div class=button><a href=../inventaris.php>Voorraad</a></div>
+    			<div class=button><a href=../CMS.php>CMS</a></div>
+    			<div class=button><a href=../Gebruikersbeheer.php>Gebruikersbeheer</a></div>
+    		</div>
+    		<div class="LoggedInUser"><?php 
+    			session_start();
+    			$user = $_SESSION['user'];
+    			print("<p>".$user."</td>")
+    			?>
+    			<a href="login.php" class=logoutbutton>Log uit</a>
+    		</div>
     	</div>
-    	<div class="LoggedInUser"><?php 
-    		session_start();
-    		$user = $_SESSION['user'];
-    		print("<td>".$user."</td>");
-    		?>
-    		<a href="login.php" class=logoutbutton>Log uit</a>
-    	</div>
-    </div>
     <div class="wrapper">
 		<div class="product_mgmt">
 			.
@@ -108,7 +108,7 @@
 					
 			<form action="wijzigen.php" method="post" enctype="multipart/form-data" class="wijzig_form">
 			<input type="hidden" value="<?php print ($productnummer); ?>" name="productnummer">
-			<table>
+			<table class="tabelinfo">
 				<tr><td colspan="2"><input type="file" name="fileToUpload"></td></tr>
 				<tr><td>Product naam: </td><td><input type="text" name="product" value="<?php print ($product); ?>"></td></tr>
 				<tr><td>Beschrijving:</td><td><textarea rows="3" cols="20" name="beschrijving"><?php print ($beschrijving);?></textarea></td></tr>

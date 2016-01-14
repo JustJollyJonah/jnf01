@@ -58,7 +58,7 @@ if(isset($_SESSION['user'])){
             <div class="nav">
                 <div class="button"><a href="inventaris.php">Voorraad</a></div>
                 <div class="button"><a href="CMS.php">CMS</a></div>
-                <div class="button active"><a href="gebruikersbeheer.php">Gebruikersbeheer</a></div>
+                <div class="button active"><a href="Gebruikersbeheer.php">Gebruikersbeheer</a></div>
             </div>
             <div class="LoggedInUser">
                 <?php print("<p>".$user."</p>") ?>
