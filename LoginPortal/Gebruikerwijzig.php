@@ -38,7 +38,12 @@ if(isset($_SESSION['user'])){
 }else{
 	header('Location: login.php');
 }
-$query = $db -> prepare ("SELECT * FROM medewerker");
+
+if (isset ( $_GET ['wijzig'] )) {
+	$id = $_GET ['wijzig'];
+}
+	
+$query = $db -> prepare ("SELECT * FROM medewerker WHERE medewerkernummer = $id ");
 $query->execute();
 while($row = $query->fetch()){
 	$medewerkernummer = $row ['Medewerkernummer'];
@@ -54,8 +59,7 @@ while($row = $query->fetch()){
 
 //$selectall = $db->prepare ( "SELECT * FROM medewerker WHERE medewerkernummer = $id");
 //$selectall->execute();
-	if (isset ( $_GET ['wijzig'] )) {
-		$id = $_GET ['wijzig'];}
+
 		
 	if(isset($_POST['MedewerkerUpdate']))
 	{
@@ -85,19 +89,19 @@ while($row = $query->fetch()){
 		<table class="tabelinfo">
 			<tr>
 				<td>Voornaam:</td>
-				<td><input type="text" value="" placeholder=<?php echo $naam?> name="Naam"  /></td>
+				<td><input type="text" value="" placeholder="<?php echo $naam?>" name="Naam"  /></td>
 			</tr>
 			<tr>
 				<td>Achternaam:</td>
-				<td><input type="text" placeholder=<?php echo $achternaam?> name="Achternaam"  /></td>
+				<td><input type="text" placeholder="<?php echo $achternaam?>" name="Achternaam"  /></td>
 			</tr>
 			<tr>
 				<td>Adres:</td>
-				<td><input type="text" placeholder=<?php echo $adres?> name="Adres"></td>
+				<td><input type="text" placeholder="<?php echo $adres?>" name="Adres"></td>
 			</tr>
 			<tr>
 				<td>Woonplaats:</td>
-				<td><input type="text" placeholder=<?php echo $woonplaats?> name="Woonplaats"></td>
+				<td><input type="text" placeholder="<?php echo $woonplaats?>" name="Woonplaats"></td>
 			</tr>
 			<tr>
 				<td>Postcode:</td>
@@ -105,7 +109,7 @@ while($row = $query->fetch()){
 			</tr>
 			<tr>
 				<td>Locatienummer:</td>
-				<td><input type="number" placeholder=<?php echo $locatienummer?> name="Locatienummer"></td>
+				<td><input type="number" placeholder="<?php echo $locatienummer?>" name="Locatienummer"></td>
 			</tr>			
 				<td>Functie: </td>
 				<td><select name="Functie"><?php $query = $db->prepare("SELECT * FROM functie");

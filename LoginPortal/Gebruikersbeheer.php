@@ -69,7 +69,7 @@ if(isset($_SESSION['user'])){
          <div class='voegtoe'>
             <a class=buttonleft href="Gebruikertoevoegen.php">Medewerker toevoegen</a><br>
             </br>
-            <a class=buttonleft href="logintoevoegen.php">Login Toevoegen</a><br>
+            <a class=buttonleft href="Logintoevoegen.php">Login Toevoegen</a><br>
             </br>
             <a class=buttonleft href="loginverwijderen.php">Login verwijderen</a>
             </div>
