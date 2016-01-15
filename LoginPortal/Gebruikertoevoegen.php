@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" href="StylePortal.css">
-		<link rel="stylesheet" href="productliststyle.css">
+		<link rel="stylesheet" href="productlistStyle.css">
 	</head>
 	<body>
 	<div class="banner">
@@ -69,9 +69,6 @@ if(isset($_POST['MedewerkerSubmit']))
 				<td>Postcode:</td>
 				<td><input type="text" placeholder="postcode" name="Postcode"></td>
 			</tr>
-			<tr>
-				<td>Medewerkernummer:</td>
-				<td><input type="text" name= "Medewerkernummer"></td>
 			<tr>
 				<td>Locatienummer:</td>
 				<td>
